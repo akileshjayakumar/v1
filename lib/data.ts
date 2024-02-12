@@ -35,7 +35,10 @@ export const experiencesData = [
     title: "Automation Intern | CPF Board",
     location: "Singapore",
     description:
-      "• Developed a Sentiment Analysis Bot with GPT-3.5 API, automating HR tasks and enhancing data management (CSV/Excel), leveraging Microsoft Power Automate and Python for streamlined operations.<br><br>• Reduced user testing time by 30% through automation enhancements in Python applications, leading to improved performance and efficiency.<br><br>• Led automated test cases using Pair and prompt engineering, directly improving software quality and reliability.<br><br>• Gained practical experience and knowledge in tools and products used across the Whole of Government, including SG Tech Stack (SGTS), Pair, LaunchPad, and Government on Commercial Cloud (GCC).",
+      "• Developed a Sentiment Analysis Bot with GPT-3.5 API, automating HR tasks and enhancing data management (CSV/Excel), leveraging Microsoft Power Automate and Python for streamlined operations. <br/><br/>" +
+      "• Reduced user testing time by 30% through automation enhancements in Python applications, leading to improved performance and efficiency. <br/><br/>" +
+      "• Led automated test cases using Pair and prompt engineering, directly improving software quality and reliability. <br/><br/>" +
+      "• Gained practical experience and knowledge in tools and products used across the Whole of Government, including SG Tech Stack (SGTS), Pair, LaunchPad, and Government on Commercial Cloud (GCC).",
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2023 - Present",
   },
