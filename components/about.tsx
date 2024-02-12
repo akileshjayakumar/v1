@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>ABOUT</SectionHeading>
       <p>
-        I am a final-year Computer Science student at{" "}
+        Hey there! I am a final year Computer Science student at{" "}
         <a
           href="https://www.uow.edu.au/"
           target="_blank"
@@ -31,19 +31,14 @@ export default function About() {
         in Singapore, focusing on Big Data and Cybersecurity. <br />
         <br />
       </p>
-      <p>
-        I am actively seeking opportunities for a 6-month, full-time
-        credit-bearing internship in Software Engineering or Cybersecurity. I
-        aim to leverage my academic background and technical skills to
-        contribute effectively in a business environment.
-      </p>
 
       <br />
       <p>
-        I'm highly interested in advancing my skills in software development. I
-        enjoy diving deeper into this field and actively contributing to
-        projects. Motivated and eager to tackle new challenges, I always seek
-        opportunities to improve my abilities and learn. Let's connect! 😁
+        I'm passionate about refining my skills and creating impactful
+        applications. I'm particularly keen on honing my software development
+        skills further. I love delving into this area and getting involved in
+        projects. I'm always up for a challenge and eager to learn and grow
+        along the way. Let's connect! 😊
       </p>
     </motion.section>
   );

@@ -33,11 +33,11 @@ export default function Intro() {
             <Image
               src="/profile-photo.jpg"
               alt="profile-photo"
-              width="400" // Updated this line
-              height="400" // Updated this line
+              width="400"
+              height="400"
               quality="100"
               priority={true}
-              className="rounded-full object-cover border-[0.35rem] border-white shadow-xl" // Updated this line
+              className="rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
         </div>
@@ -61,8 +61,8 @@ export default function Intro() {
       >
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="akilesh-jayakumar-resume.pdf"
-          download="akilesh-jayakumar-resume.pdf"
+          href="akileshjayakumar_resume.pdf"
+          download="akileshjayakumar_resume.pdf"
         >
           Download CV/Resume{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
