@@ -45,21 +45,21 @@ export const projectsData = [
   {
     title: "ChatGPT Clone Project",
     description:
-      "Developed a ChatGPT clone with frontend (HTML, CSS, JavaScript) and backend (Node.js, Express) components, leveraging GPT-3.5 API for AI interactions in real-time.",
+      "Engineered a real-time interactive ChatGPT clone, integrating GPT-3.5 model API calls. Showcased backend proficiency and deployment strategies by hosting on Render with Git integration.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "OpenAI API"],
     imageUrl: gptclone,
   },
   {
     title: "Flip A Coin Game",
     description:
-      "Interactive  Coin Flip Game simulating coin tosses with clickable fun. Developed with HTML, CSS, and JavaScript for engaging gameplay.",
+      "Created an engaging coin flip game, enhancing user interaction through clickable elements and intuitive design. Successfully deployed on GitHub Pages, highlighting front-end development skills.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: flipcoin,
   },
   {
     title: "Password Generator",
     description:
-      "Password Generator crafting robust and unique passwords. Implemented using HTML, CSS, and JavaScript for a user-friendly experience.",
+      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Utilized GitHub Pages for deployment, highlighting front-end development skills.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
   },
@@ -79,7 +79,7 @@ export const skillsData = [
   "Vercel",
   "MongoDB",
   "OpenAI",
-  "Microsoft Power Automate/Power BI",
+  "NLTK",
+  "Microsoft Power Platform",
   "Azure/AWS/GCP",
-  "Framer Motion",
 ] as const;
