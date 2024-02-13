@@ -45,7 +45,7 @@ export const projectsData = [
   {
     title: "ChatGPT Clone Project",
     description:
-      "Engineered a real-time interactive ChatGPT clone, integrating GPT-3.5 model API calls. Showcased backend proficiency and deployment strategies by hosting on Render with Git integration.",
+      "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions via GPT-3.5 model API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "OpenAI API"],
     imageUrl: gptclone,
   },
