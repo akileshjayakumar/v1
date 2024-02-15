@@ -45,21 +45,21 @@ export const projectsData = [
   {
     title: "ChatGPT Clone Project",
     description:
-      "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions via GPT-3.5 model API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
+      "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "OpenAI API"],
     imageUrl: gptclone,
   },
   {
     title: "Flip A Coin Game",
     description:
-      "Created an engaging coin flip game, enhancing user interaction through clickable elements and intuitive design. Successfully deployed on GitHub Pages, highlighting front-end development skills.",
+      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: flipcoin,
   },
   {
     title: "Password Generator",
     description:
-      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Utilized GitHub Pages for deployment, highlighting front-end development skills.",
+      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
   },
@@ -74,12 +74,13 @@ export const skillsData = [
   "React",
   "Next.js",
   "Node.js",
+  "Express.js",
   "Git",
   "GitHub",
   "Vercel",
   "MongoDB",
   "OpenAI",
-  "NLTK",
-  "Microsoft Power Platform",
+  "NLTK/NLP",
   "Azure/AWS/GCP",
+  "Microsoft Power Platform",
 ] as const;
