@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
@@ -12,6 +10,8 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  repoUrl,
+  liveUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -30,20 +30,39 @@ export default function Project({
       }}
       className="group sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[49.9rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[24.99rem] hover:bg-gray transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        <div className="pb-9 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-white">{description}</p>
-          <ul className="flex text-white flex-wrap mt-4 gap-2 sm:mt-auto">
+          <p className="mt-2 leading-relaxed">{description}</p>
+          <ul className="flex flex-wrap mt-5 mb-5 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
+                className="bg-black/[0.7] px-4 py-1 text-[0.7rem] uppercase tracking-wider rounded-full"
                 key={index}
               >
                 {tag}
               </li>
             ))}
           </ul>
+          {/* Add GitHub Repo and Live Site links here */}
+          <div className="mt-5">
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              GitHub Repo
+            </a>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Live Site
+            </a>
+          </div>
         </div>
 
         <Image

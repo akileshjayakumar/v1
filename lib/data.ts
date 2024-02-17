@@ -48,6 +48,8 @@ export const projectsData = [
       "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "OpenAI API"],
     imageUrl: gptclone,
+    repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
+    liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
   },
   {
     title: "Flip A Coin Game",
@@ -55,6 +57,8 @@ export const projectsData = [
       "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: flipcoin,
+    repoUrl: "https://github.com/akileshjayakumar/flip-a-coin-game",
+    liveUrl: "https://akileshjayakumar.github.io/flip-a-coin-game/",
   },
   {
     title: "Password Generator",
@@ -62,6 +66,8 @@ export const projectsData = [
       "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
+    repoUrl: "https://github.com/akileshjayakumar/password-generator",
+    liveUrl: "https://akileshjayakumar.github.io/password-generator/",
   },
 ] as const;
 
