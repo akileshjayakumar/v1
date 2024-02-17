@@ -19,7 +19,7 @@ export default function Intro() {
   const [typingSpeed, setTypingSpeed] = useState(0);
 
   useEffect(() => {
-    let timer;
+    let timer: ReturnType<typeof setTimeout>;
     if (isDeleting) {
       timer = setTimeout(() => {
         setText(fullText.substring(0, text.length - 1));
