@@ -8,9 +8,9 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import "/app/animation.css"; // Make sure this path correctly points to your CSS file
+import "/app/animation.css";
 
-const fullText = "Hey, I'm Akilesh! 👋";
+const fullText = "Hi, I'm Akilesh!";
 
 export default function Intro() {
   const [text, setText] = useState("");
@@ -33,10 +33,10 @@ export default function Intro() {
     }
 
     if (!isDeleting && text === fullText) {
-      setTimeout(() => setIsDeleting(true), 2000); // Delay before starting to delete
+      setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1); // Reset to start typing again
+      setLoopNum(loopNum + 1);
     }
 
     return () => clearTimeout(timer);
