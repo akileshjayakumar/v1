@@ -28,8 +28,8 @@ export default function Experience() {
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "right",
-                padding: "2rem 2rem",
+                textAlign: "left",
+                padding: "1rem 1rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -45,9 +45,8 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.company}</h3>
+              <h3 className="font-bold capitalize">{item.company}</h3>
               <h2 className="font-semibold capitalize">{item.title}</h2>
-              <br />
               <p className="font-normal !mt-0">{item.location}</p>
               <ul className="list-disc !mt-1">
                 {item.description.map((point, idx) => (
