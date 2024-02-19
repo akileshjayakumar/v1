@@ -45,10 +45,11 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h1 className="">{item.company}</h1>
-              <h2 className="">{item.title}</h2>
+              <h3 className="font-bold capitalize">{item.company}</h3>
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <br />
               <p className="font-normal !mt-0">{item.location}</p>
-              <ul className="list-disc !mt-1">
+              <ul className="m-2 list-disc !mt-1">
                 {item.description.map((point, idx) => (
                   <li key={idx} className="font-normal text-white-600">
                     {point}
