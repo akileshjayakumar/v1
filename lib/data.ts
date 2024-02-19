@@ -39,7 +39,7 @@ export const experiencesData = [
       "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n",
       "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.\n",
     ],
-    icon: cpflogo.src,
+    icon: CgWorkAlt,
     date: "Dec 2023 - Present",
   },
 ] as const;
