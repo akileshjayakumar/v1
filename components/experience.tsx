@@ -19,13 +19,11 @@ const Experience = () => {
       <VerticalTimelineElement
         key={index}
         contentStyle={{
-          boxShadow: "none",
           textAlign: "right",
         }}
         date={item.date}
         icon={item.icon}
         iconStyle={{
-          background: theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
           fontSize: "1.5rem",
         }}
       >
@@ -34,7 +32,7 @@ const Experience = () => {
         <br />
         <ul className="m-2 list-disc !mt-1">
           {item.description.map((point, idx) => (
-            <li key={idx} className="font-normal text-white-600">
+            <li key={idx} className="font-normal">
               {point}
             </li>
           ))}
