@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import flipcoin from "@/public/flip-coin.png";
 import passwordgen from "@/public/password-gen.png";
+import cpflogo from "@/public/cpf-logo.png";
 
 export const links = [
   {
@@ -38,7 +39,7 @@ export const experiencesData = [
       "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n",
       "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.\n",
     ],
-    icon: React.createElement(CgWorkAlt),
+    icon: cpflogo.src,
     date: "Dec 2023 - Present",
   },
 ] as const;
