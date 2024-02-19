@@ -33,9 +33,9 @@ export const experiencesData = [
     title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed automation scripts for data processing.\n",
-      "Collaborated with team members to optimize workflow efficiency.\n",
-      "Participated in regular meetings to discuss project progress and updates.\n",
+      "Developed a Sentiment Analysis App with GPT-3.5 API integration, enhancing and automating HR processes and data management in Python.\n",
+      "Implemented Pair and prompt engineering to execute test cases and plans elevating software reliability.\n",
+      "Automated workflows in CPF AppFolio using Python scripts via Microsoft Power Automate, while researching tools and products used across the Whole of Government, including SG Tech Stack (SGTS), Pair, LaunchPad, and Government on Commercial Cloud (GCC).\n",
     ],
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2023 - Present",
