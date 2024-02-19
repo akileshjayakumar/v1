@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { CgWorkAlt } from "react-icons/cg";
 
 export default function Experience() {
   const { ref } = useSectionInView("EXPERIENCE");
@@ -44,7 +45,8 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <h3 className="font-semibold capitalize">{item.company}</h3>
+              <p className="font-semibold capitalize">{item.title}</p>
               <p className="font-normal !mt-0">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}

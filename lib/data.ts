@@ -1,11 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
 import gptclone from "@/public/gpt-clone.png";
 import flipcoin from "@/public/flip-coin.png";
 import passwordgen from "@/public/password-gen.png";
-import cpflogo from "@/public/cpf-logo.png";
 
 export const links = [
   {
@@ -32,13 +29,13 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Automation Intern",
     company: "CPF Board",
+    title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed automation scripts for data processing.",
-      "Collaborated with team members to optimize workflow efficiency.",
-      "Participated in regular meetings to discuss project progress and updates.",
+      "Developed automation scripts for data processing.\n",
+      "Collaborated with team members to optimize workflow efficiency.\n",
+      "Participated in regular meetings to discuss project progress and updates.\n",
     ],
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2023 - Present",

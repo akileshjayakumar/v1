@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -30,26 +31,26 @@ export default function Project({
       }}
       className="group sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 mb-10 sm:h-[27rem] max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pb-9 px-5 mb-2 mt-6 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section className="bg-gray-100 mb-10 sm:h-[26rem] max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        <div className="pb-9 px-5 mb-2 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="leading-relaxed">{description}</p>
-          <ul className="flex flex-wrap mt-5 mb-4 gap-2 sm:mt-auto">
+          <p className="leading-relaxed mt-4 mb-2">{description}</p>
+          <ul className="flex flex-wrap mt-4 mb-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[1] px-4 py-1 text-[0.85rem] uppercase tracking-wider rounded-full"
+                className="bg-black/[1] px-4 py-1 mt-1 text-[0.85rem] uppercase tracking-wider rounded-full"
                 key={index}
               >
                 {tag}
               </li>
             ))}
           </ul>
-          <div className="fle mb-5 mt-4">
+          <div className="mb-4">
             <a
               href={repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-5 rounded"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 flex justify-center rounded"
             >
               GitHub Repo
             </a>
@@ -57,7 +58,7 @@ export default function Project({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-5 flex justify-center rounded"
             >
               Live Site
             </a>
