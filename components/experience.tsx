@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "./section-heading";
 import {
@@ -5,9 +7,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import { experiencesData } from "../lib/data"; // Updated import path
+import { useSectionInView } from "../lib/hooks"; // Updated import path
+import { useTheme } from "../context/theme-context"; // Updated import path
 import { CgWorkAlt } from "react-icons/cg";
 
 const Experience = () => {
