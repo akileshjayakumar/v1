@@ -1,16 +1,14 @@
 "use client";
 
-import React from "react";
 import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "../lib/data"; // Updated import path
-import { useSectionInView } from "../lib/hooks"; // Updated import path
-import { useTheme } from "../context/theme-context"; // Updated import path
-import { CgWorkAlt } from "react-icons/cg";
+import { experiencesData } from "../lib/data";
+import { useSectionInView } from "../lib/hooks";
+import { useTheme } from "../context/theme-context";
 
 const Experience = () => {
   const { ref } = useSectionInView("EXPERIENCE");
@@ -23,12 +21,6 @@ const Experience = () => {
         contentStyle={{
           boxShadow: "none",
           textAlign: "right",
-        }}
-        contentArrowStyle={{
-          borderRight:
-            theme === "light"
-              ? "0.4rem solid #9ca3af"
-              : "0.4rem solid rgba(255, 255, 255, 0.5)",
         }}
         date={item.date}
         icon={item.icon}
