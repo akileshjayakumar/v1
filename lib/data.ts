@@ -32,10 +32,14 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "CPF Board | Automation Intern",
+    title: "Automation Intern",
+    company: "CPF Board",
     location: "Singapore",
-    description:
-      "Developed and implemented innovative automation solutions leveraging Python, Microsoft Power Automate, and GPT-3.5 API to streamline HR tasks, enhance data management, and improve software testing efficiency while gaining proficiency in various government-specific tools and technologies.",
+    description: [
+      "Developed automation scripts for data processing.",
+      "Collaborated with team members to optimize workflow efficiency.",
+      "Participated in regular meetings to discuss project progress and updates.",
+    ],
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2023 - Present",
   },
