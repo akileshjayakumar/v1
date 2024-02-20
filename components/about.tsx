@@ -20,6 +20,7 @@ export default function About() {
       <SectionHeading>ABOUT</SectionHeading>
       <p className="items-center justify-center">
         Hello there! I'm currently a final-year Computer Science student at the{" "}
+        <br />
         <a
           className="text-blue-500"
           href="https://www.uow.edu.au/"
@@ -28,18 +29,10 @@ export default function About() {
           style={{ fontWeight: "bold", textDecoration: "underline" }}
         >
           University of Wollongong (SIM Campus)
-        </a>
+        </a>{" "}
         , focusing on Big Data and Cybersecurity. I'm always up for taking on
         fresh challenges and am constantly on the lookout for opportunities to
         learn and grow my skill set.
-      </p>
-
-      <p>
-        Hello there! I'm currently a final-year Computer Science student at the
-        University of Wollongong (SIM Campus), focusing on Big Data and
-        Cybersecurity. I'm always up for taking on fresh challenges and am
-        constantly on the lookout for opportunities to learn and grow my skill
-        set.
       </p>
 
       <br />
