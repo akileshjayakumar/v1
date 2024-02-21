@@ -66,7 +66,7 @@ export const projectsData = [
   {
     title: "Password Generator",
     description:
-      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+      "Implemented a password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
@@ -84,9 +84,9 @@ export const skillsData = [
   "Next.js",
   "Node.js",
   "Express.js",
-  "MongoDB",
-  "OpenAI",
   "Git",
   "GitHub",
-  "Azure/AWS/GCP",
+  "OpenAI",
+  "MongoDB",
+  "Microsoft Power Automate",
 ] as const;
