@@ -69,7 +69,7 @@ export default function Intro() {
   const { ref } = useSectionInView("HOME", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   return (
     <section
@@ -109,17 +109,15 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col mt-[3rem] sm:flex-row justify-center gap-5 px-4 text-lg font-bold"
+        className="flex flex-col sm:flex-row justify-center gap-5 px-4 text-lg font-bold"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
         {/* LinkedIn Button */}
         <a
-          className={`bg-white px-3 py-3 flex flex-col items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile
-              ? "w-[10rem] h-15 ml-[6.5rem]  flex flex-col items-center"
-              : ""
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
+            isMobile ? "w-[3rem] h-12 ml-[8.9rem] justify-center" : ""
           }`}
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
@@ -131,9 +129,7 @@ export default function Intro() {
         {/* GitHub Button */}
         <a
           className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile
-              ? "w-[10rem] h-15 ml-[6.5rem] flex flex-col items-center"
-              : ""
+            isMobile ? "w-[3rem] h-12 ml-[8.9rem] justify-center" : ""
           }`}
           href="https://github.com/akileshjayakumar"
           target="_blank"
@@ -145,9 +141,7 @@ export default function Intro() {
         {/* Download Button */}
         <a
           className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile
-              ? "w-[17rem] h-20 ml-[3rem] flex flex-col items-center"
-              : ""
+            isMobile ? "w-[11rem] h-12 flex justify-center" : ""
           }`}
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
