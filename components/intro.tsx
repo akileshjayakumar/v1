@@ -100,7 +100,7 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-200 mt-4 px-4 text-2xl font-medium !leading-[3] sm:text-4xl mb-9"
+        className="mb-200 mt-4 justify-center px-4 text-2xl font-medium !leading-[3] sm:text-4xl mb-9"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -124,8 +124,9 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
+        {/* LinkedIn Button */}
         <a
-          className="m-1"
+          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
           rel="noopener noreferrer"
@@ -133,8 +134,9 @@ export default function Intro() {
           <Image src={linkinlogo} alt="LinkedIn Logo" width={30} height={30} />
         </a>
 
+        {/* GitHub Button */}
         <a
-          className="m-1"
+          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="https://github.com/akileshjayakumar"
           target="_blank"
           rel="noopener noreferrer"
@@ -142,8 +144,9 @@ export default function Intro() {
           <Image src={githublogo} alt="GitHub Logo" width={30} height={30} />
         </a>
 
+        {/* Download Button */}
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
           style={{ minWidth: "12rem" }}
