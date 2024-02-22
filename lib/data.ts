@@ -35,7 +35,7 @@ export const experiencesData = [
     location: "Singapore",
     description: [
       "Developed a Sentiment Analysis App with GPT-3.5 API integration, enhancing and automating HR processes and data management in Python.\n",
-      "Implemented Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.\n",
+      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.\n",
       "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n",
       "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.\n",
     ],
@@ -88,5 +88,7 @@ export const skillsData = [
   "GitHub",
   "OpenAI",
   "MongoDB",
+  "Vercel",
   "Microsoft Power Automate",
+  "Microsoft Power BI",
 ] as const;
