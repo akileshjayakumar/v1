@@ -18,9 +18,6 @@ const fullText = [
   "Bonjour, je suis Akilesh!",
   "I'm passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
-  "I speak English and Tamil.",
-  "I like to explore new places.",
-  "I enjoy watching movies.",
   "I'm a coffee and tea enthusiast.",
 ];
 
@@ -28,7 +25,7 @@ export default function Intro() {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(50);
   const [textWidth, setTextWidth] = useState(0);
   const textRef = useRef<HTMLSpanElement>(null);
 
@@ -38,13 +35,13 @@ export default function Intro() {
 
     if (isDeleting) {
       timer = setTimeout(() => {
-        setText(currentText.substring(0, text.length - 1));
-        setTypingSpeed(50);
+        setText((prevText) => prevText.substring(0, prevText.length - 1));
+        setTypingSpeed((prevSpeed) => (text.length > 10 ? 20 : 50));
       }, typingSpeed);
     } else {
       timer = setTimeout(() => {
-        setText(currentText.substring(0, text.length + 1));
-        setTypingSpeed(50);
+        setText((prevText) => currentText.substring(0, prevText.length + 1));
+        setTypingSpeed((prevSpeed) => (text.length > 10 ? 20 : 50));
       }, typingSpeed);
     }
 
@@ -52,7 +49,7 @@ export default function Intro() {
       setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1);
+      setLoopNum((prevLoopNum) => prevLoopNum + 1);
     }
 
     setTextWidth(textRef.current ? textRef.current.offsetWidth : 0);
@@ -64,7 +61,6 @@ export default function Intro() {
     const maxTextWidth = Math.max(...fullText.map((str) => str.length));
     setTextWidth(maxTextWidth * 10);
 
-    // Start typing after a brief delay
     setTimeout(() => {
       setIsDeleting(false);
     }, 1000);
@@ -73,14 +69,16 @@ export default function Intro() {
   const { ref } = useSectionInView("HOME", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-20 max-w-[50rem] text-center sm:mb-0"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
+      <div className="flex flex-col items-center justify-center">
+        <div className="relative mb-4">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -97,36 +95,32 @@ export default function Intro() {
             />
           </motion.div>
         </div>
+        <motion.h1
+          className="px-4 text-2xl font-medium !leading-[3] sm:text-4xl"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <span className="font-medium" ref={textRef}>
+            {text}
+          </span>
+          <span className="typing-cursor">|</span>{" "}
+        </motion.h1>
       </div>
 
-      <motion.h1
-        className="mb-200 mt-4 justify-center px-4 text-2xl font-medium !leading-[3] sm:text-4xl mb-9"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        style={{
-          whiteSpace: "nowrap",
-          display: "inline-block",
-          textAlign: "center",
-          alignContent: "flex-start",
-          marginInline: `calc(50% - ${textWidth / 2}px)`,
-        }}
-      >
-        <span className="font-bold" ref={textRef}>
-          {text}
-        </span>
-        <span className="typing-cursor">|</span>{" "}
-      </motion.h1>
-
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-5 px-4 text-lg font-medium"
+        className="flex flex-col mt-[3rem] sm:flex-row justify-center gap-5 px-4 text-lg font-bold"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
         {/* LinkedIn Button */}
         <a
-          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className={`bg-white px-3 py-3 flex flex-col items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
+            isMobile
+              ? "w-[10rem] h-15 ml-[6.5rem]  flex flex-col items-center"
+              : ""
+          }`}
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
           rel="noopener noreferrer"
@@ -136,7 +130,11 @@ export default function Intro() {
 
         {/* GitHub Button */}
         <a
-          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
+            isMobile
+              ? "w-[10rem] h-15 ml-[6.5rem] flex flex-col items-center"
+              : ""
+          }`}
           href="https://github.com/akileshjayakumar"
           target="_blank"
           rel="noopener noreferrer"
@@ -146,7 +144,11 @@ export default function Intro() {
 
         {/* Download Button */}
         <a
-          className="bg-white px-4 py-2 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
+            isMobile
+              ? "w-[17rem] h-20 ml-[3rem] flex flex-col items-center"
+              : ""
+          }`}
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
           style={{ minWidth: "12rem" }}
