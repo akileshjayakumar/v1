@@ -88,7 +88,7 @@ export default function Intro() {
       id="home"
       className="mb-20 max-w-[50rem] text-center sm:mb-0"
     >
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center">
         <div className="relative mb-4">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -120,14 +120,16 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex mb-[2.2rem] flex-col sm:flex-row justify-center gap-5 px-4 text-lg"
+        className="flex mb-[1.5rem] ml-[2rem] justify-center gap-[3rem] text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
         {/* LinkedIn Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
+          className={
+            "bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          }
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
           rel="noopener noreferrer"
@@ -138,7 +140,9 @@ export default function Intro() {
 
         {/* GitHub Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
+          className={
+            "bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          }
           href="https://github.com/akileshjayakumar"
           target="_blank"
           rel="noopener noreferrer"
@@ -149,7 +153,9 @@ export default function Intro() {
 
         {/* Download Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
+          className={
+            "group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          }
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
           style={{ minWidth: "12rem", ...renderMobileButtonStyles() }}
