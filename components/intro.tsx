@@ -15,10 +15,9 @@ const fullText = [
   "வணக்கம், நான் அகிலேஷ்!",
   "你好，我是阿基莱什！",
   "Hai, saya Akilesh!",
-  "Bonjour, je suis Akilesh!",
   "I'm passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
-  "I'm a coffee and tea enthusiast.",
+  "I'm tea enthusiast.",
 ];
 
 export default function Intro() {
@@ -27,7 +26,7 @@ export default function Intro() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(50);
   const [textWidth, setTextWidth] = useState(0);
-  const textRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
@@ -71,6 +70,18 @@ export default function Intro() {
 
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
+  const renderMobileButtonStyles = () => {
+    if (isMobile) {
+      return {
+        width: "[3rem]",
+        height: "[3rem]",
+        justifyContent: "center",
+      };
+    } else {
+      return {};
+    }
+  };
+
   return (
     <section
       ref={ref}
@@ -96,7 +107,7 @@ export default function Intro() {
           </motion.div>
         </div>
         <motion.h1
-          className="px-4 text-2xl font-medium !leading-[3] sm:text-4xl"
+          className="text-2xl m-[3.7rem] font-medium sm:text-5xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -109,43 +120,39 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row justify-center gap-5 px-4 text-lg font-bold"
+        className="flex mb-[2.2rem] flex-col sm:flex-row justify-center gap-5 px-4 text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
         {/* LinkedIn Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile ? "w-[3rem] h-12 ml-[8.9rem] justify-center" : ""
-          }`}
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
           rel="noopener noreferrer"
+          style={renderMobileButtonStyles()}
         >
           <Image src={linkinlogo} alt="LinkedIn Logo" width={30} height={30} />
         </a>
 
         {/* GitHub Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile ? "w-[3rem] h-12 ml-[8.9rem] justify-center" : ""
-          }`}
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
           href="https://github.com/akileshjayakumar"
           target="_blank"
           rel="noopener noreferrer"
+          style={renderMobileButtonStyles()}
         >
           <Image src={githublogo} alt="GitHub Logo" width={30} height={30} />
         </a>
 
         {/* Download Button */}
         <a
-          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 ${
-            isMobile ? "w-[11rem] h-12 flex justify-center" : ""
-          }`}
+          className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10`}
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
-          style={{ minWidth: "12rem" }}
+          style={{ minWidth: "12rem", ...renderMobileButtonStyles() }}
         >
           Download CV/Resume{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
