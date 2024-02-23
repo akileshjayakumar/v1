@@ -15,9 +15,9 @@ const fullText = [
   "வணக்கம், நான் அகிலேஷ்!",
   "你好，我是阿基莱什！",
   "Hai, saya Akilesh!",
-  "I'm passionate about software engineering and cybersecurity.",
+  "I am passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
-  "I'm tea enthusiast.",
+  "I am a tea enthusiast.",
 ];
 
 export default function Intro() {
@@ -107,7 +107,7 @@ export default function Intro() {
           </motion.div>
         </div>
         <motion.h1
-          className="text-2xl m-[3.7rem] font-medium sm:text-5xl"
+          className="text-2xl m-[3.7rem] font-medium sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -120,7 +120,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex mb-[1.5rem] ml-[2rem] justify-center gap-[3rem] text-lg"
+        className="flex mb-[1.5rem] ml-[2rem] justify-center gap-[2.4rem] text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
@@ -154,11 +154,10 @@ export default function Intro() {
         {/* Download Button */}
         <a
           className={
-            "group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+            "group bg-white px-[0.7rem] py-[0rem] flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           }
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
-          style={{ minWidth: "12rem", ...renderMobileButtonStyles() }}
         >
           Download CV/Resume{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
