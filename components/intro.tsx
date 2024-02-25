@@ -17,7 +17,11 @@ const fullText = [
   "Hai, saya Akilesh!",
   "I am passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
+  "Python and JavaScript are my favorite languages.",
+  "I am currently learning Go and Rust.",
   "I am a tea enthusiast.",
+  "I am a music lover.",
+  "Lets connect!",
 ];
 
 export default function Intro() {
@@ -120,7 +124,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex mb-[1.5rem] ml-[2rem] justify-center gap-[2.4rem] text-lg"
+        className="flex mb-[1.5rem] ml-[0.2rem] justify-center gap-[2.4rem] text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
@@ -128,12 +132,13 @@ export default function Intro() {
         {/* LinkedIn Button */}
         <a
           className={
-            "bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" +
+            (isMobile ? " mobile-style" : " w-[4rem] h-[4rem]")
           }
           href="https://www.linkedin.com/in/akileshjayakumar/"
           target="_blank"
           rel="noopener noreferrer"
-          style={renderMobileButtonStyles()}
+          style={isMobile ? renderMobileButtonStyles() : undefined}
         >
           <Image src={linkinlogo} alt="LinkedIn Logo" width={30} height={30} />
         </a>
@@ -141,7 +146,8 @@ export default function Intro() {
         {/* GitHub Button */}
         <a
           className={
-            "bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" +
+            (isMobile ? " mobile-style" : " w-[4rem] h-[4rem]")
           }
           href="https://github.com/akileshjayakumar"
           target="_blank"
@@ -154,12 +160,13 @@ export default function Intro() {
         {/* Download Button */}
         <a
           className={
-            "group bg-white px-[0.7rem] py-[0rem] flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack " +
+            (isMobile ? " mobile-style" : " w-[4rem] h-[4rem]")
           }
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar-resume.pdf"
         >
-          Download CV/Resume{" "}
+          CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
       </motion.div>
