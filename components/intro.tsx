@@ -12,8 +12,8 @@ import linkinlogo from "@/public/linkedin-logo.png";
 
 const fullText = [
   "Hi, I'm Akilesh!",
-  "வணக்கம், நான் அகிலேஷ்!",
-  "你好，我是阿基莱什！",
+  "என் பெயர் அகிலேஷ்!",
+  "你好，我是阿基莱什!",
   "Hai, saya Akilesh!",
   "I am passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
@@ -90,14 +90,14 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-20 max-w-[50rem] text-center sm:mb-0"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex flex-col items-center">
         <div className="relative mb-4">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "tween", duration: 0.1 }}
+            transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
               src="/profile-photo.jpg"
@@ -114,7 +114,7 @@ export default function Intro() {
           className="text-2xl m-[3.7rem] font-medium sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.5 }}
         >
           <span className="font-medium" ref={textRef}>
             {text}
@@ -124,10 +124,10 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex mb-[1.5rem] ml-[0.2rem] justify-center gap-[2.4rem] text-lg"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 text-lg ml-[1rem] font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.7 }}
       >
         {/* LinkedIn Button */}
         <a
@@ -164,7 +164,7 @@ export default function Intro() {
             (isMobile ? " mobile-style" : " w-[4rem] h-[4rem]")
           }
           href="./Akilesh Jayakumar Resume.pdf"
-          download="akileshjayakumar-resume.pdf"
+          download="akileshjayakumar_resume.pdf"
         >
           CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
