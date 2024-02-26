@@ -13,7 +13,7 @@ import linkinlogo from "@/public/linkedin-logo.png";
 const fullText = [
   "Hi, I'm Akilesh!",
   "என் பெயர் அகிலேஷ்!",
-  "你好，我是阿基莱什!",
+  "嗨，我叫阿基莱什!",
   "Hai, saya Akilesh!",
   "I am passionate about software engineering and cybersecurity.",
   "I enjoy coding and learning new technologies.",
@@ -21,7 +21,10 @@ const fullText = [
   "I am currently learning Go and Rust.",
   "I am a tea enthusiast.",
   "I am a music lover.",
-  "Lets connect!",
+  "I love solving puzzles and brain teasers.",
+  "I am a big fan of science fiction and fantasy comic book movies.",
+  "In my free time, I dabble in graphic design.",
+  "Let's connect!",
 ];
 
 export default function Intro() {
@@ -124,7 +127,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 text-lg ml-[1rem] font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-[3rem] text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
@@ -160,13 +163,15 @@ export default function Intro() {
         {/* Download Button */}
         <a
           className={
-            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack " +
-            (isMobile ? " mobile-style" : " w-[4rem] h-[4rem]")
+            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center justify-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack " +
+            (isMobile ? " mobile-style" : " w-[6rem] h-[3.5rem]")
           }
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar_resume.pdf"
         >
-          CV{" "}
+          <span style={{ display: "inline-block", textAlign: "center" }}>
+            CV
+          </span>{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
       </motion.div>
