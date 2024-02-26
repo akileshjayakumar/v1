@@ -49,7 +49,7 @@ export const projectsData = [
     title: "ChatGPT Clone Project",
     description:
       "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
-    tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "OpenAI API"],
+    tags: ["hmtl", "css", "javascript", "node.js", "express.js", "openai api"],
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
@@ -58,7 +58,7 @@ export const projectsData = [
     title: "Flip A Coin Game",
     description:
       "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["hmtl", "css", "javascript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-a-coin-game",
     liveUrl: "https://akileshjayakumar.github.io/flip-a-coin-game/",
@@ -67,7 +67,7 @@ export const projectsData = [
     title: "Password Generator",
     description:
       "Implemented a password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["hmtl", "css", "javascript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
     liveUrl: "https://akileshjayakumar.github.io/password-generator/",

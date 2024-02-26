@@ -22,7 +22,7 @@ const fullText = [
   "I am a tea enthusiast.",
   "I am a music lover.",
   "I love solving puzzles and brain teasers.",
-  "I am a big fan of science fiction and fantasy comic book movies.",
+  "I am a big fan of science fiction and comic book movies.",
   "In my free time, I dabble in graphic design.",
   "Let's connect!",
 ];
@@ -95,8 +95,8 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex flex-col items-center">
-        <div className="relative mb-4">
+      <div className="flex flex-col items-center justify-center">
+        <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -163,7 +163,7 @@ export default function Intro() {
         {/* Download Button */}
         <a
           className={
-            "bg-white mr-[1rem] mb-[0.4rem] p-5 text-gray-700 hover:text-gray-950 flex items-center justify-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack " +
+            "bg-black mr-[1rem] mb-[0.4rem] p-5 flex items-center justify-center gap-1 rounded-full focus:scale-[1.9] hover:scale-[1.9] active:scale-105 transition cursor-pointer borderBlack " +
             (isMobile ? " mobile-style" : " w-[6rem] h-[3.5rem]")
           }
           href="./Akilesh Jayakumar Resume.pdf"

@@ -9,7 +9,6 @@ type ProjectProps = (typeof projectsData)[number];
 export default function Project({
   title,
   description,
-  tags,
   imageUrl,
   repoUrl,
   liveUrl,
@@ -31,21 +30,17 @@ export default function Project({
       }}
       className="group sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 mb-10 sm:h-[26rem] max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pb-9 px-5 mb-2 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section
+        className="bg-gray-100 mb[9rem] mt-9 sm:h-[27.5rem] max-w-[50rem] 
+      rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8  dark:bg-white/10"
+      >
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="leading-relaxed mt-4 mb-2">{description}</p>
-          <ul className="flex flex-wrap mt-4 mb-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[1] px-4 py-1 mt-1 text-[0.85rem] uppercase tracking-wider rounded-full"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-          <div className="mb-4">
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            {description}
+          </p>
+
+          <div className="mt-[2rem] mb-[2rem]">
             <a
               href={repoUrl}
               target="_blank"
@@ -67,20 +62,20 @@ export default function Project({
 
         <Image
           src={imageUrl}
-          alt="Project Image"
+          alt="Project I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-          transition 
-          group-hover:scale-[1.04]
-          group-hover:-translate-x-3
-          group-hover:translate-y-3
-          group-hover:-rotate-2
+        transition 
+        group-hover:scale-[1.04]
+        group-hover:-translate-x-3
+        group-hover:translate-y-3
+        group-hover:-rotate-2
 
-          group-even:group-hover:translate-x-3
-          group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2
+        group-even:group-hover:translate-x-3
+        group-even:group-hover:translate-y-3
+        group-even:group-hover:rotate-2
 
-          group-even:right-[initial] group-even:-left-40"
+        group-even:right-[initial] group-even:-left-40"
         />
       </section>
     </motion.div>
