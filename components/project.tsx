@@ -9,6 +9,7 @@ type ProjectProps = (typeof projectsData)[number];
 export default function Project({
   title,
   description,
+  tags,
   imageUrl,
   repoUrl,
   liveUrl,
@@ -39,6 +40,17 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+
+          <ul className="flex flex-wrap gap-2 sm:mt-auto">
+            {tags.map((tag, index) => (
+              <li
+                className="bg-black/[0.7] px-3 py-1 text-[0.9rem] tracking-wider text-white rounded-full"
+                key={index}
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
 
           <div className="mt-[2rem] mb-[2rem]">
             <a

@@ -1,9 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
-import flipcoin from "@/public/flip-coin.png";
+import qrcode from "@/public/qr-code.png";
 import passwordgen from "@/public/password-gen.png";
-import cpflogo from "@/public/cpf-logo.png";
 
 export const links = [
   {
@@ -55,18 +54,18 @@ export const projectsData = [
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
   },
   {
-    title: "Flip A Coin Game",
+    title: "QR Code Generator",
     description:
-      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+      "Developed a user-friendly QR Code Generator utilizing HTML, CSS, and JavaScript for efficient generation and customization of QR codes. Deployed on GitHub Pages.",
     tags: ["hmtl", "css", "javascript"],
-    imageUrl: flipcoin,
-    repoUrl: "https://github.com/akileshjayakumar/flip-a-coin-game",
-    liveUrl: "https://akileshjayakumar.github.io/flip-a-coin-game/",
+    imageUrl: qrcode,
+    repoUrl: "https://github.com/akileshjayakumar/qr-code-generator",
+    liveUrl: "https://akileshjayakumar.github.io/qr-code-generator/",
   },
   {
     title: "Password Generator",
     description:
-      "Implemented a password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+      "Implemented a password generator tool, focusing on user experience to deliver multiple, unique and secure passwords. Deployed on GitHub Pages.",
     tags: ["hmtl", "css", "javascript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
@@ -89,6 +88,4 @@ export const skillsData = [
   "OpenAI",
   "MongoDB",
   "Vercel",
-  "Microsoft Power Automate",
-  "Microsoft Power BI",
 ] as const;
