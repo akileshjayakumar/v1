@@ -85,7 +85,10 @@ export const skillsData = [
   "Express.js",
   "Git",
   "GitHub",
-  "OpenAI",
-  "MongoDB",
   "Vercel",
+  "Figma",
+  "Microsoft Power Automate/Power BI",
+  "MongoDB",
+  "OpenAI API",
+  "",
 ] as const;
