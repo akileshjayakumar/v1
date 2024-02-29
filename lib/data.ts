@@ -45,9 +45,9 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "ChatGPT Clone Project",
+    title: "ChatGPT Clone",
     description:
-      "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration for continuous updates.",
+      "Engineered a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration.",
     tags: ["hmtl", "css", "javascript", "node.js", "express.js", "openai api"],
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
@@ -90,5 +90,4 @@ export const skillsData = [
   "Microsoft Power Automate/Power BI",
   "MongoDB",
   "OpenAI API",
-  "",
 ] as const;
