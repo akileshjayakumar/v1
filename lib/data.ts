@@ -3,8 +3,6 @@ import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
 import flipcoin from "@/public/flip-coin.png";
-import quizgame from "@/public/quiz-game.png";
-import portfolioweb from "@/public/portfolio-web.png";
 
 export const links = [
   {
@@ -63,15 +61,6 @@ export const projectsData = [
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
     liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
-  },
-  {
-    title: "General Quiz Game",
-    description:
-      "Developed an interactive quiz game project showcasing proficiency in frontend development, featuring customizable setup, responsive design, real-time progress tracking and immediate feedback.",
-    tags: ["hmtl", "css", "javascript"],
-    imageUrl: quizgame,
-    repoUrl: "https://github.com/akileshjayakumar/qr-code-generator",
-    liveUrl: "https://akileshjayakumar.github.io/qr-code-generator/",
   },
   {
     title: "Password Generator",
