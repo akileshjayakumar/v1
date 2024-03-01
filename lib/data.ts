@@ -47,15 +47,6 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Portfolio Website",
-    description:
-      "Developed and designed a responsive and user-centric portfolio website, prioritizing UI/UX design with effective state management. Deployed seamlessly on Vercel with Git integration.",
-    tags: ["next.js", "typescript", "react", "tailwind css", "node.js"],
-    imageUrl: portfolioweb,
-    repoUrl: "https://github.com/akileshjayakumar/akileshjayakumar-vercel-app",
-    liveUrl: "https://akileshjayakumar.vercel.app/",
-  },
-  {
     title: "ChatGPT Clone",
     description:
       "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration.",
