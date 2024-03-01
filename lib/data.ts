@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import qrcode from "@/public/qr-code.png";
 import passwordgen from "@/public/password-gen.png";
+import flipcoin from "@/public/flip-coin.png";
 
 export const links = [
   {
@@ -70,6 +71,15 @@ export const projectsData = [
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
     liveUrl: "https://akileshjayakumar.github.io/password-generator/",
+  },
+  {
+    title: "Flip The Coin Game",
+    description:
+      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages.",
+    tags: ["hmtl", "css", "javascript"],
+    imageUrl: flipcoin,
+    repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
+    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
   },
 ] as const;
 
