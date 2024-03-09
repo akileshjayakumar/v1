@@ -22,7 +22,7 @@ export default function Experience() {
       className="scroll-mt-28 mb-28 sm:mb-40 m-5"
     >
       <SectionHeading>EXPERIENCE</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -30,30 +30,42 @@ export default function Experience() {
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
+                border:
+                  theme === "light"
+                    ? "1px solid #ddd"
+                    : "1px solid rgba(255, 255, 255, 0.1)",
+                textAlign: "right",
                 padding: "1rem 1rem",
+                color: theme === "light" ? "#1f2937" : "#e5e7eb",
               }}
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                    ? "7px solid #ddd"
+                    : "7px solid rgba(255, 255, 255, 0.3)",
               }}
               date={item.date}
               icon={<item.icon />}
               iconStyle={{
                 background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
+                  theme === "light" ? "#ffffff" : "rgba(255, 255, 255, 0.15)",
+                color: theme === "light" ? "#1f2937" : "#e5e7eb", // Icon color
+                boxShadow: "0 0 0 4px rgba(0, 0, 0, 0.1)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <h3 className="font-bold capitalize">{item.company}</h3>
-              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
               <ul className="m-2 list-disc !mt-1">
                 {item.description.map((point, idx) => (
-                  <li key={idx} className="font-normal text-white-600">
+                  <li
+                    key={idx}
+                    className="font-normal"
+                    style={{ color: theme === "light" ? "#4b5563" : "#e5e7eb" }}
+                  >
                     {point}
                   </li>
                 ))}

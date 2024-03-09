@@ -32,19 +32,17 @@ export default function Project({
       className="group sm:mb-8 last:mb-0"
     >
       <section
-        className="bg-gray-100 mb[9rem] mt-9 sm:h-[27.5rem] max-w-[50rem] 
-      rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8  dark:bg-white/10"
+        className="bg-black mb-[2rem] mt-9 sm:h-[27.5rem] max-w-[50rem]
+        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border border-white"
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
+          <h3 className="text-2xl font-semibold text-white">{title}</h3>
+          <p className="mt-2 leading-relaxed text-white/90">{description}</p>
 
           <ul className="flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.9rem] tracking-wider text-white rounded-full"
+                className="bg-gray-800 px-3 py-1 text-[0.9rem] border-gray-600 tracking-wider text-white rounded-full"
                 key={index}
               >
                 {tag}

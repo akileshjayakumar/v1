@@ -74,7 +74,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center text-white sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex flex-col items-center justify-center">
         <motion.div
@@ -89,12 +89,12 @@ export default function Intro() {
             height="390"
             quality="100"
             priority={true}
-            className="rounded-full object-cover border-[0.3rem] border-white"
+            className="rounded-full object-cover border-[0.3rem] border-white no-shadow"
           />
         </motion.div>
 
         <motion.h1
-          className="text-2xl m-[3.7rem] font-medium sm:text-4xl"
+          className="text-2xl m-[3.7rem] font-medium sm:text-4xl text-white"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -107,7 +107,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-[1rem] mb-[2rem] text-3xl font-bold"
+        className="flex flex-col sm:flex-row items-center justify-center gap-[1rem] mb-[2rem] text-3xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
@@ -119,7 +119,9 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <FaTwitter
-              className={iconStyle + " hover:scale-110 transition-transform"}
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
             />
           </a>
 
@@ -129,7 +131,9 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <FaGithub
-              className={iconStyle + " hover:scale-110 transition-transform"}
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
             />
           </a>
           <a
@@ -138,7 +142,9 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <FaLinkedin
-              className={iconStyle + " hover:scale-110 transition-transform"}
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
             />
           </a>
         </div>
@@ -149,10 +155,13 @@ export default function Intro() {
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar_resume.pdf"
         >
-          <span style={{ display: "inline-block", textAlign: "center" }}>
+          <span
+            style={{ display: "inline-block", textAlign: "center" }}
+            className="text-white"
+          >
             CV
           </span>
-          <HiDownload className="text-4xl opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="text-4xl text-white opacity-60 group-hover:translate-y-1 transition" />
         </a>
       </motion.div>
     </section>

@@ -32,11 +32,13 @@ export default function Skills() {
       <SectionHeading>SKILLS</SectionHeading>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
         <div key={categoryIndex}>
-          <h3 className="text-xl font-semibold lowercase">{category}</h3>
-          <ul className="flex m-5 flex-wrap justify-center gap-2 text-lg text-gray-800">
+          <h3 className="text-xl font-semibold lowercase text-white">
+            {category}
+          </h3>
+          <ul className="flex m-5 flex-wrap justify-center gap-2 text-lg">
             {skills.map((skill, skillIndex) => (
               <motion.li
-                className="bg-white lowercase tracking-wider border border-gray-300 shadow-sm rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+                className="bg-gray-800 lowercase tracking-wider border border-gray-600 shadow-sm rounded-xl px-5 py-3 text-white"
                 key={skill}
                 variants={fadeInAnimationVariants}
                 initial="initial"
