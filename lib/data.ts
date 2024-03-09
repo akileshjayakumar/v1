@@ -33,10 +33,10 @@ export const experiencesData = [
     title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes and data management.\n",
-      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.\n",
-      "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n",
-      "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.\n",
+      "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes.\n\n",
+      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.\n\n",
+      "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n\n",
+      "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.",
     ],
     icon: CgWorkAlt,
     date: "Dec 2023 - Present",
@@ -47,8 +47,8 @@ export const projectsData = [
   {
     title: "ChatGPT Clone",
     description:
-      "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed seamlessly on Render with Git integration.",
-    tags: ["hmtl", "css", "javascript", "node.js", "express.js", "openai api"],
+      "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed on Render.",
+    tags: ["html", "css", "javascript", "node.js", "express.js", "openai api"],
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
@@ -57,7 +57,7 @@ export const projectsData = [
     title: "Flip The Coin Game",
     description:
       "Developed an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages.",
-    tags: ["hmtl", "css", "javascript"],
+    tags: ["html", "css", "javascript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
     liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
@@ -66,28 +66,17 @@ export const projectsData = [
     title: "Password Generator",
     description:
       "Developed a password generator tool, focusing on user experience to deliver multiple, unique and secure passwords. Deployed on GitHub Pages.",
-    tags: ["hmtl", "css", "javascript"],
+    tags: ["html", "css", "javascript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
     liveUrl: "https://akileshjayakumar.github.io/password-generator/",
   },
 ] as const;
 
-export const skillsData = [
-  "Python",
-  "SQL",
-  "JavaScript/TypeScript",
-  "HTML/CSS",
-  "Tailwind CSS",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-  "Git",
-  "GitHub",
-  "Vercel",
-  "Figma",
-  "Microsoft Power Automate/Power BI",
-  "MongoDB",
-  "OpenAI API",
-] as const;
+export const skillsData = {
+  languages: ["Python", "SQL", "JavaScript/TypeScript", "HTML/CSS"],
+  frameworks: ["Tailwind CSS", "React", "Next.js", "Node.js", "Express.js"],
+  devTools: ["Git", "GitHub", "Vercel", "Render", "Figma"],
+  databases: ["MongoDB", "Oracle"],
+  api: ["OpenAI API", "Hugging Face"],
+} as const;
