@@ -33,9 +33,9 @@ export const experiencesData = [
     title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes.\n\n",
-      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.\n\n",
-      "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.\n\n",
+      "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes.",
+      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.",
+      "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.",
       "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.",
     ],
     icon: CgWorkAlt,
@@ -78,5 +78,5 @@ export const skillsData = {
   frameworks: ["Tailwind CSS", "React", "Next.js", "Node.js", "Express.js"],
   devTools: ["Git", "GitHub", "Vercel", "Render", "Figma"],
   databases: ["MongoDB", "Oracle"],
-  api: ["OpenAI API", "Hugging Face"],
+  api: ["OpenAI", "Hugging Face"],
 } as const;
