@@ -22,33 +22,26 @@ export default function Experience() {
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date={item.date}
-              iconStyle={{
-                background:
-                  theme === "light" ? "#ffffff" : "rgba(255, 255, 255, 0.15)",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 0 0 4px rgba(0, 0, 0, 0.1)",
-              }}
-              icon={<item.icon />}
               contentStyle={{
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-                color: theme === "light" ? "#1f2937" : "#e5e7eb",
                 boxShadow: "none",
-                border:
-                  theme === "light"
-                    ? "1px solid #ddd"
-                    : "1px solid rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
-                    ? "7px solid #ddd"
-                    : "7px solid rgba(255, 255, 255, 0.3)",
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+              }}
+              date={item.date}
+              icon={<item.icon />}
+              iconStyle={{
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
               }}
             >
               <h3 className="font-bold capitalize">{item.company}</h3>
