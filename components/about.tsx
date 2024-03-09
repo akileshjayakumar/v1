@@ -32,9 +32,7 @@ export default function About() {
         , focusing on Big Data and Cybersecurity. I'm passionate about building
         and designing software that is both functional and user-friendly. I'm
         also interested in data science and machine learning, and I'm always
-        looking for opportunities to learn and grow my skill set. I'm always up
-        for taking on new challenges and am constantly on the lookout for
-        opportunities to learn and grow my skill set.
+        looking for opportunities to learn and grow my skill set.
       </p>
 
       <br />
