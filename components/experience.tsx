@@ -33,9 +33,9 @@ export default function Experience() {
                 border:
                   theme === "light"
                     ? "1px solid #ddd"
-                    : "1px solid rgba(255, 255, 255, 0.1)",
+                    : "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "right",
-                padding: "1rem 1rem",
+                padding: "1.3rem 2rem",
                 color: theme === "light" ? "#1f2937" : "#e5e7eb",
               }}
               contentArrowStyle={{
@@ -49,7 +49,7 @@ export default function Experience() {
               iconStyle={{
                 background:
                   theme === "light" ? "#ffffff" : "rgba(255, 255, 255, 0.15)",
-                color: theme === "light" ? "#1f2937" : "#e5e7eb", // Icon color
+                color: theme === "light" ? "#1f2937" : "#e5e7eb",
                 boxShadow: "0 0 0 4px rgba(0, 0, 0, 0.1)",
                 display: "flex",
                 alignItems: "center",
@@ -58,8 +58,11 @@ export default function Experience() {
             >
               <h3 className="font-bold capitalize">{item.company}</h3>
               <h4 className="font-semibold capitalize">{item.title}</h4>
-              <br />
-              <ul className="m-2 list-disc !mt-1">
+              <p className="font-normal !mt-0">{item.location}</p>
+              <ul
+                className="m-2 list-disc !mt-1"
+                style={{ textAlign: "right" }}
+              >
                 {item.description.map((point, idx) => (
                   <li
                     key={idx}
