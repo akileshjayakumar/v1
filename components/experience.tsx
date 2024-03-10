@@ -49,14 +49,14 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h1 className="font-bold capitalize">{item.company}</h1> <br />
+              <h1 className="font-bold capitalize">{item.company}</h1>
               <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
               <ul
-                className="m-2 !mt-1"
+                className="m-5"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  listStylePosition: "inside",
+                  listStylePosition: "outside",
                   textAlign: "left",
                   paddingLeft: "1em",
                 }}
