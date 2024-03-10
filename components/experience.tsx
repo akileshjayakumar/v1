@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import SectionHeading from "./section-heading";
 import {
@@ -10,7 +8,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
-import { it } from "node:test";
 
 export default function Experience() {
   const { ref } = useSectionInView("EXPERIENCE");
@@ -20,60 +17,52 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="mb-28 scroll-mt-28 text-center sm:mb-40"
+      className="mb-20 scroll-mt-20 text-center sm:mb-28"
     >
       <SectionHeading>EXPERIENCE</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "3rem",
-              }}
-              contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
-              date={item.date}
-              icon={<item.icon />}
-              iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
+          <VerticalTimelineElement
+            key={index}
+            contentStyle={{
+              background:
+                theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.08)",
+              boxShadow: "none",
+              border: "1px solid rgba(0, 0, 0, 0.1)",
+              textAlign: "left",
+              padding: "2rem",
+            }}
+            contentArrowStyle={{
+              borderRight:
+                theme === "light"
+                  ? "7px solid #cbd5e1"
+                  : "7px solid rgba(255, 255, 255, 0.25)",
+            }}
+            date={item.date}
+            icon={<item.icon />}
+            iconStyle={{
+              background:
+                theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
+              fontSize: "1.25rem",
+            }}
+          >
+            <h3 className="font-semibold capitalize">{item.company}</h3>
+            <h4 className="text-sm capitalize">{item.title}</h4>
+            <ul
+              className="mt-3 text-left"
+              style={{
+                color: theme === "light" ? "#374151" : "#e5e7eb",
+                listStylePosition: "outside",
+                paddingLeft: "1em",
               }}
             >
-              <h1 className="font-bold capitalize">{item.company}</h1>
-              <h4 className="font-semibold capitalize">{item.title}</h4>
-              <br />
-              <ul
-                className="m-5"
-                style={{
-                  color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  listStylePosition: "outside",
-                  textAlign: "left",
-                  paddingLeft: "1em",
-                }}
-              >
-                {item.description.map((point, idx) => (
-                  <li
-                    key={idx}
-                    style={{
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </VerticalTimelineElement>
-          </React.Fragment>
+              {item.description.map((point, idx) => (
+                <li key={idx} style={{ marginBottom: "0.75rem" }}>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
     </section>
