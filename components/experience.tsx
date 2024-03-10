@@ -51,15 +51,19 @@ export default function Experience() {
             <h3 className="font-semibold capitalize">{item.company}</h3>
             <h4 className="text-sm capitalize">{item.title}</h4>
             <ul
-              className="mt-3 text-left"
+              className="mt-3 text-left list-disc"
               style={{
                 color: theme === "light" ? "#374151" : "#e5e7eb",
-                listStylePosition: "outside",
+                listStylePosition: "inside",
                 paddingLeft: "1em",
+                marginLeft: "1em",
               }}
             >
               {item.description.map((point, idx) => (
-                <li key={idx} style={{ marginBottom: "0.75rem" }}>
+                <li
+                  key={idx}
+                  style={{ marginBottom: "0.75rem", paddingLeft: "0.5em" }}
+                >
                   {point}
                 </li>
               ))}
