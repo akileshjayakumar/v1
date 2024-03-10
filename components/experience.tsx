@@ -33,7 +33,7 @@ export default function Experience() {
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
-                padding: "1.3rem 2rem",
+                padding: "3rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -49,16 +49,16 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-bold capitalize">{item.company}</h3>
+              <h1 className="font-bold capitalize">{item.company}</h1> <br />
               <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
               <ul
-                className="m-2"
+                className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
                   listStylePosition: "inside",
                   textAlign: "left",
-                  paddingLeft: "1em", // Adjust this value as needed to ensure bullets are visible
+                  paddingLeft: "1em",
                 }}
               >
                 {item.description.map((point, idx) => (
