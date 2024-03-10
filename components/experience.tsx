@@ -57,7 +57,8 @@ export default function Experience() {
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
                   listStylePosition: "inside",
-                  textAlign: "right",
+                  textAlign: "left",
+                  paddingLeft: "1em", // Adjust this value as needed to ensure bullets are visible
                 }}
               >
                 {item.description.map((point, idx) => (

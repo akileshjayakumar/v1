@@ -34,8 +34,8 @@ export const experiencesData = [
     description: [
       "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes.",
       "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.",
-      "Automated workflows in CPF AppFolio using Microsoft Power Automate directly improving performance.",
-      "Research in tools and products used across the Whole of Government, including Government on Commercial Cloud (GCC), SG Tech Stack (SGTS), Pair and LaunchPad.",
+      "Automated workflows and integreted them into CPF AppFolio using Microsoft Power Automate.",
+      "Research in tools and products used across the Whole of Government, including GCC, SGTS, Pair and LaunchPad.",
     ],
     icon: CgWorkAlt,
     date: "Dec 2023 - Present",
