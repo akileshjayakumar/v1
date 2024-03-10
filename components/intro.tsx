@@ -10,15 +10,15 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
 
 const fullText = [
-  "hi, i'm akilesh!",
-  "என் பெயர் அகிலேஷ்!",
-  "我的名字是阿基莱什!",
-  "passionate about software engineering and cybersecurity.",
-  "love learning about new technologies and frameworks.",
-  "currently learning aws.",
-  "passionate about solving puzzles and 3x3 rubik's cube.",
-  "cardistry and magigc tricks are my hobbies.",
-  "avid fan of sci-fi and comic book movies.",
+  "hi, i'm akilesh! 👋",
+  "என் பெயர் அகிலேஷ்! 👋",
+  "我的名字是阿基莱什! 👋",
+  "i am passionate about software engineering and cybersecurity. 👨‍💻",
+  "i enjoy learning about new technologies and frameworks. 🖥️",
+  "i am currently learning aws.",
+  "i love solving puzzles and 3x3 rubik's cube. 🧩",
+  "cardistry and magic tricks are my hobbies. 🪄",
+  "i am an avid fan of sci-fi and comic book movies. 🍿",
   "let's connect!",
 ];
 
@@ -28,6 +28,18 @@ export default function Intro() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const textRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 700);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const currentText = fullText[loopNum % fullText.length];
@@ -35,12 +47,12 @@ export default function Intro() {
 
     const handleTyping = () => {
       setText(currentText.substring(0, text.length + 1));
-      setTypingSpeed(50);
+      setTypingSpeed(30);
     };
 
     const handleDeleting = () => {
       setText(currentText.substring(0, text.length - 1));
-      setTypingSpeed(50);
+      setTypingSpeed(30);
     };
 
     if (!isDeleting && text === currentText) {
@@ -50,6 +62,7 @@ export default function Intro() {
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
+      setTypingSpeed(150); // Resetting the speed for the next round of typing
     } else if (!isDeleting) {
       timer = setTimeout(handleTyping, typingSpeed);
     } else {
@@ -61,8 +74,6 @@ export default function Intro() {
 
   const { ref } = useSectionInView("HOME", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   const iconStyle = isMobile ? "text-4xl" : "text-5xl";
 
@@ -95,7 +106,11 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <span className="font-medium" ref={textRef}>
+          <span
+            className="font-medium"
+            ref={textRef}
+            style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
+          >
             {text}
           </span>
           <span className="typing-cursor">|</span>
@@ -145,7 +160,6 @@ export default function Intro() {
           </a>
         </div>
 
-        {/* Download Button */}
         <a
           className="bg-black p-5 flex items-center justify-center gap-1 rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer borderBlack"
           href="./Akilesh Jayakumar Resume.pdf"
