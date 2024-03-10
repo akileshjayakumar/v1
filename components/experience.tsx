@@ -19,7 +19,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 scroll-mt-28 text-center sm:mb-40" // max-width removed for wider card
     >
       <SectionHeading>EXPERIENCE</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
@@ -31,8 +31,8 @@ export default function Experience() {
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "1rem",
+                textAlign: "right", // Text aligned to the right
+                padding: "2rem", // Increased padding for a wider card
               }}
               contentArrowStyle={{
                 borderRight:
@@ -48,36 +48,22 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3
-                className="font-bold capitalize"
-                style={{ textAlign: "left" }}
-              >
-                {item.company}
-              </h3>
-
-              <h4
-                className="font-semibold capitalize"
-                style={{ textAlign: "left" }}
-              >
-                {item.title}
-              </h4>
+              <h3 className="font-bold capitalize">{item.company}</h3>
+              <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
               <ul
                 className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  padding: 0,
-                  direction: "rtl", // Right-to-left direction for the ul
+                  listStylePosition: "inside", // Ensures bullets are inside and visible
+                  textAlign: "right", // Aligns bullets and text to the right
                 }}
               >
                 {item.description.map((point, idx) => (
                   <li
                     key={idx}
                     style={{
-                      direction: "ltr", // Left-to-right direction for the text
-                      textAlign: "right", // Align text to the right
-                      width: "100%", // Ensure full width for proper alignment
-                      marginBottom: "1rem", // Add space below each bullet point
+                      marginBottom: "1rem", // Space between bullet points
                     }}
                   >
                     {point}
