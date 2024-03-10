@@ -48,8 +48,8 @@ export default function Experience() {
               fontSize: "1.25rem",
             }}
           >
-            <h3 className="font-semibold capitalize">{item.company}</h3>
-            <h4 className="text-sm capitalize">{item.title}</h4>
+            <h3 className="font-bold capitalize">{item.company}</h3>
+            <h4 className="font-semibold text-sm capitalize">{item.title}</h4>
             <ul
               className="text-left flex flex-wrap list-disc"
               style={{
@@ -60,12 +60,7 @@ export default function Experience() {
               }}
             >
               {item.description.map((point, idx) => (
-                <li
-                  key={idx}
-                  style={{ marginBottom: "0.75rem", paddingLeft: "0.5rem" }}
-                >
-                  {point}
-                </li>
+                <li key={idx}>{point}</li>
               ))}
             </ul>
           </VerticalTimelineElement>
