@@ -10,15 +10,15 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
 
 const fullText = [
-  "hi, i'm akilesh! 👋",
-  "என் பெயர் அகிலேஷ்! 👋",
-  "我的名字是阿基莱什! 👋",
-  "i am passionate about software engineering and cybersecurity. 👨‍💻",
-  "i enjoy learning about new technologies and frameworks. 🖥️",
+  "hi, i'm akilesh!",
+  "என் பெயர் அகிலேஷ்!",
+  "我的名字是阿基莱什!",
+  "i am passionate about software engineering and cybersecurity.",
+  "i enjoy learning new technologies and frameworks.",
   "i am currently learning aws.",
-  "i love solving puzzles and 3x3 rubik's cube. 🧩",
-  "cardistry and magic tricks are my hobbies. 🪄",
-  "i am an avid fan of sci-fi and comic book movies. 🍿",
+  "i love solving puzzles and 3x3 rubik's cube.",
+  "cardistry and magic tricks are my hobbies.",
+  "i am an avid fan of sci-fi and comic book movies.",
   "let's connect!",
 ];
 

@@ -75,7 +75,14 @@ export const projectsData = [
 export const skillsData = {
   languages: ["Python", "SQL", "JavaScript/TypeScript", "HTML/CSS"],
   frameworks: ["Tailwind CSS", "React", "Next.js", "Node.js", "Express.js"],
-  devTools: ["Git", "GitHub", "Vercel", "Render", "Figma"],
+  devTools: [
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Render",
+    "Figma",
+    "OpenAI",
+    "Hugging Face",
+  ],
   databases: ["MongoDB", "Oracle"],
-  api: ["OpenAI", "Hugging Face"],
 } as const;
