@@ -53,14 +53,20 @@ export default function Experience() {
               <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
               <ul
-                className="m-2 list-disc !mt-1"
+                className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  textAlign: "right",
+                  textAlign: "left",
+                  direction: "rtl",
+                  listStylePosition: "inside",
                 }}
               >
                 {item.description.map((point, idx) => (
-                  <li key={idx} className="font-normal">
+                  <li
+                    key={idx}
+                    className="font-normal"
+                    style={{ direction: "ltr" }}
+                  >
                     {point}
                   </li>
                 ))}
