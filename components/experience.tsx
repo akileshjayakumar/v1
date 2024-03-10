@@ -45,7 +45,7 @@ export default function Experience() {
               iconStyle={{
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1rem",
+                fontSize: "0.11rem",
               }}
             >
               <h3 className="font-bold capitalize">{item.company}</h3>

@@ -10,18 +10,16 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
 
 const fullText = [
-  "hi, i'm akilesh!'",
-  "என் பெயர் அகிலேஷ்!'",
-  "我的名字是阿基莱什!'",
-  "hai, saya akilesh!'",
-  "an enthusiast in software engineering and cybersecurity.",
-  "an eager learner of new technological skills.",
+  "hi, i'm akilesh!",
+  "என் பெயர் அகிலேஷ்!",
+  "我的名字是阿基莱什!",
+  "hai, saya akilesh!",
+  "passionate in software engineering and cybersecurity.",
+  "an eager learner of new technologies and frameworks.",
   "an active student of aws and gcp.",
-  "an hobbyist in puzzles, rubik's cube, cardistry, and magic.",
-  "an avid fan of sci-fi and comic movies.",
-  "an enthusiast who dabbles in UI/UX and graphic design.",
-  "an enthusiast of all music.",
-  "an invitation: let's connect!",
+  "an hobbyist in puzzles, rubik's cube, cardistry, and magic tricks.",
+  "an avid fan of sci-fi and comic book movies.",
+  "let's connect!",
 ];
 
 export default function Intro() {
