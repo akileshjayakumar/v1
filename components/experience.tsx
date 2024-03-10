@@ -56,20 +56,23 @@ export default function Experience() {
                 className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  textAlign: "left",
-                  direction: "rtl",
-                  listStylePosition: "inside",
+                  padding: 0,
+                  direction: "rtl", // Right-to-left direction for the ul
                 }}
               >
                 {item.description.map((point, idx) => (
                   <li
                     key={idx}
-                    className="font-normal"
-                    style={{ direction: "ltr" }}
+                    style={{
+                      direction: "ltr", // Left-to-right direction for the text
+                      textAlign: "right", // Align text to the right
+                      width: "100%", // Ensure full width for proper alignment
+                    }}
                   >
                     {point}
                   </li>
-                ))}
+                ))}{" "}
+                <br />
               </ul>
             </VerticalTimelineElement>
           </React.Fragment>
