@@ -51,16 +51,16 @@ export default function Experience() {
             <h3 className="font-bold capitalize">{item.company}</h3>
             <h4 className="font-semibold text-sm capitalize">{item.title}</h4>
             <ul
-              className="text-left flex flex-wrap list-disc"
+              className="list-disc pl-4 mt-2 space-y-2"
               style={{
                 color: theme === "light" ? "#374151" : "#e5e7eb",
-                listStylePosition: "inside",
-                paddingLeft: "1em",
-                marginLeft: "1em",
+                textAlign: "left",
               }}
             >
               {item.description.map((point, idx) => (
-                <li key={idx}>{point}</li>
+                <li key={idx} className="text-base leading-relaxed">
+                  {point}
+                </li>
               ))}
             </ul>
           </VerticalTimelineElement>
