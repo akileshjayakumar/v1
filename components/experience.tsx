@@ -32,7 +32,7 @@ export default function Experience() {
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
-                padding: "3rem",
+                padding: "1rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -48,8 +48,19 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-bold capitalize">{item.company}</h3>
-              <h4 className="font-semibold capitalize">{item.title}</h4>
+              <h3
+                className="font-bold capitalize"
+                style={{ textAlign: "left" }}
+              >
+                {item.company}
+              </h3>
+
+              <h4
+                className="font-semibold capitalize"
+                style={{ textAlign: "left" }}
+              >
+                {item.title}
+              </h4>
               <br />
               <ul
                 className="m-2 !mt-1"
@@ -66,12 +77,12 @@ export default function Experience() {
                       direction: "ltr", // Left-to-right direction for the text
                       textAlign: "right", // Align text to the right
                       width: "100%", // Ensure full width for proper alignment
+                      marginBottom: "1rem", // Add space below each bullet point
                     }}
                   >
                     {point}
                   </li>
-                ))}{" "}
-                <br />
+                ))}
               </ul>
             </VerticalTimelineElement>
           </React.Fragment>
