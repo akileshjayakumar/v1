@@ -14,7 +14,7 @@ const fullText = [
   "என் பெயர் அகிலேஷ்!",
   "我的名字是阿基莱什!",
   "hai, saya akilesh!",
-  "passionate in software engineering and cybersecurity.",
+  "an enthusiast in software engineering and cybersecurity.",
   "an eager learner of new technologies and frameworks.",
   "an active student of aws and gcp.",
   "an hobbyist in puzzles, rubik's cube, cardistry, and magic tricks.",

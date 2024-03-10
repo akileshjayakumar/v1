@@ -19,7 +19,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="mb-28 scroll-mt-28 text-center sm:mb-40" // max-width removed for wider card
+      className="mb-28 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>EXPERIENCE</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
@@ -31,8 +31,8 @@ export default function Experience() {
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "right", // Text aligned to the right
-                padding: "2rem", // Increased padding for a wider card
+                textAlign: "right",
+                padding: "2rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -41,6 +41,7 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
+              dateClassName="custom-date-style" // Custom class for the date
               icon={<item.icon />}
               iconStyle={{
                 background:
@@ -55,15 +56,15 @@ export default function Experience() {
                 className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
-                  listStylePosition: "inside", // Ensures bullets are inside and visible
-                  textAlign: "right", // Aligns bullets and text to the right
+                  listStylePosition: "inside",
+                  textAlign: "right",
                 }}
               >
                 {item.description.map((point, idx) => (
                   <li
                     key={idx}
                     style={{
-                      marginBottom: "1rem", // Space between bullet points
+                      marginBottom: "1rem",
                     }}
                   >
                     {point}
