@@ -51,7 +51,7 @@ export default function Experience() {
             <h3 className="font-semibold capitalize">{item.company}</h3>
             <h4 className="text-sm capitalize">{item.title}</h4>
             <ul
-              className="text-left flex list-disc"
+              className="text-left flex flex-wrap list-disc"
               style={{
                 color: theme === "light" ? "#374151" : "#e5e7eb",
                 listStylePosition: "inside",
