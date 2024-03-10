@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { it } from "node:test";
 
 export default function Experience() {
   const { ref } = useSectionInView("EXPERIENCE");
@@ -31,8 +32,8 @@ export default function Experience() {
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "right",
-                padding: "2rem",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -41,19 +42,18 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              dateClassName="custom-date-style" // Custom class for the date
               icon={<item.icon />}
               iconStyle={{
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "0.11rem",
+                fontSize: "1.5rem",
               }}
             >
               <h3 className="font-bold capitalize">{item.company}</h3>
               <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
-              <ol
-                className="m-2 !mt-1"
+              <ul
+                className="m-2"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
                   listStylePosition: "inside",
@@ -70,7 +70,7 @@ export default function Experience() {
                     {point}
                   </li>
                 ))}
-              </ol>
+              </ul>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
