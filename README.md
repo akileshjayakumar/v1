@@ -1,6 +1,6 @@
-# Portfolio Website Project
+# Portfolio Website
 
-Welcome to my Personal Website project! This website showcases my skills, projects and experiences. Built with Next.js, TypeScript, React, and Tailwind CSS, this site is designed to be responsive, accessible, and user-friendly.
+Welcome to my Personal Portfolio Website! This website showcases my skills, projects and experiences. Built with Next.js, TypeScript, React, and Tailwind CSS, this site is designed to be responsive, accessible, and user-friendly.
 
 ## Key Features
 
@@ -13,7 +13,7 @@ Welcome to my Personal Website project! This website showcases my skills, projec
 
 - **Frontend:** React, Next.js, TypeScript, Tailwind CSS
 - **Version Control:** Git
-- **Deployment:** Hosted on Vercel, and GitHub for CI/CD
+- **Deployment:** Hosted on Vercel
 
 ## Project Setup
 

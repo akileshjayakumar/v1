@@ -13,12 +13,12 @@ const fullText = [
   "hi, i'm akilesh!",
   "என் பெயர் அகிலேஷ்!",
   "我的名字是阿基莱什!",
-  "hai, saya akilesh!",
-  "an enthusiast in software engineering and cybersecurity.",
-  "an eager learner of new technologies and frameworks.",
-  "an active student of aws and gcp.",
-  "an hobbyist in puzzles, rubik's cube, cardistry, and magic tricks.",
-  "an avid fan of sci-fi and comic book movies.",
+  "passionate about software engineering and cybersecurity.",
+  "love learning about new technologies and frameworks.",
+  "currently learning aws.",
+  "passionate about solving puzzles and 3x3 rubik's cube.",
+  "cardistry and magigc tricks are my hobbies.",
+  "avid fan of sci-fi and comic book movies.",
   "let's connect!",
 ];
 
