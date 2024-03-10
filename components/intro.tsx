@@ -16,8 +16,7 @@ const fullText = [
   "Hai, saya Akilesh!",
   "I am passionate about software engineering and cybersecurity.",
   "I enjoy learning new technologies.",
-  "I am currently learning AWS and Azure.",
-  "I am a tea enthusiast.",
+  "I am currently learning AWS.",
   "I am a music lover.",
   "I love solving puzzles and 3x3 Rubik's cube.",
   "Cardistry and magic tricks are my hobbies.",
@@ -68,7 +67,7 @@ export default function Intro() {
 
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
-  const iconStyle = isMobile ? "text-4xl" : "text-5xl"; // Adjust icon size here
+  const iconStyle = isMobile ? "text-4xl" : "text-5xl";
 
   return (
     <section

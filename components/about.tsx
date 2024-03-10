@@ -31,7 +31,7 @@ export default function About() {
         </a>{" "}
         , focusing on Big Data and Cybersecurity. I'm passionate about building
         and designing software that is both functional and user-friendly. I'm
-        also interested in data science and machine learning, and I'm always
+        also interested in data science and UI/UX, and I'm always
         looking for opportunities to learn and grow my skill set.
       </p>
 

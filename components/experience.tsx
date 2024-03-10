@@ -41,6 +41,7 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
+              className="ml-8"
               icon={<item.icon />}
               iconStyle={{
                 background:
@@ -53,7 +54,10 @@ export default function Experience() {
               <br />
               <ul
                 className="m-2 list-disc !mt-1"
-                style={{ color: theme === "light" ? "#4b5563" : "#e5e7eb" }}
+                style={{
+                  color: theme === "light" ? "#4b5563" : "#e5e7eb",
+                  textAlign: "right",
+                }}
               >
                 {item.description.map((point, idx) => (
                   <li key={idx} className="font-normal">
