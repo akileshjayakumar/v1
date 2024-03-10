@@ -45,13 +45,13 @@ export default function Experience() {
               iconStyle={{
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
+                fontSize: "1rem",
               }}
             >
               <h3 className="font-bold capitalize">{item.company}</h3>
               <h4 className="font-semibold capitalize">{item.title}</h4>
               <br />
-              <ul
+              <ol
                 className="m-2 !mt-1"
                 style={{
                   color: theme === "light" ? "#4b5563" : "#e5e7eb",
@@ -69,7 +69,7 @@ export default function Experience() {
                     {point}
                   </li>
                 ))}
-              </ul>
+              </ol>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
