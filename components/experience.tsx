@@ -31,7 +31,7 @@ export default function Experience() {
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.08)",
               boxShadow: "none",
               border: "1px solid rgba(0, 0, 0, 0.1)",
-              textAlign: "left",
+              textAlign: "right",
               padding: "2rem",
             }}
             contentArrowStyle={{
@@ -54,7 +54,7 @@ export default function Experience() {
               className="list-disc pl-4 mt-2 space-y-2"
               style={{
                 color: theme === "light" ? "#374151" : "#e5e7eb",
-                textAlign: "left",
+                textAlign: "right",
               }}
             >
               {item.description.map((point, idx) => (
