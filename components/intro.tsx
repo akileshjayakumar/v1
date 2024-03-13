@@ -3,9 +3,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { HiDownload } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
+import { LuDownload } from "react-icons/lu";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
@@ -138,17 +138,6 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://github.com/akileshjayakumar"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub
-              className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
-              }
-            />
-          </a>
-          <a
             href="https://www.linkedin.com/in/akileshjayakumar/"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,20 +148,37 @@ export default function Intro() {
               }
             />
           </a>
+
+          <a
+            href="https://github.com/akileshjayakumar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
+            />
+          </a>
         </div>
 
         <a
-          className="bg-black p-5 flex items-center justify-center gap-1 rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-black p-3 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          style={{
+            borderColor: "rgb(16, 219, 192)",
+            borderWidth: "4px",
+            borderStyle: "solid",
+          }}
           href="./Akilesh Jayakumar Resume.pdf"
           download="akileshjayakumar_resume.pdf"
         >
           <span
             style={{ display: "inline-block", textAlign: "center" }}
-            className="text-white"
+            className="text-white mr-[0.2rem]"
           >
             CV
           </span>
-          <HiDownload className="text-4xl text-white opacity-60 group-hover:translate-y-1 transition" />
+          <LuDownload className="text-5xl opacity-60 group-hover:translate-y-1 transition" />
         </a>
       </motion.div>
     </section>
