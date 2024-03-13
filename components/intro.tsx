@@ -4,7 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
-import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
@@ -129,7 +130,7 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter
+            <RiTwitterXLine
               className={
                 iconStyle + " hover:scale-110 transition-transform text-white"
               }
