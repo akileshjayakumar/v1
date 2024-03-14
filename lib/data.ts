@@ -53,7 +53,7 @@ export const projectsData = [
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
   },
   {
-    title: "Flip The Coin Game",
+    title: "Coin Flipping Game",
     description:
       "Developed an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages.",
     tags: ["html", "css", "javascript"],
