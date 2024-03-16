@@ -2,6 +2,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
 import flipcoin from "@/public/flip-coin.png";
+import { IoSchoolSharp } from "react-icons/io5";
 
 export const links = [
   {
@@ -21,8 +22,21 @@ export const links = [
     hash: "#experience",
   },
   {
+    name: "EDUCATION",
+    hash: "#education",
+  },
+  {
     name: "PROJECTS",
     hash: "#projects",
+  },
+] as const;
+
+export const educationData = [
+  {
+    institution: "University of Wollongong (SIM Campus)",
+    degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
+    period: "October 2022 - Present",
+    icon: IoSchoolSharp,
   },
 ] as const;
 
