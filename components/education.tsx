@@ -15,11 +15,7 @@ export default function Education() {
   const { theme } = useTheme();
 
   return (
-    <section
-      id="education"
-      ref={ref}
-      className="mb-28 max-w-[70rem] scroll-mt-28 text-center sm:mb-40"
-    >
+    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
@@ -27,11 +23,6 @@ export default function Education() {
             key={index}
             date={item.period}
             icon={<item.icon />}
-            iconStyle={{
-              background:
-                theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
-              fontSize: "2rem",
-            }}
             contentStyle={{
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.08)",
@@ -45,6 +36,11 @@ export default function Education() {
                 theme === "light"
                   ? "7px solid #cbd5e1"
                   : "7px solid rgba(255, 255, 255, 0.25)",
+            }}
+            iconStyle={{
+              background:
+                theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
+              fontSize: "2rem",
             }}
           >
             <h3 className="font-bold capitalize">{item.institution}</h3>
