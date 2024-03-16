@@ -5,15 +5,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { LuDownload } from "react-icons/lu";
+import { BsCloudDownload } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
 
 const fullText = [
-  "hi, i'm akilesh!",
-  "என் பெயர் அகிலேஷ்!",
-  "我的名字是阿基莱什!",
+  "hi, my name is akilesh jayakumar!",
+  "வணக்கம், என் பெயர் அகிலேஷ்!",
+  "嗨，我的名字是阿基莱什!",
+  "hai, nama saya akilesh!",
   "i am passionate about software engineering and cybersecurity.",
   "i enjoy learning new technologies and frameworks.",
   "i am currently learning aws.",
@@ -163,22 +164,27 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-3 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          className="bg-black p-2 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
           style={{
             borderColor: "rgb(16, 219, 192)",
             borderWidth: "4px",
             borderStyle: "solid",
           }}
-          href="./Akilesh Jayakumar Resume.pdf"
-          download="akileshjayakumar_resume.pdf"
+          href="./akileshjayakumar-resume.pdf"
+          download="akileshjayakumar-resume.pdf"
         >
           <span
             style={{ display: "inline-block", textAlign: "center" }}
-            className="text-white mr-[0.2rem]"
+            className="text-white mr-[0.9rem]"
           >
             CV
           </span>
-          <LuDownload className="text-5xl opacity-60 group-hover:translate-y-1 transition" />
+          <BsCloudDownload
+            className="text-4xl  group-hover:translate-y-1 transition"
+            style={{
+              color: "white",
+            }}
+          />
         </a>
       </motion.div>
     </section>

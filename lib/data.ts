@@ -32,10 +32,10 @@ export const experiencesData = [
     title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed a Sentiment Analysis App in Python with GPT-3.5 API integration, enhancing and automating HR processes.",
-      "Utilized Pair and prompt engineering techniques to execute test cases and plans elevating software reliability.",
-      "Automated workflows and integrated them into CPF AppFolio using Microsoft Power Automate.",
-      "Research in tools and products used across the Whole of Government, including GCC, SGTS, Pair and LaunchPad.",
+      "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes, improving efficiency.",
+      "Used Pair.Gov.SG platform and prompt engineering techniques to execute test cases, improving software.",
+      "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
+      "Conducted research on government tools and products, gaining insights into digital infrastructure on GCC and SGTS.",
     ],
     icon: CgWorkAlt,
     date: "Dec 2023 - Present",
@@ -46,16 +46,16 @@ export const projectsData = [
   {
     title: "ChatGPT Clone",
     description:
-      "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chat bot via GPT-3.5 API calls. Deployed on Render.",
+      "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chatbot via GPT-3.5 API calls. Deployed on Render.",
     tags: ["html", "css", "javascript", "node.js", "express.js", "openai api"],
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
   },
   {
-    title: "Coin Flipping Game",
+    title: "Coin Flip Game",
     description:
-      "Developed an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages.",
+      "Developed an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin-flipping animations. Deployed on GitHub Pages.",
     tags: ["html", "css", "javascript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
@@ -64,7 +64,7 @@ export const projectsData = [
   {
     title: "Password Generator",
     description:
-      "Developed a password generator tool, focusing on user experience to deliver multiple, unique and secure passwords. Deployed on GitHub Pages.",
+      "Developed a password generator tool, focusing on user experience to deliver unique and secure passwords. Deployed on GitHub Pages.",
     tags: ["html", "css", "javascript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
