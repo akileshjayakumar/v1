@@ -26,7 +26,7 @@ export default function Experience() {
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
               boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              border: "10px solid rgba(0, 0, 0, 0.1)",
+              border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
               padding: "24px",
               borderRadius: "8px",

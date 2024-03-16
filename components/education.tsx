@@ -21,8 +21,6 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            date={item.period}
-            icon={<item.icon />}
             contentStyle={{
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
@@ -38,6 +36,8 @@ export default function Education() {
                   ? "7px solid #cbd5e1"
                   : "7px solid rgba(255, 255, 255, 0.25)",
             }}
+            date={item.date}
+            icon={<item.icon />}
             iconStyle={{
               background:
                 theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",

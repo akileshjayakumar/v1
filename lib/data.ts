@@ -35,13 +35,13 @@ export const educationData = [
   {
     institution: "University of Wollongong (SIM Campus)",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
-    period: "October 2022 - Present",
+    date: "Dec 2023 - Present",
     icon: IoSchoolSharp,
   },
   {
     institution: "Singapore Institute of Management",
     degree: "Diploma in Information Technology",
-    period: "October 2021 - September 2022",
+    date: "Dec 2023 - Present",
     icon: IoSchoolSharp,
   },
 ] as const;
