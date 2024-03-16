@@ -25,11 +25,12 @@ export default function Education() {
             icon={<item.icon />}
             contentStyle={{
               background:
-                theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.08)",
-              boxShadow: "none",
+                theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
               border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
-              padding: "2rem",
+              padding: "24px",
+              borderRadius: "8px",
             }}
             contentArrowStyle={{
               borderRight:
@@ -40,11 +41,11 @@ export default function Education() {
             iconStyle={{
               background:
                 theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
-              fontSize: "2rem",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            <h3 className="font-bold capitalize">{item.institution}</h3>
-            <h4 className="font-semibold text-sm capitalize">{item.degree}</h4>
+            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
+            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
