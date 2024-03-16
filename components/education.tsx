@@ -18,7 +18,7 @@ export default function Education() {
     <section
       id="education"
       ref={ref}
-      className="mb-20 scroll-mt-20 text-center sm:mb-28"
+      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
@@ -36,6 +36,7 @@ export default function Education() {
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.08)",
               boxShadow: "none",
+              border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
               padding: "2rem",
             }}

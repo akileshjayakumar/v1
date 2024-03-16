@@ -38,6 +38,12 @@ export const educationData = [
     period: "October 2022 - Present",
     icon: IoSchoolSharp,
   },
+  {
+    institution: "Singapore Institute of Management",
+    degree: "Diploma in Information Technology",
+    period: "October 2021 - September 2022",
+    icon: IoSchoolSharp,
+  },
 ] as const;
 
 export const experiencesData = [
