@@ -32,7 +32,7 @@ export default function Experience() {
               boxShadow: "none",
               border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
-              padding: "2.5rem",
+              padding: "2rem",
             }}
             contentArrowStyle={{
               borderRight:
@@ -45,7 +45,7 @@ export default function Experience() {
             iconStyle={{
               background:
                 theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
-              fontSize: "1.25rem",
+              fontSize: "2rem",
             }}
           >
             <h3 className="font-bold capitalize">{item.company}</h3>

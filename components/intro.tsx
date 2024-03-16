@@ -11,7 +11,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import "/app/animation.css";
 
 const fullText = [
-  "hi, my name is akilesh jayakumar!",
+  "hi, my name is akilesh!",
   "வணக்கம், என் பெயர் அகிலேஷ்!",
   "嗨，我的名字是阿基莱什!",
   "hai, nama saya akilesh!",
