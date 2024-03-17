@@ -34,7 +34,7 @@ export default function Education() {
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
               border: "1px solid rgba(0, 0, 0, 0.05)",
-              padding: "20px",
+              padding: "40px",
               borderRadius: "10px",
               textAlign: "left",
             }}
