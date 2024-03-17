@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import {
@@ -16,9 +15,7 @@ export default function Education() {
   const { theme } = useTheme();
 
   const handleCertificateClick = (url: string) => {
-    if (url) {
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -51,31 +48,39 @@ export default function Education() {
               boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
-            <h4 className="font-semibold text-lg">{item.degree}</h4>
-            {item.certificateUrl && (
-              <button
-                className="certificate-button"
-                onClick={() =>
-                  item.certificateUrl
-                    ? handleCertificateClick(item.certificateUrl)
-                    : null
-                }
-              >
-                View Diploma Certificate
-              </button>
-            )}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: "15px",
+              }}
+            >
+              <div>
+                <h3 className="font-bold text-xl capitalize">
+                  {item.institution} - {item.degree}
+                </h3>
+              </div>
+              {item.certificateUrl && (
+                <button
+                  className="certificate-button"
+                  onClick={() =>
+                    item.certificateUrl &&
+                    handleCertificateClick(item.certificateUrl)
+                  }
+                >
+                  View Diploma Certificate | Transcript
+                </button>
+              )}
+            </div>
             {item.modules && (
-              <details className="modules-details">
-                <summary className="modules-summary">Modules Completed</summary>
-                <ul className="modules-list">
-                  {item.modules.map((module, idx) => (
-                    <li key={idx} className="module-item">
-                      {module}
-                    </li>
-                  ))}
-                </ul>
-              </details>
+              <ul className="modules-list" style={{ paddingLeft: 0 }}>
+                {item.modules.map((module, idx) => (
+                  <li key={idx} className="module-item">
+                    {module}
+                  </li>
+                ))}
+              </ul>
             )}
           </VerticalTimelineElement>
         ))}
