@@ -34,7 +34,7 @@ export default function Education() {
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
               boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
               border: "1px solid rgba(0, 0, 0, 0.1)",
-              padding: "32px 50px", // Increased padding for wider appearance
+              padding: "30px",
               borderRadius: "8px",
               width: "80%", // Optionally increase width (you might need to adjust this)
             }}
@@ -53,8 +53,6 @@ export default function Education() {
             }}
           >
             <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
-            <br />
-            <br />
             <br />
             <br />
             <h4 className="text-lg capitalize">{item.degree}</h4>
