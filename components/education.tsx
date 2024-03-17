@@ -27,7 +27,7 @@ export default function Education() {
               boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
               border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
-              padding: "32px", // Increased padding
+              padding: "32px",
               borderRadius: "8px",
             }}
             contentArrowStyle={{
@@ -44,12 +44,24 @@ export default function Education() {
               boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>{" "}
-            {/* Increased font size */}
-            <h4 className="font-semibold text-lg capitalize">
-              {item.degree}
-            </h4>{" "}
-            {/* Increased font size */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+              }}
+            >
+              <h3
+                className="font-bold text-xl capitalize"
+                style={{ marginRight: "10px" }}
+              >
+                {item.institution}
+              </h3>
+              <h4 className="font-semibold text-lg capitalize">
+                {item.degree}
+              </h4>
+            </div>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
