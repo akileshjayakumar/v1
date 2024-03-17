@@ -36,7 +36,7 @@ export default function Education() {
               border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
               padding: "30px",
-              width: "50%",
+              borderRadius: "8px",
             }}
             contentArrowStyle={{
               borderRight:
@@ -58,8 +58,11 @@ export default function Education() {
             <br />
             {item.modules && (
               <ul
-                className="modules-list"
-                style={{ paddingLeft: 0, marginBottom: "15px" }}
+                className="list-disc pl-4 mt-2 space-y-2"
+                style={{
+                  color: theme === "light" ? "#374151" : "#e5e7eb",
+                  textAlign: "left",
+                }}
               >
                 {item.modules.map((module, idx) => (
                   <li key={idx} className="module-item">
@@ -76,7 +79,7 @@ export default function Education() {
                     ? handleCertificateClick(item.certificateUrl)
                     : null
                 }
-                style={{ marginTop: "10px" }}
+                style={{ margin: "5px" }}
               >
                 View Diploma Certificate | Transcript
               </button>
