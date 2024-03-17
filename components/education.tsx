@@ -36,6 +36,8 @@ export default function Education() {
               border: "1px solid rgba(0, 0, 0, 0.05)",
               padding: "40px",
               borderRadius: "10px",
+              width: "80%", // Increase the width of the card
+              maxWidth: "1200px", // Optional: you can set a max width
               textAlign: "left",
             }}
             contentArrowStyle={{
