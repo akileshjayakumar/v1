@@ -3,6 +3,7 @@ import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
 import textspeech from "@/public/text-to-speech.png";
 import flipcoin from "@/public/flip-coin.png";
+import { IconType } from "react-icons";
 import { IoSchoolSharp } from "react-icons/io5";
 
 export const links = [
@@ -32,7 +33,16 @@ export const links = [
   },
 ] as const;
 
-export const educationData = [
+type EducationEntry = {
+  institution: string;
+  degree: string;
+  date: string;
+  icon: IconType;
+  certificateUrl?: string;
+  modules?: string[];
+};
+
+export const educationData: EducationEntry[] = [
   {
     institution: "University of Wollongong (SIM Campus)",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
@@ -44,8 +54,19 @@ export const educationData = [
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: IoSchoolSharp,
+    certificateUrl: "http://example.com/your-diploma-certificate.pdf",
+    modules: [
+      "ITSD001 Business Statistics with Python",
+      "ITSD002 Problem Solving",
+      "ITSD003 Communications and Networks",
+      "ITSD004 Programming Fundamentals",
+      "ITSD005 Database Management and Security",
+      "ITSD006 Interaction Design",
+      "ITSD007 IT Project Management",
+      "ITSD008 Systems Development Techniques",
+    ],
   },
-] as const;
+];
 
 export const experiencesData = [
   {
