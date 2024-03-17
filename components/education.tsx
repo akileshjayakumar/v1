@@ -36,7 +36,7 @@ export default function Education() {
               border: "1px solid rgba(0, 0, 0, 0.1)",
               textAlign: "left",
               padding: "30px",
-              width: "100%",
+              width: "50%",
             }}
             contentArrowStyle={{
               borderRight:
