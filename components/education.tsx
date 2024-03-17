@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import {
@@ -14,8 +15,11 @@ export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
   const { theme } = useTheme();
 
+  // Adjusted to explicitly check for string type
   const handleCertificateClick = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
@@ -48,39 +52,32 @@ export default function Education() {
               boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "15px",
-              }}
-            >
-              <div>
-                <h3 className="font-bold text-xl capitalize">
-                  {item.institution} - {item.degree}
-                </h3>
-              </div>
-              {item.certificateUrl && (
-                <button
-                  className="certificate-button"
-                  onClick={() =>
-                    item.certificateUrl &&
-                    handleCertificateClick(item.certificateUrl)
-                  }
-                >
-                  View Diploma Certificate | Transcript
-                </button>
-              )}
-            </div>
+            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
+            <h4 className="text-lg capitalize">{item.degree}</h4>
             {item.modules && (
-              <ul className="modules-list" style={{ paddingLeft: 0 }}>
+              <ul
+                className="modules-list"
+                style={{ paddingLeft: 0, marginBottom: "15px" }}
+              >
                 {item.modules.map((module, idx) => (
                   <li key={idx} className="module-item">
                     {module}
                   </li>
                 ))}
               </ul>
+            )}
+            {item.certificateUrl && (
+              <button
+                className="certificate-button"
+                onClick={() =>
+                  item.certificateUrl
+                    ? handleCertificateClick(item.certificateUrl)
+                    : null
+                }
+                style={{ marginTop: "10px" }}
+              >
+                View Diploma Certificate | Transcript
+              </button>
             )}
           </VerticalTimelineElement>
         ))}
