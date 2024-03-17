@@ -1,6 +1,7 @@
 import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
+import textspeech from "@/public/text-speech.png";
 import flipcoin from "@/public/flip-coin.png";
 import { IoSchoolSharp } from "react-icons/io5";
 
@@ -64,13 +65,22 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Text To Speech",
+    description:
+      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on Vercel.",
+    tags: ["html", "css", "javascript"],
+    imageUrl: textspeech,
+    repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
+    liveUrl: "https://akilesh-text-to-speech.vercel.app",
+  },
+  {
     title: "ChatGPT Clone",
     description:
       "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chatbot via GPT-3.5 API calls. Deployed on Render.",
     tags: ["html", "css", "javascript", "node.js", "express.js", "openai api"],
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
-    liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com/",
+    liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com",
   },
   {
     title: "Coin Flip Game",
@@ -79,7 +89,7 @@ export const projectsData = [
     tags: ["html", "css", "javascript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
-    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
+    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin",
   },
   {
     title: "Password Generator",
@@ -88,7 +98,7 @@ export const projectsData = [
     tags: ["html", "css", "javascript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
-    liveUrl: "https://akileshjayakumar.github.io/password-generator/",
+    liveUrl: "https://akileshjayakumar.github.io/password-generator",
   },
 ] as const;
 
