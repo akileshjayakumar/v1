@@ -1,7 +1,7 @@
 import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
-import textspeech from "@/public/text-speech.png";
+import textspeech from "@/public/text-to-speech.png";
 import flipcoin from "@/public/flip-coin.png";
 import { IoSchoolSharp } from "react-icons/io5";
 
