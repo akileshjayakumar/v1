@@ -32,38 +32,37 @@ export default function Education() {
             contentStyle={{
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              border: "1px solid rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              border: "1px solid rgba(0, 0, 0, 0.05)",
+              padding: "20px",
+              borderRadius: "10px",
               textAlign: "left",
-              padding: "30px",
-              borderRadius: "8px",
             }}
             contentArrowStyle={{
               borderRight:
-                theme === "light"
-                  ? "7px solid #cbd5e1"
-                  : "7px solid rgba(255, 255, 255, 0.25)",
+                "7px solid " + (theme === "light" ? "#f0f0f0" : "#333"),
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
-              background:
-                theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              background: theme === "light" ? "#fff" : "#333",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
             }}
           >
-            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
-            <br />
-            <h4 className="font-semibold text-lg capitalize">{item.degree}</h4>
-            <br />
+            <h3
+              className="font-bold text-xl capitalize"
+              style={{ marginBottom: "0.5rem" }}
+            >
+              {item.institution}
+            </h3>
+            <h4
+              className="font-semibold text-lg capitalize"
+              style={{ marginBottom: "1rem" }}
+            >
+              {item.degree}
+            </h4>
             {item.modules && (
-              <ul
-                className="list-disc pl-4 mt-2 space-y-2"
-                style={{
-                  color: theme === "light" ? "#374151" : "#e5e7eb",
-                  textAlign: "left",
-                }}
-              >
+              <ul className="list-disc pl-4 mt-1 mb-2">
                 {item.modules.map((module, idx) => (
                   <li key={idx} className="module-item">
                     {module}
@@ -74,12 +73,18 @@ export default function Education() {
             {item.certificateUrl && (
               <button
                 className="certificate-button"
+                style={{
+                  backgroundColor: "#4a90e2",
+                  color: "#fff",
+                  padding: "10px 15px",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   item.certificateUrl
                     ? handleCertificateClick(item.certificateUrl)
                     : null
                 }
-                style={{ margin: "5px" }}
               >
                 View Diploma Certificate | Transcript
               </button>
