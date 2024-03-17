@@ -6,13 +6,20 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { educationData } from "@/lib/data"; // Adjust the import path based on your file structure
+import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import "@/app/globals.css";
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
   const { theme } = useTheme();
+
+  const handleCertificateClick = (url: string) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
@@ -21,6 +28,7 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
+            className="vertical-timeline-element"
             contentStyle={{
               background:
                 theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
@@ -46,23 +54,25 @@ export default function Education() {
             <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
             <h4 className="font-semibold text-lg">{item.degree}</h4>
             {item.certificateUrl && (
-              <a
-                href={item.certificateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+              <button
+                className="certificate-button"
+                onClick={() =>
+                  item.certificateUrl
+                    ? handleCertificateClick(item.certificateUrl)
+                    : null
+                }
               >
                 View Diploma Certificate
-              </a>
+              </button>
             )}
             {item.modules && (
-              <details className="mt-4">
-                <summary className="cursor-pointer text-lg font-semibold">
-                  Modules Completed
-                </summary>
-                <ul className="list-disc pl-6 mt-2">
+              <details className="modules-details">
+                <summary className="modules-summary">Modules Completed</summary>
+                <ul className="modules-list">
                   {item.modules.map((module, idx) => (
-                    <li key={idx}>{module}</li>
+                    <li key={idx} className="module-item">
+                      {module}
+                    </li>
                   ))}
                 </ul>
               </details>

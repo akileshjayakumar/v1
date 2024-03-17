@@ -54,7 +54,8 @@ export const educationData: EducationEntry[] = [
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: IoSchoolSharp,
-    certificateUrl: "http://example.com/your-diploma-certificate.pdf",
+    certificateUrl:
+      "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
     modules: [
       "ITSD001 Business Statistics with Python",
       "ITSD002 Problem Solving",
