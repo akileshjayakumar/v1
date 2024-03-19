@@ -59,12 +59,11 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
           <VerticalTimelineElement
-            className="width-[99rem]"
             key={index}
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
