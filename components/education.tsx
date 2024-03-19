@@ -48,8 +48,7 @@ export default function Education() {
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "2rem",
-              marginLeft: "15px", // Added for gap between date and icon
+              fontSize: "1rem",
             }}
           >
             <div className="flex flex-col items-start">
