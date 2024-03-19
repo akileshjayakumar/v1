@@ -58,19 +58,21 @@ export default function Education() {
               background: theme === "light" ? "#ffffff" : "#1f2937",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "3rem",
-              margin: "0 auto",
-              maxWidth: "90%",
+              padding: "2rem",
+              margin: "1.5rem 0",
+              boxShadow:
+                "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)",
             }}
             contentArrowStyle={{
               borderRight:
                 "7px solid  " + (theme === "light" ? "#ffffff" : "#1f2937"),
             }}
+            icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
             }}
-            icon={<item.icon />}
+            position="right"
           >
             <h3 className="font-bold text-xl">{item.institution}</h3>
             <h4 className="font-semibold text-lg">{item.degree}</h4>
