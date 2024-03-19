@@ -78,9 +78,7 @@ export default function Education() {
           >
             <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
             <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
-            <span className="block text-md font-medium mt-2 mb-3">
-              {item.date}
-            </span>
+            <br />
             {item.modules && (
               <ul
                 className="list-disc pl-4 mt-2 space-y-2 m-2"
