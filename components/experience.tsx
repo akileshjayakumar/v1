@@ -45,7 +45,9 @@ export default function Experience() {
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
+            <br />
             <h4 className="font-semibold text-md capitalize">{item.title}</h4>
+            <br />
             <ul
               className="list-disc pl-4 mt-2 space-y-2"
               style={{

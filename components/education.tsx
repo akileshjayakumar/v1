@@ -9,21 +9,20 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
-import uowlogo from "@/public/uow.png";
-import simlogo from "@/public/sim.png";
+import { TbSchool } from "react-icons/tb";
 
 export const educationData = [
   {
     institution: "University of Wollongong (SIM Campus)",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
-    icon: uowlogo,
+    icon: TbSchool,
   },
   {
     institution: "Singapore Institute of Management",
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
-    icon: simlogo,
+    icon: TbSchool,
     certificateUrl:
       "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
     modules: [
@@ -56,21 +55,30 @@ export default function Education() {
           <VerticalTimelineElement
             key={index}
             date={item.date}
-            icon={<img src={item.icon.src} alt={`${item.institution} logo`} />}
             iconStyle={{ background: "#312e81", color: "#fff" }}
-            contentStyle={{ background: "#1f2937", color: "#f3f4f6" }}
-            contentArrowStyle={{ borderRight: "8px solid  #1f2937" }}
+            contentStyle={{
+              background: theme === "light" ? "#ffffff" : "#1f2937",
+              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
+              border:
+                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
+              color: theme === "light" ? "#1f2937" : "#f3f4f6",
+              textAlign: "left",
+              padding: "3rem 2rem",
+            }}
+            contentArrowStyle={{
+              borderRight: "8px solid #fff",
+            }}
           >
-            <h3 className="font-bold text-lg capitalize mb-2">
-              {item.institution}
-            </h3>
-            <h4 className="font-semibold text-md capitalize mb-1">
+            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
+            <br />
+            <h4 className="font-semibold text-md capitalize">
+              <br />
               {item.degree}
             </h4>
             {item.modules && (
               <ul className="list-disc pl-5 mt-2 mb-2 text-white">
                 {item.modules.map((module, idx) => (
-                  <li key={idx} className="mb-1">
+                  <li key={idx} className="text-md capitalize leading-relaxed">
                     {module}
                   </li>
                 ))}
