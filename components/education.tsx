@@ -34,27 +34,32 @@ export default function Education() {
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "3rem 2rem",
+              padding: "3rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
             }}
             date={item.date}
-            dateClassName="text-lg font-semibold m-1"
+            dateClassName="text-lg font-semibold"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "1rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
-            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
+            <h3 className="font-bold text-lg capitalize mb-2">
+              {item.institution}
+            </h3>
+            <h4 className="font-semibold text-md capitalize mb-1">
+              {item.degree}
+            </h4>
             {item.modules && (
-              <ul className="list-disc pl-5 mt-2">
+              <ul className="list-disc pl-5 mt-2 mb-2">
                 {item.modules.map((module, idx) => (
-                  <li key={idx}>{module}</li>
+                  <li key={idx} className="mb-1">
+                    {module}
+                  </li>
                 ))}
               </ul>
             )}
