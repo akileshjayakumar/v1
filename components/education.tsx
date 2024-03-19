@@ -56,33 +56,41 @@ export default function Education() {
             key={index}
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
+              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
+              border:
+                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "2rem",
-              margin: "1.5rem 0",
-              boxShadow:
-                "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)",
+              maxWidth: "1000px",
             }}
             contentArrowStyle={{
-              borderRight:
-                "7px solid  " + (theme === "light" ? "#ffffff" : "#1f2937"),
+              borderRight: "8px solid #fff",
             }}
+            date={item.date}
+            dateClassName="text-lg font-semibold"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+              fontSize: "6rem",
             }}
-            position="right"
           >
-            <h3 className="font-bold text-xl">{item.institution}</h3>
-            <h4 className="font-semibold text-lg">{item.degree}</h4>
+            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
+            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
             <span className="block text-md font-medium mt-2 mb-3">
               {item.date}
             </span>
             {item.modules && (
-              <ul className="list-disc pl-5 mt-2 mb-2">
+              <ul
+                className="list-disc pl-4 mt-2 space-y-2 m-2"
+                style={{
+                  color: theme === "light" ? "#374151" : "#e5e7eb",
+                  textAlign: "left",
+                }}
+              >
                 {item.modules.map((module, idx) => (
-                  <li key={idx} className="text-md leading-relaxed">
+                  <li key={idx} className="text-base leading-relaxed">
                     {module}
                   </li>
                 ))}
