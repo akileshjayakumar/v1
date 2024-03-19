@@ -44,20 +44,7 @@ export const experiencesData = [
     ],
     icon: CgWorkAlt,
     date: "December 2023 - Present",
-  },
-  {
-    company: "CPF Board12345",
-    title: "Automation Intern",
-    location: "Singapore",
-    description: [
-      "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes, improving efficiency.",
-      "Used Pair.Gov.SG platform and prompt engineering techniques to execute test cases, improving software.",
-      "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
-      "Conducted research on government tools and products, gaining insights into digital infrastructure on GCC and SGTS.",
-    ],
-    icon: CgWorkAlt,
-    date: "December 2023 - Present",
-  },
+  }
 ] as const;
 
 export const projectsData = [

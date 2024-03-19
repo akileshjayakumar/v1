@@ -25,7 +25,7 @@ export const educationData = [
     icon: TbSchool,
     certificateUrl:
       "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
-    modules: [
+    subjects: [
       "ITSD001 Business Statistics with Python",
       "ITSD002 Problem Solving",
       "ITSD003 Communications and Networks",
@@ -39,7 +39,7 @@ export const educationData = [
 ];
 
 export default function Education() {
-  const { ref } = useSectionInView("EXPERIENCE");
+  const { ref } = useSectionInView("EDUCATION");
   const { theme } = useTheme();
   const handleCertificateClick = (url: string | undefined) => {
     if (typeof url === "string") {
@@ -61,7 +61,7 @@ export default function Education() {
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              maxWidth: "1000px",
+              padding: "0.9rem 0.9rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
@@ -79,7 +79,8 @@ export default function Education() {
             <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
             <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
             <br />
-            {item.modules && (
+
+            {item.subjects && item.subjects.length > 0 && (
               <ul
                 className="list-disc pl-4 mt-2 space-y-2 m-2"
                 style={{
@@ -87,21 +88,20 @@ export default function Education() {
                   textAlign: "left",
                 }}
               >
-                {item.modules.map((module, idx) => (
+                {item.subjects.map((subject, idx) => (
                   <li key={idx} className="text-base leading-relaxed">
-                    {module}
+                    {subject}
                   </li>
                 ))}
               </ul>
             )}
-            {item.certificateUrl && (
-              <button
-                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
-                onClick={() => handleCertificateClick(item.certificateUrl)}
-              >
-                View Certificate | Transcript
-              </button>
-            )}
+
+            <button
+              className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
+              onClick={() => handleCertificateClick(item.certificateUrl)}
+            >
+              Certificate | Transcript
+            </button>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
