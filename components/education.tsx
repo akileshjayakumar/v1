@@ -64,6 +64,7 @@ export default function Education() {
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
           <VerticalTimelineElement
+            className="width-[99rem]"
             key={index}
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
@@ -76,7 +77,6 @@ export default function Education() {
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
-              width: "100px",
             }}
             date={item.date}
             dateClassName="text-lg font-semibold"
