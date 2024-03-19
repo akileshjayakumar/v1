@@ -31,20 +31,11 @@ export default function Education() {
             className="vertical-timeline-element"
             contentStyle={{
               background:
-                theme === "light" ? "#f9fafb" : "rgba(31, 38, 45, 0.85)",
-              color: theme === "light" ? "#333" : "#fff",
-              boxShadow: "0 3px 10px rgba(0, 0, 0, 0.2)",
-              border:
-                theme === "light"
-                  ? "1px solid #eaeaea"
-                  : "1px solid rgba(255, 255, 255, 0.15)",
-              padding: "20px",
-              borderRadius: "8px",
+                theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+              boxShadow: "none",
+              border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "left",
-              transition: "all 0.3s ease-in-out",
-              opacity: "1",
-              width: "60%", // Increased width
-              maxWidth: "none", // Removed max-width constraint
+              padding: "1.3rem 2rem",
             }}
             contentArrowStyle={{
               borderRight: "7px solid " + (theme === "light" ? "#fff" : "#333"),
