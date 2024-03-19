@@ -51,14 +51,8 @@ export default function Education() {
               fontSize: "1rem",
             }}
           >
-            <div className="flex flex-col items-start">
-              <h3 className="font-bold text-lg capitalize">
-                {item.institution}
-              </h3>
-              <h4 className="font-semibold text-md capitalize">
-                {item.degree}
-              </h4>
-            </div>
+            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
+            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
             {item.modules && (
               <ul className="list-disc pl-5 mt-2">
                 {item.modules.map((module, idx) => (
