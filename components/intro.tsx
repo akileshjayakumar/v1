@@ -164,10 +164,10 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-2 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          className="bg-black p-[0.9rem] gap-2 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
           style={{
-            borderColor: "rgb(16, 219, 192)",
-            borderWidth: "4px",
+            borderColor: "white",
+            borderWidth: "3px",
             borderStyle: "solid",
           }}
           href="./akileshjayakumar-resume.pdf"

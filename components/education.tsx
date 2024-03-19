@@ -1,4 +1,3 @@
-// Education.js
 "use client";
 
 import React from "react";
@@ -7,11 +6,10 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css"; // Ensure you have this CSS imported
 import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
-import "./Education.css"; // Assuming you have a CSS file for additional styles
+import "@/app/globals.css";
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
@@ -24,34 +22,49 @@ export default function Education() {
   };
 
   return (
-    <section id="education" ref={ref} className="education-section">
+    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
-      <VerticalTimeline layout="1-column-left">
+      <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             className="vertical-timeline-element"
-            date={item.date}
-            iconStyle={{
-              background: theme === "light" ? "#f0f0f0" : "#333",
-              color: "#fff",
+            contentStyle={{
+              background:
+                theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+              boxShadow: "none",
+              border: "1px solid rgba(0, 0, 0, 0.05)",
+              textAlign: "left",
+              padding: "1.3rem 2rem",
             }}
+            contentArrowStyle={{
+              borderRight:
+                theme === "light"
+                  ? "0.4rem solid #9ca3af"
+                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
+            }}
+            date={item.date}
             icon={<item.icon />}
+            iconStyle={{
+              background:
+                theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+              fontSize: "1.5rem",
+            }}
           >
-            <h3 className="vertical-timeline-element-title">
-              {item.institution}
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {item.degree}
-            </h4>
-            <ul className="edu-modules">
-              {item.modules?.map((module, idx) => (
-                <li key={idx}>{module}</li>
-              ))}
-            </ul>
+            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
+            <br />
+            <h4 className="font-semibold text-lg capitalize">{item.degree}</h4>
+            <br />
+            {item.modules && (
+              <ul className="list-disc pl-5">
+                {item.modules.map((module, idx) => (
+                  <li key={idx}>{module}</li>
+                ))}
+              </ul>
+            )}
             {item.certificateUrl && (
               <button
-                className="certificate-button"
+                className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                 onClick={() => handleCertificateClick(item.certificateUrl)}
               >
                 View Certificate
