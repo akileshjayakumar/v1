@@ -43,7 +43,7 @@ export default function Education() {
               textAlign: "left",
               transition: "all 0.3s ease-in-out",
               opacity: "1",
-              width: "80%", // Increased width
+              width: "50%", // Increased width
               maxWidth: "none", // Removed max-width constraint
             }}
             contentArrowStyle={{

@@ -24,12 +24,20 @@ export default function Experience() {
             key={index}
             contentStyle={{
               background:
-                theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              border: "1px solid rgba(0, 0, 0, 0.1)",
-              textAlign: "left",
-              padding: "30px",
+                theme === "light" ? "#f9fafb" : "rgba(31, 38, 45, 0.85)",
+              color: theme === "light" ? "#333" : "#fff",
+              boxShadow: "0 3px 10px rgba(0, 0, 0, 0.2)",
+              border:
+                theme === "light"
+                  ? "1px solid #eaeaea"
+                  : "1px solid rgba(255, 255, 255, 0.15)",
+              padding: "20px",
               borderRadius: "8px",
+              textAlign: "left",
+              transition: "all 0.3s ease-in-out",
+              opacity: "1",
+              width: "50%", // Increased width
+              maxWidth: "none", // Removed max-width constraint
             }}
             contentArrowStyle={{
               borderRight:
