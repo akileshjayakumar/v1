@@ -36,13 +36,13 @@ export default function Education() {
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "5rem 3rem",
+              padding: "3rem 2rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid  #fff",
             }}
             date={item.date}
-            dateClassName="text-lg font-semibold m-2"
+            dateClassName="text-lg font-semibold ml-1 mr-1"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
