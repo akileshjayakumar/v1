@@ -54,8 +54,6 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            date={item.date}
-            iconStyle={{ background: "#312e81", color: "#fff" }}
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
               boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
@@ -68,13 +66,19 @@ export default function Education() {
             contentArrowStyle={{
               borderRight: "8px solid #fff",
             }}
+            date={item.date}
+            dateClassName="text-lg font-semibold"
+            icon={<item.icon />}
+            iconStyle={{
+              background: theme === "light" ? "#60a5fa" : "#312e81",
+              color: "#fff",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+              fontSize: "6rem",
+            }}
           >
             <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
+            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
             <br />
-            <h4 className="font-semibold text-md capitalize">
-              <br />
-              {item.degree}
-            </h4>
             {item.modules && (
               <ul className="list-disc pl-5 mt-2 mb-2 text-white">
                 {item.modules.map((module, idx) => (

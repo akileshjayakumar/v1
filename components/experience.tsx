@@ -41,15 +41,14 @@ export default function Experience() {
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "1rem",
+              fontSize: "6rem",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
-            <br />
             <h4 className="font-semibold text-md capitalize">{item.title}</h4>
             <br />
             <ul
-              className="list-disc pl-4 mt-2 space-y-2"
+              className="list-disc pl-4 mt-2 space-y-2 m-2"
               style={{
                 color: theme === "light" ? "#374151" : "#e5e7eb",
                 textAlign: "left",
