@@ -56,33 +56,31 @@ export default function Education() {
             key={index}
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
-              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
-              border:
-                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "3rem 2rem",
+              padding: "3rem",
+              margin: "0 auto",
+              maxWidth: "90%",
             }}
             contentArrowStyle={{
-              borderRight: "8px solid #fff",
+              borderRight:
+                "7px solid  " + (theme === "light" ? "#ffffff" : "#1f2937"),
             }}
-            date={item.date}
-            dateClassName="text-lg font-semibold"
-            icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
-              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "6rem",
             }}
+            icon={<item.icon />}
           >
-            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
-            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
-            <br />
+            <h3 className="font-bold text-xl">{item.institution}</h3>
+            <h4 className="font-semibold text-lg">{item.degree}</h4>
+            <span className="block text-md font-medium mt-2 mb-3">
+              {item.date}
+            </span>
             {item.modules && (
-              <ul className="list-disc pl-5 mt-2 mb-2 text-white">
+              <ul className="list-disc pl-5 mt-2 mb-2">
                 {item.modules.map((module, idx) => (
-                  <li key={idx} className="text-md capitalize leading-relaxed">
+                  <li key={idx} className="text-md leading-relaxed">
                     {module}
                   </li>
                 ))}
@@ -90,7 +88,7 @@ export default function Education() {
             )}
             {item.certificateUrl && (
               <button
-                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
+                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
                 onClick={() => handleCertificateClick(item.certificateUrl)}
               >
                 View Certificate | Transcript
