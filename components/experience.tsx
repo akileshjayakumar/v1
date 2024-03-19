@@ -23,26 +23,23 @@ export default function Experience() {
           <VerticalTimelineElement
             key={index}
             contentStyle={{
-              background:
-                theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
               boxShadow: "none",
-              border: "1px solid rgba(0, 0, 0, 0.05)",
+              border: "1px solid white",
               textAlign: "left",
-              padding: "20px",
+              padding: "25px",
               borderRadius: "10px",
+              width: "20%",
             }}
             contentArrowStyle={{
               borderRight:
-                theme === "light"
-                  ? "1rem solid #9ca3af"
-                  : "1rem solid rgba(255, 255, 255, 0.5)",
+                theme === "light" ? "0.5rem solid white" : "0.5rem solid white",
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
               background:
                 theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-              fontSize: "1.5rem",
+              fontSize: "1rem",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
