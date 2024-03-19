@@ -42,8 +42,9 @@ export default function Education() {
               borderRadius: "8px",
               textAlign: "left",
               transition: "all 0.3s ease-in-out",
-              transform: "translateX(0)",
               opacity: "1",
+              width: "80%", // Increased width
+              maxWidth: "none", // Removed max-width constraint
             }}
             contentArrowStyle={{
               borderRight: "7px solid " + (theme === "light" ? "#fff" : "#333"),
