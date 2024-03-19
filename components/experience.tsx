@@ -29,7 +29,7 @@ export default function Experience() {
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              maxWidth: "1000px",
+              padding: "9rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
