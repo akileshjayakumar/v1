@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import {
@@ -15,8 +13,8 @@ export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
   const { theme } = useTheme();
 
-  const handleCertificateClick = (url: string) => {
-    if (url) {
+  const handleCertificateClick = (url: string | undefined) => {
+    if (typeof url === "string") {
       window.open(url, "_blank", "noopener,noreferrer");
     }
   };
@@ -31,64 +29,46 @@ export default function Education() {
             className="vertical-timeline-element"
             contentStyle={{
               background:
-                theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              border: "1px solid rgba(0, 0, 0, 0.05)",
-              padding: "40px",
-              borderRadius: "10px",
-              width: "60%", // Increase the width of the card
-              maxWidth: "60px", // Optional: you can set a max width
+                theme === "light" ? "#f9fafb" : "rgba(31, 38, 45, 0.85)",
+              color: theme === "light" ? "#333" : "#fff",
+              boxShadow: "0 3px 10px rgba(0, 0, 0, 0.2)",
+              border:
+                theme === "light"
+                  ? "1px solid #eaeaea"
+                  : "1px solid rgba(255, 255, 255, 0.15)",
+              padding: "20px",
+              borderRadius: "8px",
               textAlign: "left",
+              transition: "all 0.3s ease-in-out",
+              transform: "translateX(0)",
+              opacity: "1",
             }}
             contentArrowStyle={{
-              borderRight:
-                "7px solid " + (theme === "light" ? "#f0f0f0" : "#333"),
+              borderRight: "7px solid " + (theme === "light" ? "#fff" : "#333"),
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#fff" : "#333",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+              color: theme === "light" ? "#333" : "#fff",
             }}
           >
-            <h3
-              className="font-bold text-xl capitalize"
-              style={{ marginBottom: "0.5rem" }}
-            >
-              {item.institution}
-            </h3>
-            <h4
-              className="font-semibold text-lg capitalize"
-              style={{ marginBottom: "1rem" }}
-            >
-              {item.degree}
-            </h4>
+            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
+            <h4 className="font-semibold text-lg capitalize">{item.degree}</h4>
             {item.modules && (
-              <ul className="list-disc pl-4 mt-1 mb-2">
+              <ul className="list-disc pl-5">
                 {item.modules.map((module, idx) => (
-                  <li key={idx} className="module-item">
-                    {module}
-                  </li>
+                  <li key={idx}>{module}</li>
                 ))}
               </ul>
             )}
             {item.certificateUrl && (
               <button
-                className="certificate-button"
-                style={{
-                  backgroundColor: "#4a90e2",
-                  color: "#fff",
-                  padding: "10px 15px",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
-                onClick={() =>
-                  item.certificateUrl
-                    ? handleCertificateClick(item.certificateUrl)
-                    : null
-                }
+                className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                onClick={() => handleCertificateClick(item.certificateUrl)}
               >
-                View Diploma Certificate | Transcript
+                View Certificate
               </button>
             )}
           </VerticalTimelineElement>
