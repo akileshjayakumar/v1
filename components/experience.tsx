@@ -28,13 +28,14 @@ export default function Experience() {
               boxShadow: "none",
               border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "left",
-              padding: "1.3rem 2rem",
+              padding: "20px",
+              borderRadius: "10px",
             }}
             contentArrowStyle={{
               borderRight:
                 theme === "light"
-                  ? "7px solid #cbd5e1"
-                  : "7px solid rgba(255, 255, 255, 0.25)",
+                  ? "0.4rem solid #9ca3af"
+                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
             }}
             date={item.date}
             icon={<item.icon />}
