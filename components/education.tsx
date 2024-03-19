@@ -42,7 +42,7 @@ export default function Education() {
               borderRight: "8px solid #fff",
             }}
             date={item.date}
-            dateClassName="text-lg font-semibold ml-1 mr-1"
+            dateClassName="text-lg font-semibold m-1"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#312e81",
@@ -52,10 +52,10 @@ export default function Education() {
             }}
           >
             <div className="flex flex-col items-start">
-              <h3 className="font-bold text-xl capitalize">
+              <h3 className="font-bold text-lg capitalize">
                 {item.institution}
               </h3>
-              <h4 className="font-semibold text-lg capitalize mt-2">
+              <h4 className="font-semibold text-md capitalize">
                 {item.degree}
               </h4>
             </div>
