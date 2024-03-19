@@ -73,7 +73,7 @@ export default function Education() {
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
               padding: "0.7rem 0.7rem",
-              width: "5000px",
+              width: "500px",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
