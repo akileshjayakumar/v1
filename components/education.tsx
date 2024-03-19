@@ -39,7 +39,7 @@ export default function Education() {
               padding: "3rem 2rem",
             }}
             contentArrowStyle={{
-              borderRight: "8px solid  #fff",
+              borderRight: "8px solid #fff",
             }}
             date={item.date}
             dateClassName="text-lg font-semibold ml-1 mr-1"
@@ -49,14 +49,17 @@ export default function Education() {
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
               fontSize: "2rem",
+              marginLeft: "15px", // Added for gap between date and icon
             }}
           >
-            <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
-            <br />
-            <h4 className="font-semibold text-lg mt-1 capitalize">
-              {item.degree}
-            </h4>
-            <br />
+            <div className="flex flex-col items-start">
+              <h3 className="font-bold text-xl capitalize">
+                {item.institution}
+              </h3>
+              <h4 className="font-semibold text-lg capitalize mt-2">
+                {item.degree}
+              </h4>
+            </div>
             {item.modules && (
               <ul className="list-disc pl-5 mt-2">
                 {item.modules.map((module, idx) => (
