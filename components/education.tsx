@@ -41,19 +41,21 @@ export default function Education() {
             contentArrowStyle={{
               borderRight:
                 theme === "light"
-                  ? "0.4rem solid #9ca3af"
-                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                  ? "1rem solid #9ca3af"
+                  : "1rem solid rgba(255, 255, 255, 0.5)",
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
-              background: theme === "light" ? "#fff" : "#333",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-              color: theme === "light" ? "#333" : "#fff",
+              background:
+                theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+              fontSize: "1.5rem",
             }}
           >
             <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
+            <br />
             <h4 className="font-semibold text-lg capitalize">{item.degree}</h4>
+            <br />
             {item.modules && (
               <ul className="list-disc pl-5">
                 {item.modules.map((module, idx) => (

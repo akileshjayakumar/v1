@@ -34,15 +34,15 @@ export default function Experience() {
             contentArrowStyle={{
               borderRight:
                 theme === "light"
-                  ? "0.4rem solid #9ca3af"
-                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                  ? "1rem solid #9ca3af"
+                  : "1rem solid rgba(255, 255, 255, 0.5)",
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
               background:
-                theme === "light" ? "#e5e7eb" : "rgba(255, 255, 255, 0.2)",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+              fontSize: "1.5rem",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
