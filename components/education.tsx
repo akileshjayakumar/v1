@@ -30,33 +30,32 @@ export default function Education() {
             key={index}
             className="vertical-timeline-element"
             contentStyle={{
-              background:
-                theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-              boxShadow: "none",
-              border: "1px solid rgba(0, 0, 0, 0.05)",
+              background: theme === "light" ? "#ffffff" : "#1f2937",
+              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
+              border:
+                theme === "light" ? "1px solid #e5e7eb" : "1px solid #374151",
+              color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
               padding: "1.3rem 2rem",
             }}
             contentArrowStyle={{
-              borderRight:
-                theme === "light"
-                  ? "0.4rem solid #9ca3af"
-                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
+              borderRight: "7px solid  #fff",
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
-              background:
-                theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+              background: theme === "light" ? "#60a5fa" : "#312e81",
+              color: "#fff",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
               fontSize: "1.5rem",
             }}
           >
             <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
-            <br />
-            <h4 className="font-semibold text-lg capitalize">{item.degree}</h4>
-            <br />
+            <h4 className="font-semibold text-lg mt-1 capitalize">
+              {item.degree}
+            </h4>
             {item.modules && (
-              <ul className="list-disc pl-5">
+              <ul className="list-disc pl-5 mt-2">
                 {item.modules.map((module, idx) => (
                   <li key={idx}>{module}</li>
                 ))}
@@ -64,7 +63,7 @@ export default function Education() {
             )}
             {item.certificateUrl && (
               <button
-                className="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
                 onClick={() => handleCertificateClick(item.certificateUrl)}
               >
                 View Certificate
