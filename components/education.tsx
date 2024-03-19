@@ -17,6 +17,17 @@ export const educationData = [
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
     icon: TbSchool,
+    certificateUrl: undefined,
+    subjects: [
+      "CSCI203 Algorithms and Data Structures",
+      "CSCI235 Database Systems",
+      "CSCI251 Advanced Programming",
+      "CSCI262 Syestem Security",
+      "CSCI317 Database Performance Tuning",
+      "CSIT302 Cybersecurity",
+      "CSIT314 Software Development Methodologies",
+      "MATH221 Mathematics for Computer Science",
+    ],
   },
   {
     institution: "Singapore Institute of Management",
@@ -61,7 +72,8 @@ export default function Education() {
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "0.9rem 0.9rem",
+              padding: "0.7rem 0.7rem",
+              width: "50px",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
@@ -73,7 +85,7 @@ export default function Education() {
               background: theme === "light" ? "#60a5fa" : "#312e81",
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "6rem",
+              fontSize: "1.5rem",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.institution}</h3>

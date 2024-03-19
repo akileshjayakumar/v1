@@ -44,7 +44,7 @@ export const experiencesData = [
     ],
     icon: CgWorkAlt,
     date: "December 2023 - Present",
-  }
+  },
 ] as const;
 
 export const projectsData = [
