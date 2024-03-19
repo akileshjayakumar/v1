@@ -33,42 +33,6 @@ export const links = [
   },
 ] as const;
 
-type EducationEntry = {
-  institution: string;
-  degree: string;
-  date: string;
-  icon: IconType;
-  certificateUrl?: string;
-  modules?: string[];
-};
-
-export const educationData: EducationEntry[] = [
-  {
-    institution: "University of Wollongong (SIM Campus)",
-    degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
-    date: "October 2022 - Present",
-    icon: IoSchoolSharp,
-  },
-  {
-    institution: "Singapore Institute of Management",
-    degree: "Diploma in Information Technology",
-    date: "October 2021 - September 2022",
-    icon: IoSchoolSharp,
-    certificateUrl:
-      "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
-    modules: [
-      "ITSD001 Business Statistics with Python",
-      "ITSD002 Problem Solving",
-      "ITSD003 Communications and Networks",
-      "ITSD004 Programming Fundamentals",
-      "ITSD005 Database Management and Security",
-      "ITSD006 Interaction Design",
-      "ITSD007 IT Project Management",
-      "ITSD008 Systems Development Techniques",
-    ],
-  },
-];
-
 export const experiencesData = [
   {
     company: "CPF Board",

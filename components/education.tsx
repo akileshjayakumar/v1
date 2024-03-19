@@ -1,19 +1,47 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "@/components/section-heading";
+import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { educationData } from "@/lib/data";
+import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import uowlogo from "@/public/uow.png";
+import simlogo from "@/public/sim.png";
+
+export const educationData = [
+  {
+    institution: "University of Wollongong (SIM Campus)",
+    degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
+    date: "October 2022 - Present",
+    icon: uowlogo,
+  },
+  {
+    institution: "Singapore Institute of Management",
+    degree: "Diploma in Information Technology",
+    date: "October 2021 - September 2022",
+    icon: simlogo,
+    certificateUrl:
+      "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
+    modules: [
+      "ITSD001 Business Statistics with Python",
+      "ITSD002 Problem Solving",
+      "ITSD003 Communications and Networks",
+      "ITSD004 Programming Fundamentals",
+      "ITSD005 Database Management and Security",
+      "ITSD006 Interaction Design",
+      "ITSD007 IT Project Management",
+      "ITSD008 Systems Development Techniques",
+    ],
+  },
+];
 
 export default function Education() {
-  const { ref } = useSectionInView("EDUCATION");
+  const { ref } = useSectionInView("EXPERIENCE");
   const { theme } = useTheme();
-
   const handleCertificateClick = (url: string | undefined) => {
     if (typeof url === "string") {
       window.open(url, "_blank", "noopener,noreferrer");
@@ -21,32 +49,17 @@ export default function Education() {
   };
 
   return (
-    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="education" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            contentStyle={{
-              background: theme === "light" ? "#ffffff" : "#1f2937",
-              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
-              border:
-                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
-              color: theme === "light" ? "#1f2937" : "#f3f4f6",
-              textAlign: "left",
-              padding: "3rem",
-            }}
-            contentArrowStyle={{
-              borderRight: "8px solid #fff",
-            }}
             date={item.date}
-            dateClassName="text-lg font-semibold"
-            icon={<item.icon />}
-            iconStyle={{
-              background: theme === "light" ? "#60a5fa" : "#312e81",
-              color: "#fff",
-              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-            }}
+            icon={<img src={item.icon.src} alt={`${item.institution} logo`} />}
+            iconStyle={{ background: "#312e81", color: "#fff" }}
+            contentStyle={{ background: "#1f2937", color: "#f3f4f6" }}
+            contentArrowStyle={{ borderRight: "8px solid  #1f2937" }}
           >
             <h3 className="font-bold text-lg capitalize mb-2">
               {item.institution}
@@ -55,7 +68,7 @@ export default function Education() {
               {item.degree}
             </h4>
             {item.modules && (
-              <ul className="list-disc pl-5 mt-2 mb-2">
+              <ul className="list-disc pl-5 mt-2 mb-2 text-white">
                 {item.modules.map((module, idx) => (
                   <li key={idx} className="mb-1">
                     {module}
