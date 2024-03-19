@@ -33,13 +33,13 @@ export default function Education() {
               background: theme === "light" ? "#ffffff" : "#1f2937",
               boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
               border:
-                theme === "light" ? "1px solid #e5e7eb" : "1px solid #374151",
+                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
-              padding: "1.3rem 2rem",
+              padding: "3rem 3rem",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  #fff",
+              borderRight: "8px solid  #fff",
             }}
             date={item.date}
             icon={<item.icon />}
@@ -51,9 +51,11 @@ export default function Education() {
             }}
           >
             <h3 className="font-bold text-xl capitalize">{item.institution}</h3>
+            <br />
             <h4 className="font-semibold text-lg mt-1 capitalize">
               {item.degree}
             </h4>
+            <br />
             {item.modules && (
               <ul className="list-disc pl-5 mt-2">
                 {item.modules.map((module, idx) => (
