@@ -7,8 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { BsCloudDownload } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import "/app/animation.css";
+import "/app/style.css";
 
 const fullText = [
   "hi, my name is akilesh!",
@@ -64,7 +63,7 @@ export default function Intro() {
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setTypingSpeed(150); // Resetting the speed for the next round of typing
+      setTypingSpeed(1);
     } else if (!isDeleting) {
       timer = setTimeout(handleTyping, typingSpeed);
     } else {
@@ -75,9 +74,7 @@ export default function Intro() {
   }, [text, isDeleting, loopNum, typingSpeed]);
 
   const { ref } = useSectionInView("HOME", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
-  const iconStyle = isMobile ? "text-4xl" : "text-5xl";
+  const iconStyle = isMobile ? "text-5xl" : "text-5xl";
 
   return (
     <section

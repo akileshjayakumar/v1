@@ -9,7 +9,6 @@ import {
 import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
-import "@/app/globals.css";
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
@@ -28,7 +27,6 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            className="vertical-timeline-element"
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
               boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
@@ -62,10 +60,10 @@ export default function Education() {
             )}
             {item.certificateUrl && (
               <button
-                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
+                className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
                 onClick={() => handleCertificateClick(item.certificateUrl)}
               >
-                View Certificate
+                View Certificate | Transcript
               </button>
             )}
           </VerticalTimelineElement>
