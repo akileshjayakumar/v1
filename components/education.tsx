@@ -13,7 +13,7 @@ import { TbSchool } from "react-icons/tb";
 
 export const educationData = [
   {
-    institution: "University of Wollongong (SIM Campus)",
+    institution: "University of Wollongong \n",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
     icon: TbSchool,
@@ -30,7 +30,7 @@ export const educationData = [
     ],
   },
   {
-    institution: "Singapore Institute of Management",
+    institution: "Singapore Institute of Management \n",
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: TbSchool,
