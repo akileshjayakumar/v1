@@ -13,7 +13,7 @@ import { TbSchool } from "react-icons/tb";
 
 export const educationData = [
   {
-    institution: "University of Wollongong \n",
+    institution: "University of Wollongong",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
     icon: TbSchool,
@@ -22,7 +22,7 @@ export const educationData = [
       "CSCI203 Algorithms and Data Structures",
       "CSCI235 Database Systems",
       "CSCI251 Advanced Programming",
-      "CSCI262 Syestem Security",
+      "CSCI262 System Security",
       "CSCI317 Database Performance Tuning",
       "CSIT302 Cybersecurity",
       "CSIT314 Software Development Methodologies",
@@ -30,7 +30,7 @@ export const educationData = [
     ],
   },
   {
-    institution: "Singapore Institute of Management \n",
+    institution: "Singapore Institute of Management",
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: TbSchool,
@@ -48,8 +48,6 @@ export const educationData = [
     ],
   },
 ];
-
-// Other imports remain unchanged
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
@@ -89,10 +87,9 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">{`${item.institution} \n ${item.degree}`}</h3>
-            {/* Removed <h4> tag for course name */}
-            <br />
-
+            <h3 className="font-bold text-lg capitalize">
+              {item.institution} <br /> {item.degree}
+            </h3>
             {item.subjects && item.subjects.length > 0 && (
               <ul
                 className="list-disc pl-4 mt-2 space-y-2 m-2"
