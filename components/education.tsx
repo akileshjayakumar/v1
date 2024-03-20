@@ -13,7 +13,7 @@ import { TbSchool } from "react-icons/tb";
 
 export const educationData = [
   {
-    institution: "University of Wollongong (SIM Campus)         ",
+    institution: "University of Wollongong (SIM Campus)",
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
     icon: TbSchool,
@@ -30,7 +30,7 @@ export const educationData = [
     ],
   },
   {
-    institution: "Singapore Institute of Management (SIM Campus)          ",
+    institution: "Singapore Institute of Management (SIM Campus)",
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: TbSchool,
@@ -87,7 +87,7 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">
+            <h3 className="font-bold text-lg capitalize m-[1rem]">
               {item.institution} <br />
               <br /> {item.degree}
             </h3>{" "}
