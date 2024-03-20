@@ -89,7 +89,9 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">{`${item.institution} \n ${item.degree}`}</h3>
+            <h3 className="font-bold text-lg capitalize">
+              {item.institution} <br /> {item.degree}
+            </h3>
             {/* Removed <h4> tag for course name */}
             <br />
 
