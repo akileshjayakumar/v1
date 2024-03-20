@@ -1,5 +1,5 @@
 "use client";
-
+// Importing necessary React components and hooks
 import React from "react";
 import SectionHeading from "./section-heading";
 import {
@@ -58,6 +58,7 @@ export default function Education() {
     }
   };
 
+  // JSX for the education section
   return (
     <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
@@ -65,56 +66,43 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            style={{ width: "600px" }} // Adjust the width as per your requirement
-            contentStyle={{
-              background: theme === "light" ? "#ffffff" : "#1f2937",
-              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
-              border:
-                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
-              color: theme === "light" ? "#1f2937" : "#f3f4f6",
-              textAlign: "left",
-              padding: "1rem", // Increase padding to expand the content
-            }}
-            contentArrowStyle={{
-              borderRight: "8px solid #fff",
-            }}
             date={item.date}
-            dateClassName="text-lg font-semibold"
+            dateClassName="text-lg font-semibold text-right" // Aligning the date to the right
             icon={<item.icon />}
             iconStyle={{
-              background: theme === "light" ? "#60a5fa" : "#312e81",
+              // Adjusting icon colors to match the design
+              background: "#312e81",
               color: "#fff",
-              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "1.5rem",
+            }}
+            contentStyle={{
+              // Setting colors and padding to match the dark theme
+              background: "#1f2937",
+              color: "#f3f4f6",
+              padding: "20px",
+              borderRadius: "4px", // Add rounded corners if necessary
+              border: "2px solid #374151", // Add border color
+            }}
+            contentArrowStyle={{
+              // Adjust arrow style
+              borderRight: "7px solid  #374151",
             }}
           >
-            <div style={{ whiteSpace: "nowrap" }}>
-              <h3 className="font-bold text-lg capitalize m-[1rem]">
-                {item.institution} <br />
-                <br /> {item.degree}
-              </h3>
-            </div>
-            {item.subjects && item.subjects.length > 0 && (
-              <ul
-                className="list-disc pl-4 mt-2 space-y-2 m-2"
-                style={{
-                  color: theme === "light" ? "#374151" : "#e5e7eb",
-                  textAlign: "left",
-                }}
-              >
-                {item.subjects.map((subject, idx) => (
-                  <li key={idx} className="text-base leading-relaxed">
-                    {subject}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <h3 className="font-bold text-lg capitalize m-[1rem]">
+              {item.institution} <br />
+              {item.degree}
+            </h3>
+            <ul className="list-disc pl-4 mt-2 space-y-2 m-2">
+              {item.subjects.map((subject, idx) => (
+                <li key={idx} className="text-base leading-relaxed">
+                  {subject}
+                </li>
+              ))}
+            </ul>
             <button
-              className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white 
-              font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
+              className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
-              Certificate | Transcript
+              View Certificate
             </button>
           </VerticalTimelineElement>
         ))}
