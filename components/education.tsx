@@ -89,7 +89,8 @@ export default function Education() {
           >
             <div style={{ whiteSpace: "nowrap" }}>
               <h3 className="font-bold text-lg capitalize m-[1rem]">
-                {item.institution} | {item.degree}
+                {item.institution} <br />
+                <br /> {item.degree}
               </h3>
             </div>
             {item.subjects && item.subjects.length > 0 && (
