@@ -88,7 +88,8 @@ export default function Education() {
             }}
           >
             <h3 className="font-bold text-lg capitalize">
-              {item.institution} <br /> {item.degree}
+              {item.institution} <br />
+              <br /> {item.degree}
             </h3>
             {item.subjects && item.subjects.length > 0 && (
               <ul
@@ -107,7 +108,8 @@ export default function Education() {
             )}
 
             <button
-              className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
+              className="mt-4 inline-flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white 
+              font-bold py-2 px-4 rounded transition duration-150 ease-in-out"
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
               Certificate | Transcript
