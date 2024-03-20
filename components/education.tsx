@@ -70,10 +70,9 @@ export default function Education() {
               boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
               border:
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
-              color: theme === "light" ? "#1f2937" : "pink",
+              color: theme === "light" ? "#1f2937" : "#f3f4f6",
               textAlign: "left",
               padding: "0.7rem 0.7rem",
-              margin: "0.7rem 0.7rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
@@ -88,11 +87,11 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize m-[1rem]">
-              {item.institution} <br />
-              <br /> {item.degree}
-            </h3>{" "}
-            <br />
+            <div style={{ whiteSpace: "nowrap" }}>
+              <h3 className="font-bold text-lg capitalize m-[1rem]">
+                {item.institution} | {item.degree}
+              </h3>
+            </div>
             {item.subjects && item.subjects.length > 0 && (
               <ul
                 className="list-disc pl-4 mt-2 space-y-2 m-2"
