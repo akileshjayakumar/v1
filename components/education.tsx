@@ -70,9 +70,10 @@ export default function Education() {
               boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
               border:
                 theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
-              color: theme === "light" ? "#1f2937" : "#f3f4f6",
+              color: theme === "light" ? "#1f2937" : "pink",
               textAlign: "left",
               padding: "0.7rem 0.7rem",
+              margin: "0.7rem 0.7rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
