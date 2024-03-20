@@ -49,6 +49,8 @@ export const educationData = [
   },
 ];
 
+// Other imports remain unchanged
+
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
   const { theme } = useTheme();
@@ -87,8 +89,8 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">{item.institution}</h3>
-            <h4 className="font-semibold text-md capitalize">{item.degree}</h4>
+            <h3 className="font-bold text-lg capitalize">{`${item.institution} - ${item.degree}`}</h3>
+            {/* Removed <h4> tag for course name */}
             <br />
 
             {item.subjects && item.subjects.length > 0 && (
