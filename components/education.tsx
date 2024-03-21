@@ -67,27 +67,24 @@ export default function Education() {
           <VerticalTimelineElement
             key={index}
             date={item.date}
-            dateClassName="text-lg font-semibold text-right" // Aligning the date to the right
+            dateClassName="text-lg font-semibold text-right"
             icon={<item.icon />}
             iconStyle={{
-              // Adjusting icon colors to match the design
               background: "#312e81",
               color: "#fff",
             }}
             contentStyle={{
-              // Setting colors and padding to match the dark theme
               background: "#1f2937",
               color: "#f3f4f6",
               padding: "20px",
-              borderRadius: "4px", // Add rounded corners if necessary
-              border: "2px solid #374151", // Add border color
+              borderRadius: "4px",
+              border: "2px solid #374151",
             }}
             contentArrowStyle={{
-              // Adjust arrow style
               borderRight: "7px solid  #374151",
             }}
           >
-            <h3 className="font-bold text-lg capitalize m-[3rem]">
+            <h3 className="font-bold text-lg capitalize m-[2rem]">
               {item.institution} | {item.degree}
             </h3>
             <ul className="list-disc pl-4 mt-2 space-y-2 m-2">
@@ -101,7 +98,7 @@ export default function Education() {
               className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
-              View Certificate
+              view certificate
             </button>
           </VerticalTimelineElement>
         ))}
