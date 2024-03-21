@@ -66,22 +66,26 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            date={item.date}
-            dateClassName="text-lg font-semibold text-right"
-            icon={<item.icon />}
-            iconStyle={{
-              background: "#312e81",
-              color: "#fff",
-            }}
             contentStyle={{
-              background: "#1f2937",
-              color: "#f3f4f6",
-              padding: "20px",
-              borderRadius: "4px",
-              border: "2px solid #374151",
+              background: theme === "light" ? "#ffffff" : "#1f2937",
+              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
+              border:
+                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
+              color: theme === "light" ? "#1f2937" : "#f3f4f6",
+              textAlign: "left",
+              padding: "0.7rem 0.7rem",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  #374151",
+              borderRight: "8px solid #fff",
+            }}
+            date={item.date}
+            dateClassName="text-lg font-semibold"
+            icon={<item.icon />}
+            iconStyle={{
+              background: theme === "light" ? "#60a5fa" : "#312e81",
+              color: "#fff",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+              fontSize: "1.5rem",
             }}
           >
             <h3 className="font-bold text-lg capitalize m-[2rem]">
