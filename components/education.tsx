@@ -87,9 +87,8 @@ export default function Education() {
               borderRight: "7px solid  #374151",
             }}
           >
-            <h3 className="font-bold text-lg capitalize m-[1rem]">
-              {item.institution} <br />
-              {item.degree}
+            <h3 className="font-bold text-lg capitalize m-[6rem]">
+              {item.institution} | {item.degree}
             </h3>
             <ul className="list-disc pl-4 mt-2 space-y-2 m-2">
               {item.subjects.map((subject, idx) => (
