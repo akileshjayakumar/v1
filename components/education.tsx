@@ -88,10 +88,16 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize m-[2rem]">
+            <h3 className="font-bold text-lg capitalize">
               {item.institution} | {item.degree}
             </h3>
-            <ul className="list-disc pl-4 mt-2 space-y-2 m-2">
+            <ul
+              className="list-disc pl-4 mt-2 space-y-2 m-2"
+              style={{
+                color: theme === "light" ? "#374151" : "#e5e7eb",
+                textAlign: "left",
+              }}
+            >
               {item.subjects.map((subject, idx) => (
                 <li key={idx} className="text-base leading-relaxed">
                   {subject}
