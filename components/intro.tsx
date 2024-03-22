@@ -11,13 +11,13 @@ import "/app/style.css";
 
 const fullText = [
   "hi, my name is akilesh!",
-  "வணக்கம், என் பெயர் அகிலேஷ்!",
-  "嗨，我的名字是阿基莱什!",
-  "hai, nama saya akilesh!",
-  "i am passionate about software engineering and cybersecurity.",
+  "என் பெயர் அகிலேஷ்!",
+  "我的名字是阿基莱什!",
+  "nama saya akilesh!",
+  "i am passionate about software engineering.",
   "i enjoy learning new technologies and frameworks.",
   "i am currently learning aws.",
-  "i love solving puzzles and 3x3 rubik's cube.",
+  "i love solving puzzles and the rubik's cube.",
   "cardistry and magic tricks are my hobbies.",
   "i am an avid fan of sci-fi and comic book movies.",
   "let's connect!",
@@ -28,7 +28,8 @@ export default function Intro() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
-  const textRef = useRef(null);
+  const [hasVisited, setHasVisited] = useState(false);
+  const textRef = useRef<HTMLSpanElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -43,35 +44,41 @@ export default function Intro() {
   }, []);
 
   useEffect(() => {
-    const currentText = fullText[loopNum % fullText.length];
-    let timer: ReturnType<typeof setTimeout>;
+    if (hasVisited) {
+      const currentText = fullText[loopNum % fullText.length];
+      let timer: NodeJS.Timeout;
 
-    const handleTyping = () => {
-      setText(currentText.substring(0, text.length + 1));
-      setTypingSpeed(30);
-    };
+      const handleTyping = () => {
+        setText(currentText.substring(0, text.length + 1));
+        setTypingSpeed(30);
+      };
 
-    const handleDeleting = () => {
-      setText(currentText.substring(0, text.length - 1));
-      setTypingSpeed(30);
-    };
+      const handleDeleting = () => {
+        setText(currentText.substring(0, text.length - 1));
+        setTypingSpeed(90);
+      };
 
-    if (!isDeleting && text === currentText) {
-      timer = setTimeout(() => {
-        setIsDeleting(true);
-      }, 2000);
-    } else if (isDeleting && text === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setTypingSpeed(1);
-    } else if (!isDeleting) {
-      timer = setTimeout(handleTyping, typingSpeed);
-    } else {
-      timer = setTimeout(handleDeleting, typingSpeed);
+      if (!isDeleting && text === currentText) {
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setTypingSpeed(1);
+      } else if (!isDeleting) {
+        timer = setTimeout(handleTyping, typingSpeed);
+      } else {
+        timer = setTimeout(handleDeleting, typingSpeed);
+      }
+
+      return () => clearTimeout(timer);
     }
+  }, [text, isDeleting, loopNum, typingSpeed, hasVisited]);
 
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed]);
+  useEffect(() => {
+    setHasVisited(true);
+  }, []);
 
   const { ref } = useSectionInView("HOME", 0.5);
   const iconStyle = isMobile ? "text-5xl" : "text-5xl";
@@ -86,25 +93,20 @@ export default function Intro() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <Image
             src="/profile-photo.jpg"
             alt="profile-photo"
-            width="390"
-            height="390"
-            quality="100"
+            width={350}
+            height={350}
+            quality={100}
             priority={true}
-            className="rounded-full object-cover border-[0.3rem] border-white no-shadow"
+            className="rounded-full object-cover border-[0.3rem] border-[#0EDBC0] no-shadow"
           />
         </motion.div>
 
-        <motion.h1
-          className="text-2xl m-[3.7rem] font-medium sm:text-4xl text-white"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
+        <motion.h1 className="text-2xl m-[3.7rem] font-medium sm:text-3xl text-white">
           <span
             className="font-medium"
             ref={textRef}
@@ -112,7 +114,7 @@ export default function Intro() {
           >
             {text}
           </span>
-          <span className="typing-cursor">|</span>
+          <span className="typing-cursor">_</span>
         </motion.h1>
       </div>
 
@@ -120,7 +122,7 @@ export default function Intro() {
         className="flex flex-col sm:flex-row items-center justify-center gap-[1rem] mb-[2rem] text-3xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 2, ease: "easeOut" }}
       >
         <div className="flex gap-4">
           <a

@@ -5,7 +5,7 @@
 body {
   border-style: solid;
   border-color: rgb(16, 219, 192);
-  border-width: 2px;
+  border-width: 0.5rem;
   border-radius: 1rem;
 }
 
@@ -13,8 +13,8 @@ body {
   color: rgb(255, 255, 255);
   display: inline-block;
   width: 0px;
-  height: 0em; /* Adjust height to match your text */
-  animation: blink 0.99s infinite; /* Apply the blinking animation */
+  height: 0em;
+  animation: blink 0.99s infinite;
 }
 
 /* Blinking Cursor Keyframes */

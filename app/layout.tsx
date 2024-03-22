@@ -23,12 +23,12 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-black text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
       >
+        <div className="background-animation"></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
             <Footer />
-
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
