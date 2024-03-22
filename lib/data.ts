@@ -37,10 +37,10 @@ export const experiencesData = [
     title: "Automation Intern",
     location: "Singapore",
     description: [
-      "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes, improving efficiency.",
-      "Used Pair.Gov.SG platform and prompt engineering techniques to execute test cases, improving software.",
+      "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes.",
+      "Utilised Pair.Gov.SG platform and prompt engineering techniques to automate test cases, improving software reliability.",
       "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
-      "Conducted research on government tools and products, gaining insights into digital infrastructure on GCC and SGTS.",
+      "Conducted research on the Whole of Government tools and products including GCC, SGTS, Pair and LaunchPad.",
     ],
     icon: CgWorkAlt,
     date: "December 2023 - Present",

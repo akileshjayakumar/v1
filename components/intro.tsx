@@ -169,8 +169,9 @@ export default function Intro() {
             borderWidth: "0.2rem",
             borderStyle: "solid",
           }}
-          href="./akileshjayakumar-resume.pdf"
-          download="akileshjayakumar-resume.pdf"
+          href="https://docs.google.com/document/d/12aixN8onmZl3A1jYc6EgwrcztquAb0yUDcXebdSstk4/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span
             style={{ display: "inline-block", textAlign: "center" }}
