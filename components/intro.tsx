@@ -98,8 +98,8 @@ export default function Intro() {
           <Image
             src="/profile-photo.jpg"
             alt="profile-photo"
-            width={350}
-            height={350}
+            width={360}
+            height={360}
             quality={100}
             priority={true}
             className="rounded-full object-cover border-[0.2rem] border-[cyan] no-shadow"
@@ -119,7 +119,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-[1rem] mb-[2rem] text-3xl font-bold text-white"
+        className="flex flex-col sm:flex-row items-center justify-center gap-[2rem] mb-[2rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -163,7 +163,7 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-[0.9rem] flex items-center justify-center rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          className="bg-black p-[0.5rem] flex items-center justify-center rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
           style={{
             borderColor: "cyan",
             borderWidth: "0.2rem",
