@@ -50,12 +50,12 @@ export default function Intro() {
 
       const handleTyping = () => {
         setText(currentText.substring(0, text.length + 1));
-        setTypingSpeed(30);
+        setTypingSpeed(40);
       };
 
       const handleDeleting = () => {
         setText(currentText.substring(0, text.length - 1));
-        setTypingSpeed(90);
+        setTypingSpeed(40);
       };
 
       if (!isDeleting && text === currentText) {
@@ -93,7 +93,7 @@ export default function Intro() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Image
             src="/profile-photo.jpg"
@@ -102,7 +102,7 @@ export default function Intro() {
             height={350}
             quality={100}
             priority={true}
-            className="rounded-full object-cover border-[0.3rem] border-[#0EDBC0] no-shadow"
+            className="rounded-full object-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 
@@ -122,7 +122,7 @@ export default function Intro() {
         className="flex flex-col sm:flex-row items-center justify-center gap-[1rem] mb-[2rem] text-3xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="flex gap-4">
           <a
@@ -163,10 +163,10 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-[0.9rem] gap-2 flex items-center justify-center border rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          className="bg-black p-[0.9rem] flex items-center justify-center rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
           style={{
-            borderColor: "white",
-            borderWidth: "3px",
+            borderColor: "cyan",
+            borderWidth: "0.2rem",
             borderStyle: "solid",
           }}
           href="./akileshjayakumar-resume.pdf"
@@ -174,7 +174,7 @@ export default function Intro() {
         >
           <span
             style={{ display: "inline-block", textAlign: "center" }}
-            className="text-white mr-[0.9rem]"
+            className="text-white mr-[1rem]"
           >
             CV
           </span>

@@ -4,9 +4,9 @@
 
 body {
   border-style: solid;
-  border-color: rgb(16, 219, 192);
-  border-width: 0.5rem;
-  border-radius: 1rem;
+  border-color: cyan;
+  border-width: 0.2rem;
+  border-radius: 0rem;
 }
 
 .typing-cursor {
