@@ -105,10 +105,10 @@ export default function Education() {
               ))}
             </ul>
             <button
-              className="button-style bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-5 flex justify-center items-center rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="button-style bg-green-700 hover:bg-green-700 text-white font-bold py-2 px-5 flex justify-center items-center rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
-              view certificate
+              view certificate | transcript
             </button>
           </VerticalTimelineElement>
         ))}
