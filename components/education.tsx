@@ -88,10 +88,10 @@ export default function Education() {
               fontSize: "1.5rem",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">
-              {item.institution} | <br />
-              <br /> {item.degree}
+            <h3 className="font-bold text-lg capitalize mr[1rem]">
+              {item.institution} | {item.degree}
             </h3>
+            <br />
             <ul
               className="list-disc pl-4 mt-2 space-y-2 m-2"
               style={{
