@@ -42,6 +42,7 @@ export default function Experience() {
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
               fontSize: "1.5rem",
+              border: "2px solid #fff",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
