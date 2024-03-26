@@ -84,13 +84,14 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center text-white sm:mb-0 scroll-mt-[100rem]"
+      className="mb-1 max-w-[50rem] text-center text-white scroll-mt-[100rem]"
     >
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col sm:m-1 items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ scale: 1.06 }}
         >
           <Image
             src="/profile-photo.jpg"
@@ -99,11 +100,11 @@ export default function Intro() {
             height={400}
             quality={100}
             priority={true}
-            className="rounded-full object-cover border-[0.2rem] border-[cyan] no-shadow"
+            className="rounded-full mb-4 sm:mb-8 object-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 
-        <motion.h1 className="font-bold sm:text-4xl text-2xl m-[2rem] text-white">
+        <motion.h1 className="font-bold sm:m-8 mt-[4rem] sm:text-4xl text-2xl text-white">
           <span
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
@@ -115,7 +116,8 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-[2rem] mb-[9rem] text-2xl font-bold text-white"
+        className="flex flex-col sm:flex-row items-center justify-center gap-4 
+        sm:gap-8 m-9 sm:m-8 mb-[15rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -159,9 +161,9 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-[1rem] flex items-center justify-center rounded-full focus:scale-[1] 
-          hover:scale-[1.11] active:scale-105 transition 
-          cursor-pointer"
+          className="bg-black p-2 sm:p-3 flex items-center justify-center rounded-full focus:scale-[1] 
+        hover:scale-[1.11] active:scale-105 transition 
+        cursor-pointer"
           style={{
             borderColor: "cyan",
             borderWidth: "0.2rem",
@@ -173,7 +175,7 @@ export default function Intro() {
         >
           <span
             style={{ display: "inline-block", textAlign: "center" }}
-            className="text-white mr-[1rem]"
+            className="text-white mr-4 sm:mr-6"
           >
             CV
           </span>
