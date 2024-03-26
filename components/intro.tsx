@@ -10,16 +10,13 @@ import { useSectionInView } from "@/lib/hooks";
 import "/app/style.css";
 
 const fullText = [
-  "hi, my name is akilesh!",
-  "என் பெயர் அகிலேஷ்!",
-  "我的名字是阿基莱什!",
-  "nama saya akilesh!",
-  "i am passionate about software engineering.",
-  "i enjoy learning new technologies and frameworks.",
+  "hi, i'm akilesh jayakumar!",
+  "i am passionate about software engineering and cybersecurity.",
+  "i enjoy learning new technologies and building projects.",
   "i am currently learning aws.",
   "i love solving puzzles and the rubik's cube.",
   "cardistry and magic tricks are my hobbies.",
-  "i am an avid fan of sci-fi and comic book movies.",
+  "i love watching sci-fi and comic book movies.",
   "let's connect!",
 ];
 
@@ -55,7 +52,7 @@ export default function Intro() {
 
       const handleDeleting = () => {
         setText(currentText.substring(0, text.length - 1));
-        setTypingSpeed(40);
+        setTypingSpeed(20);
       };
 
       if (!isDeleting && text === currentText) {
@@ -98,17 +95,16 @@ export default function Intro() {
           <Image
             src="/profile-photo.jpg"
             alt="profile-photo"
-            width={360}
-            height={360}
+            width={400}
+            height={400}
             quality={100}
             priority={true}
             className="rounded-full object-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 
-        <motion.h1 className="text-2xl m-[3.7rem] font-medium sm:text-3xl text-white">
+        <motion.h1 className="font-bold sm:text-4xl text-2xl m-[2rem] text-white">
           <span
-            className="font-medium"
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
           >
@@ -119,7 +115,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-[2rem] mb-[2rem] text-2xl font-bold text-white"
+        className="flex flex-col sm:flex-row items-center justify-center gap-[2rem] mb-[9rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -163,7 +159,9 @@ export default function Intro() {
         </div>
 
         <a
-          className="bg-black p-[0.5rem] flex items-center justify-center rounded-full focus:scale-[1] hover:scale-[1.11] active:scale-105 transition cursor-pointer"
+          className="bg-black p-[1rem] flex items-center justify-center rounded-full focus:scale-[1] 
+          hover:scale-[1.11] active:scale-105 transition 
+          cursor-pointer"
           style={{
             borderColor: "cyan",
             borderWidth: "0.2rem",
@@ -180,7 +178,7 @@ export default function Intro() {
             CV
           </span>
           <BsCloudDownload
-            className="text-4xl  group-hover:translate-y-1 transition"
+            className="text-4xl group-hover:translate-y-1 transition"
             style={{
               color: "white",
             }}
