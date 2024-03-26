@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { BsCloudDownload } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import "/app/style.css";
+import { useState, useEffect, useRef } from "react";
 
 const fullText = [
   "hi, i'm akilesh jayakumar!",
@@ -88,10 +88,15 @@ export default function Intro() {
     >
       <div className="flex flex-col sm:m-1 items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          whileHover={{ scale: 1.06 }}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="cursor-pointer"
+          whileHover={{
+            scale: 1.06,
+            rotateY: 360,
+            rotateX: [360],
+          }}
         >
           <Image
             src="/profile-photo.jpg"
@@ -104,7 +109,7 @@ export default function Intro() {
           />
         </motion.div>
 
-        <motion.h1 className="font-bold sm:m-8 mt-[4rem] sm:text-4xl text-2xl text-white">
+        <motion.h1 className="font-bold sm:m-4 mt-[4rem] sm:text-4xl text-2xl text-white">
           <span
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
@@ -120,7 +125,7 @@ export default function Intro() {
         sm:gap-8 m-9 sm:m-8 mb-[15rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="flex gap-4">
           <a
