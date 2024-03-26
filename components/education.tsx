@@ -1,5 +1,5 @@
 "use client";
-// Importing necessary React components and hooks
+
 import React from "react";
 import SectionHeading from "./section-heading";
 import {
@@ -86,6 +86,7 @@ export default function Education() {
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
               fontSize: "1.5rem",
+              border: "5px solid #fff",
             }}
           >
             <h3 className="font-bold text-lg capitalize mr[1rem]">
