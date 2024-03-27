@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { BsCloudDownload } from "react-icons/bs";
+import { SlDocs } from "react-icons/sl";
 import { useSectionInView } from "@/lib/hooks";
 import "/app/style.css";
 import { useState, useEffect, useRef } from "react";
@@ -92,17 +94,13 @@ export default function Intro() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="cursor-pointer"
-          whileHover={{
-            scale: 1.06,
-            rotateY: 360,
-            rotateX: [360],
-          }}
+          whileHover={{ scale: 1.2 }}
         >
           <Image
             src="/profile-photo.jpg"
             alt="profile-photo"
-            width={400}
-            height={400}
+            width={350}
+            height={350}
             quality={100}
             priority={true}
             className="rounded-full mb-4 sm:mb-8 object-cover border-[0.2rem] border-[cyan] no-shadow"
@@ -122,7 +120,7 @@ export default function Intro() {
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-4 
-        sm:gap-8 m-9 sm:m-8 mb-[15rem] text-2xl font-bold text-white"
+        sm:gap-8 m-9 sm:m-8 mb-[15rem] mt-[6rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -153,6 +151,18 @@ export default function Intro() {
           </a>
 
           <a
+            href="https://g.dev/akileshjayakumar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGoogle
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
+            />
+          </a>
+
+          <a
             href="https://github.com/akileshjayakumar"
             target="_blank"
             rel="noopener noreferrer"
@@ -163,34 +173,19 @@ export default function Intro() {
               }
             />
           </a>
-        </div>
 
-        <a
-          className="bg-black p-2 sm:p-3 flex items-center justify-center rounded-full focus:scale-[1] 
-        hover:scale-[1.11] active:scale-105 transition 
-        cursor-pointer"
-          style={{
-            borderColor: "cyan",
-            borderWidth: "0.2rem",
-            borderStyle: "solid",
-          }}
-          href="https://docs.google.com/document/d/12aixN8onmZl3A1jYc6EgwrcztquAb0yUDcXebdSstk4/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span
-            style={{ display: "inline-block", textAlign: "center" }}
-            className="text-white mr-4 sm:mr-6"
+          <a
+            href="https://docs.google.com/document/d/12aixN8onmZl3A1jYc6EgwrcztquAb0yUDcXebdSstk4/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            CV
-          </span>
-          <BsCloudDownload
-            className="text-4xl group-hover:translate-y-1 transition"
-            style={{
-              color: "white",
-            }}
-          />
-        </a>
+            <SlDocs
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
+            />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
