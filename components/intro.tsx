@@ -18,7 +18,7 @@ const fullText = [
   "i am currently learning aws.",
   "i love solving puzzles and the rubik's cube.",
   "cardistry and magic tricks are my hobbies.",
-  "sci-fi and comic book movies are my favorites.",
+  "sci-fi and comic book movies are my favourites.",
   "let's connect!",
 ];
 
