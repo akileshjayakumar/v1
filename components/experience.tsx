@@ -38,11 +38,11 @@ export default function Experience() {
             dateClassName="text-lg font-semibold"
             icon={<item.icon />}
             iconStyle={{
-              background: theme === "light" ? "#60a5fa" : "#312e81",
+              background: theme === "light" ? "#60a5fa" : "#000000",
               color: "#fff",
               boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
               fontSize: "1.5rem",
-              border: "5px solid #fff",
+              border: "3px solid #fff",
             }}
           >
             <h3 className="font-bold text-lg capitalize">{item.company}</h3>
