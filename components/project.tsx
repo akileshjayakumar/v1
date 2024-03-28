@@ -33,7 +33,7 @@ export default function Project({
     >
       <section
         className="bg-black mb-[2rem] mt-9 sm:h-[30rem] max-w-[50rem]
-        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border border-[cyan] border-[0.2rem]"
+        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem]"
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-3xl font-semibold text-white">{title}</h3>

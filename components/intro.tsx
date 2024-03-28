@@ -13,12 +13,12 @@ import { useState, useEffect, useRef } from "react";
 
 const fullText = [
   "hi, i'm akilesh jayakumar!",
+  "i am a final-year computer science student.",
   "i am passionate about software engineering and cybersecurity.",
-  "i enjoy learning new technologies and building projects.",
   "i am currently learning aws.",
   "i love solving puzzles and the rubik's cube.",
   "cardistry and magic tricks are my hobbies.",
-  "i love watching sci-fi and comic book movies.",
+  "sci-fi and comic book movies are my favorites.",
   "let's connect!",
 ];
 
