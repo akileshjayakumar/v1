@@ -85,7 +85,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-1 max-w-[50rem] text-center text-white scroll-mt-[100rem]"
+      className="max-w-[50rem] text-center text-white scroll-mt-[100rem]"
     >
       <div className="flex flex-col sm:m-1 items-center justify-center">
         <motion.div
@@ -107,7 +107,7 @@ export default function Intro() {
         </motion.div>
 
         <motion.h1
-          className="font-bold tracking-wider sm:m-4 mt-[4rem] sm:text-5xl text-5xl text-white"
+          className="font-bold tracking-wider sm:m-4 mt-[1rem] sm:text-5xl text-5xl text-white"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
