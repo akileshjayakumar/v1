@@ -35,7 +35,6 @@ export default function Experience() {
               borderRight: "8px solid #fff",
             }}
             date={item.date}
-            dateClassName="text-lg m-[1rem] font-semibold text-white"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#000000",

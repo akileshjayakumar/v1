@@ -79,7 +79,6 @@ export default function Education() {
               borderRight: "8px solid #fff",
             }}
             date={item.date}
-            dateClassName="text-lg font-semibold"
             icon={<item.icon />}
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#000000",
