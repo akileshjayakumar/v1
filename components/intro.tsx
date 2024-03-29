@@ -12,7 +12,6 @@ import "/app/style.css";
 import { useState, useEffect, useRef } from "react";
 
 const fullText = [
-  "hi, i'm akilesh jayakumar!",
   "i am a final-year computer science student.",
   "i am passionate about software engineering and cybersecurity.",
   "i am currently learning aws.",
@@ -107,7 +106,11 @@ export default function Intro() {
           />
         </motion.div>
 
-        <motion.h1 className="font-bold sm:m-4 mt-[4rem] sm:text-4xl text-2xl text-white">
+        <h1 className="font-bold sm:m-4 mt-[4rem] sm:text-5xl text-2xl text-white">
+          hi, i'm akilesh
+        </h1>
+
+        <motion.h1 className="font-medium sm:m-4 mt-[4rem] sm:text-2xl text-2xl text-white">
           <span
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
