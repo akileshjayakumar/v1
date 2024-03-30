@@ -29,20 +29,24 @@ export default function Project({
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section
-        className="bg-black mb-[2rem] mt-9 sm:h-[30rem] max-w-[50rem]
-        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem]"
+      <motion.div
+        whileHover={{
+          scale: 1.11,
+          translateX: 1,
+          translateY: 1,
+        }}
+        className="bg-black mb-[2rem] mt-9 sm:h-[30rem] max-w-[60rem]
+        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem] group"
       >
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-4xl font-semibold text-white">{title}</h3>
+        <motion.div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+          <h3 className="text-3xl font-semibold text-white">{title}</h3>
           <p className="mt-2 leading-relaxed text-white">{description}</p>
 
-          <ul className="flex flex-wrap gap-2 sm:mt-auto">
+          <ul className="flex mt-[2rem] flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-gray-800 px-3 py-1 text-[0.9rem] border-gray-600 tracking-wider text-white rounded-full"
+                className="bg-gray-800 px-4 py-1 text-[1rem] border-gray-600 tracking-wider text-white rounded-full"
                 key={index}
               >
                 {tag}
@@ -70,26 +74,12 @@ export default function Project({
               Live Site
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <Image
-          src={imageUrl}
-          alt="Projects Image"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
+        <motion.div className="absolute hidden sm:block top-8 -right-40 w-[28rem] rounded-t-lg shadow-2xl transition">
+          <Image src={imageUrl} alt="Project Image" quality={100} />
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 }
