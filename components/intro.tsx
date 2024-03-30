@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { BsCloudDownload } from "react-icons/bs";
 import { SlDocs } from "react-icons/sl";
 import { useSectionInView } from "@/lib/hooks";
 import "/app/style.css";

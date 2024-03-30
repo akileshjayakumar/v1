@@ -32,10 +32,10 @@ export default function Skills() {
       <SectionHeading>SKILLS</SectionHeading>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
         <div key={categoryIndex}>
-          <h3 className="text-xl font-semibold lowercase text-white">
+          <h3 className="text-2xl tracking-wider font-medium lowercase text-white">
             {category}
           </h3>
-          <ul className="flex m-5 flex-wrap justify-center gap-2 text-lg">
+          <ul className="flex m-5 flex-wrap justify-center gap-3 text-lg">
             {skills.map((skill, skillIndex) => (
               <motion.li
                 className="bg-gray-800 lowercase tracking-wider border border-gray-600 shadow-sm rounded-xl px-5 py-3 text-white"

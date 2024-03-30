@@ -36,7 +36,7 @@ export default function Project({
         rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem]"
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-3xl font-semibold text-white">{title}</h3>
+          <h3 className="text-4xl font-semibold text-white">{title}</h3>
           <p className="mt-2 leading-relaxed text-white">{description}</p>
 
           <ul className="flex flex-wrap gap-2 sm:mt-auto">
