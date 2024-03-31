@@ -106,7 +106,7 @@ export default function Intro() {
         </motion.div>
 
         <motion.h1
-          className="font-bold tracking-wider sm:m-4 mt-[1rem] sm:text-5xl text-5xl text-white"
+          className="font-bold tracking-wider sm:m-2 mt-[1rem] sm:text-5xl text-5xl text-white"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -114,7 +114,7 @@ export default function Intro() {
           hi, i'm akilesh
         </motion.h1>
 
-        <motion.h1 className="tracking-wider font-medium sm:m-4 mt-[4rem] sm:text-2xl text-2xl text-white">
+        <motion.h1 className="tracking-wider font-medium sm:m-4 mt-[2rem] sm:text-2xl text-2xl text-white">
           <span
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
@@ -127,7 +127,7 @@ export default function Intro() {
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-4 
-        sm:gap-8 m-9 sm:m-8 mb-[15rem] mt-[4rem] text-2xl font-bold text-white"
+        sm:gap-8 m-9 sm:m-8 mb-[15rem] mt-[2rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
