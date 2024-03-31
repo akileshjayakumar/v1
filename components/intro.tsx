@@ -126,13 +126,12 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 
-        sm:gap-8 m-9 sm:m-8 mb-[15rem] mt-[2rem] text-2xl font-bold text-white"
+        className="flex flex-col sm:flex-row items-center justify-center m-9 sm:m-8 mb-[15rem] mt-[2rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex gap-4">
+        <div className="flex sm:gap-[10rem] gap-5">
           <a
             href="https://twitter.com/StrangeDoctorGo"
             target="_blank"

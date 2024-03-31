@@ -11,17 +11,18 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="max-w-[500rem] sm:m-[22rem] m-[1rem] leading-[5rem] mt-[1rem] sm:mb-40 scroll-mt-28"
+      className="max-w-[500rem] sm:m-[15rem] m-[1rem] leading-[5rem] mt-[1rem] sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>ABOUT</SectionHeading>
-      <p className="text-2xl text-center tracking-wider">
+      <p className="text-3xl text-center leading-[3rem] tracking-wider">
         Hi! I'm currently a final-year computer science student at the{" "}
         <a
-          className=" hover:bg-blue-700 text-white font-bold justify-center items-center rounded duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          className=" hover:bg-blue-700 text-white 
+          justify-center items-center rounded duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
           href="https://www.uow.edu.au/"
           target="_blank"
           rel="noopener noreferrer"
