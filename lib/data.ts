@@ -49,15 +49,6 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Text To Speech",
-    description:
-      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on Vercel.",
-    tags: ["html", "css", "javascript"],
-    imageUrl: textspeech,
-    repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
-    liveUrl: "https://akilesh-text-to-speech.vercel.app",
-  },
-  {
     title: "ChatGPT Clone",
     description:
       "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chatbot via GPT-3.5 API calls. Deployed on Render.",
@@ -65,15 +56,6 @@ export const projectsData = [
     imageUrl: gptclone,
     repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
     liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com",
-  },
-  {
-    title: "Coin Flip Game",
-    description:
-      "Developed an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin-flipping animations. Deployed on GitHub Pages.",
-    tags: ["html", "css", "javascript"],
-    imageUrl: flipcoin,
-    repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
-    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin",
   },
   {
     title: "Password Generator",

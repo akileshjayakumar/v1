@@ -30,7 +30,7 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-white transition text-white dark:hover:text-gray-300"
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-white transition text-white dark:hover:text-red-300"
                 )}
                 href={link.hash}
                 onClick={() => {
