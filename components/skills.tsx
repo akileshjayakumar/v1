@@ -24,7 +24,7 @@ export default function Skills() {
   const { ref } = useSectionInView("SKILLS");
 
   return (
-    <motion.section
+    <section
       id="skills"
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
@@ -54,6 +54,6 @@ export default function Skills() {
           </ul>
         </div>
       ))}
-    </motion.section>
+    </section>
   );
 }

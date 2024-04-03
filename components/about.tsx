@@ -2,19 +2,15 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
   const { ref } = useSectionInView("ABOUT");
 
   return (
-    <motion.section
+    <section
       ref={ref}
       className="max-w-[500rem] sm:m-[15rem] m-[1rem] leading-[5rem] mt-[1rem] sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>ABOUT</SectionHeading>
@@ -39,6 +35,6 @@ export default function About() {
       </p>
 
       <br />
-    </motion.section>
+    </section>
   );
 }

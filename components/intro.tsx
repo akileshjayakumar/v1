@@ -131,7 +131,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex sm:gap-[10rem] gap-5">
+        <div className="flex sm:gap-[5rem] gap-5">
           <a
             href="https://twitter.com/StrangeDoctorGo"
             target="_blank"
