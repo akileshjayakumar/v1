@@ -44,7 +44,7 @@ export default function Experience() {
               border: "3px solid #fff",
             }}
           >
-            <h3 className="font-bold text-lg capitalize">{item.company}</h3>
+            <h3 className="font-bold text-xl capitalize">{item.company}</h3>
             <h4 className="font-semibold text-md capitalize">{item.title}</h4>
             <br />
             <ul
@@ -55,7 +55,10 @@ export default function Experience() {
               }}
             >
               {item.description.map((point, idx) => (
-                <li key={idx} className="text-base leading-relaxed">
+                <li
+                  key={idx}
+                  className="text-base tracking-wider leading-relaxed"
+                >
                   {point}
                 </li>
               ))}
