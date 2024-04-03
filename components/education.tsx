@@ -4,17 +4,10 @@ import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import { IoSchoolSharp } from "react-icons/io5";
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
-  const { theme } = useTheme();
-
-  const handleCertificateClick = (url: string) => {
-    if (url) {
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
-  };
 
   return (
     <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
@@ -22,57 +15,43 @@ export default function Education() {
       {educationData.map((item, index) => (
         <div
           key={index}
-          className="education-item"
-          style={{
-            background:
-              theme === "light" ? "#f9fafb" : "rgba(255, 255, 255, 0.12)",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            border: "1px solid rgba(0, 0, 0, 0.05)",
-            padding: "40px",
-            borderRadius: "10px",
-            textAlign: "left",
-          }}
+          className="bg-white dark:bg-gray-900 shadow-md rounded-lg m-4 p-6"
         >
-          <h3
-            className="font-bold text-xl capitalize"
-            style={{ marginBottom: "0.5rem" }}
-          >
-            {item.institution}
-          </h3>
-          <h4
-            className="font-semibold text-lg capitalize"
-            style={{ marginBottom: "1rem" }}
-          >
+          <div className="flex items-center mb-4">
+            <IoSchoolSharp className="text-xl text-gray-600 dark:text-gray-300 mr-2" />
+            <h1 className="text-xl font-bold capitalize">{item.institution}</h1>
+          </div>
+          <h2 className="text-lg font-semibold capitalize mb-1">
             {item.degree}
-          </h4>
-          {item.modules && (
-            <ul className="list-disc pl-4 mt-1 mb-2">
-              {item.modules.map((module, idx) => (
-                <li key={idx} className="module-item">
-                  {module}
-                </li>
-              ))}
-            </ul>
-          )}
-          {item.certificateUrl && (
-            <button
-              className="certificate-button"
-              style={{
-                backgroundColor: "#4a90e2",
-                color: "#fff",
-                padding: "10px 15px",
-                borderRadius: "5px",
-                cursor: "pointer",
-              }}
-              // Ensuring `handleCertificateClick` is called with a string.
-              onClick={() =>
-                item.certificateUrl &&
-                handleCertificateClick(item.certificateUrl)
-              }
-            >
-              View Diploma Certificate | Transcript
-            </button>
-          )}
+          </h2>
+          <h3 className="text-sm mb-4">{item.date}</h3>
+          <div className="flex justify-between items-center">
+            <div>
+              {item.modules && (
+                <div className="mt-4">
+                  <h4 className="text-md font-semibold mb-2">Modules:</h4>
+                  <ul className="list-disc space-y-2 pl-5 text-sm">
+                    {item.modules.map((module, idx) => (
+                      <li key={idx} className="leading-relaxed">
+                        {module}
+                      </li>
+                    ))}
+                  </ul>
+                  {item.certificateUrl && (
+                    <a
+                      href={item.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block border-2 border-red-500 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
+                      aria-label="View Certificate"
+                    >
+                      View Certificate
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       ))}
     </section>

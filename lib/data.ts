@@ -46,14 +46,22 @@ export const educationData: EducationEntry[] = [
     degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
     date: "October 2022 - Present",
     icon: IoSchoolSharp,
+    modules: [
+      "CSCI203 Algorithms and Data Structures",
+      "CSCI235 Database Systems",
+      "CSCI251 Advanced Programming",
+      "CSCI262 System Security",
+      "CSCI317 Database Performance Tuning",
+      "CSIT302 Cybersecurity",
+      "CSIT314 Software Development Methodologies",
+      "MATH221 Mathematics for Computer Science",
+    ],
   },
   {
     institution: "Singapore Institute of Management",
     degree: "Diploma in Information Technology",
     date: "October 2021 - September 2022",
     icon: IoSchoolSharp,
-    certificateUrl:
-      "https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f",
     modules: [
       "ITSD001 Business Statistics with Python",
       "ITSD002 Problem Solving",

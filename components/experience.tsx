@@ -2,46 +2,45 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-// Removed import for `VerticalTimeline` and `VerticalTimelineElement`.
-import "react-vertical-timeline-component/style.min.css"; // This import can be removed as well if you're not using the timeline component.
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import { BsBriefcase, BsGeoAlt } from "react-icons/bs";
 
-export default function Experience() {
-  const { ref } = useSectionInView("EXPERIENCE");
-  const { theme } = useTheme();
+export default function Education() {
+  const { ref } = useSectionInView("EDUCATION");
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EXPERIENCE</SectionHeading>
       {experiencesData.map((item, index) => (
-        // The return statement for the map function to properly return JSX.
-        // Also, `key` should be part of the top-level element returned by this map function.
-        <div key={index} className="experience-item">
-          <h3 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
-            {item.company}
-          </h3>
-          <h4 className="font-semibold tracking-wider leading-relaxed text-md capitalize">
+        <div
+          key={index}
+          className="bg-white dark:bg-gray-900 shadow-md rounded-lg m-4 p-6"
+        >
+          <div className="flex items-center mb-4">
+            <BsBriefcase className="text-xl text-gray-600 dark:text-gray-300 mr-2" />
+            <h1 className="text-xl font-bold capitalize">{item.company}</h1>
+          </div>
+          <h2 className="text-lg font-semibold capitalize mb-1">
             {item.title}
-          </h4>
-          <br />
-          <ul
-            className="list-disc pl-4 mt-2 space-y-2 m-2"
-            style={{
-              color: theme === "light" ? "#374151" : "#e5e7eb",
-              textAlign: "left",
-            }}
-          >
-            {item.description.map((point, idx) => (
-              <li
-                key={idx}
-                className="text-base tracking-wider leading-relaxed"
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
+          </h2>
+          <h3 className="text-sm mb-4">{item.date}</h3>
+          <div className="flex justify-between items-center">
+            <div>
+              {item.description && (
+                <div className="mt-4">
+                  <h4 className="text-md font-semibold mb-2">Modules:</h4>
+                  <ul className="list-disc space-y-2 pl-5 text-sm">
+                    {item.description.map((module, idx) => (
+                      <li key={idx} className="leading-relaxed">
+                        {module}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       ))}
     </section>
