@@ -89,11 +89,8 @@ export default function Education() {
             }}
           >
             <h3 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
-              {item.institution}
+              {item.institution} <br /> <br /> {item.degree}
             </h3>
-            <h4 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
-              {item.degree}
-            </h4>
             <br />
             <ul
               className="list-disc pl-4 mt-2 space-y-2 m-2"

@@ -11,7 +11,7 @@ import "/app/style.css";
 import { useState, useEffect, useRef } from "react";
 
 const fullText = [
-  "i am a final-year computer science student.",
+  "a computer science student.",
   "i am passionate about software engineering and cybersecurity.",
   "i am currently learning aws.",
   "i love solving puzzles and the rubik's cube.",
