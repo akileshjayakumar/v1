@@ -1,8 +1,8 @@
 import { CgWorkAlt } from "react-icons/cg";
 import gptclone from "@/public/gpt-clone.png";
 import passwordgen from "@/public/password-gen.png";
-import { IoSchoolSharp } from "react-icons/io5";
-import { IconType } from "react-icons";
+import textspeech from "@/public/text-to-speech.png";
+import flipcoin from "@/public/flip-coin.png";
 
 export const links = [
   {
@@ -30,50 +30,6 @@ export const links = [
     hash: "#projects",
   },
 ] as const;
-
-type EducationEntry = {
-  institution: string;
-  degree: string;
-  date: string;
-  icon: IconType;
-  certificateUrl?: string;
-  modules?: string[];
-};
-
-export const educationData: EducationEntry[] = [
-  {
-    institution: "University of Wollongong (SIM Campus)",
-    degree: "Bachelor of Computer Science, Big Data and Cybersecurity",
-    date: "October 2022 - Present",
-    icon: IoSchoolSharp,
-    modules: [
-      "CSCI203 Algorithms and Data Structures",
-      "CSCI235 Database Systems",
-      "CSCI251 Advanced Programming",
-      "CSCI262 System Security",
-      "CSCI317 Database Performance Tuning",
-      "CSIT302 Cybersecurity",
-      "CSIT314 Software Development Methodologies",
-      "MATH221 Mathematics for Computer Science",
-    ],
-  },
-  {
-    institution: "Singapore Institute of Management",
-    degree: "Diploma in Information Technology",
-    date: "October 2021 - September 2022",
-    icon: IoSchoolSharp,
-    modules: [
-      "ITSD001 Business Statistics with Python",
-      "ITSD002 Problem Solving",
-      "ITSD003 Communications and Networks",
-      "ITSD004 Programming Fundamentals",
-      "ITSD005 Database Management and Security",
-      "ITSD006 Interaction Design",
-      "ITSD007 IT Project Management",
-      "ITSD008 Systems Development Techniques",
-    ],
-  },
-];
 
 export const experiencesData = [
   {

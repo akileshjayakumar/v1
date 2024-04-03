@@ -1,56 +1,68 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "@/components/section-heading";
+import SectionHeading from "./section-heading";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { MdWorkOutline } from "react-icons/md";
-import { motion } from "framer-motion";
+import { useTheme } from "@/context/theme-context";
 
-export default function Education() {
-  const { ref } = useSectionInView("EDUCATION");
-
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+export default function Experience() {
+  const { ref } = useSectionInView("EXPERIENCE");
+  const { theme } = useTheme();
 
   return (
-    <motion.section
-      id="experience"
-      ref={ref}
-      className="scroll-mt-28 mb-28 sm:mb-40"
-    >
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EXPERIENCE</SectionHeading>
-      {experiencesData.map((item, index) => (
-        <motion.div
-          key={index}
-          className="bg-white dark:bg-gray-900 shadow-lg rounded-lg m-4 p-6 hover:scale-105 transition-transform duration-300"
-          whileHover={{ scale: 1.03 }}
-          layout
-        >
-          <div className="flex items-center mb-4">
-            <MdWorkOutline className="text-xl text-primary-500 dark:text-primary-400 mr-2" />
-            <h1 className="text-2xl font-bold capitalize">{item.company}</h1>
-          </div>
-          <h2 className="text-lg font-semibold capitalize mb-2">
-            {item.title}
-          </h2>
-          <p className="text-sm mb-3">{item.date}</p>
-          {item.description && (
-            <ul className="list-none space-y-2 pl-4 text-sm">
-              {item.description.map((module, idx) => (
-                <li key={idx} className="flex items-center">
-                  <span className="text-primary-500 dark:text-primary-400 mr-2">
-                    •
-                  </span>
-                  <p className="leading-relaxed">{module}</p>
+      <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
+        {experiencesData.map((item, index) => (
+          <VerticalTimelineElement
+            key={index}
+            contentStyle={{
+              background: theme === "light" ? "#ffffff" : "#1f2937",
+              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
+              border:
+                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
+              color: theme === "light" ? "#1f2937" : "#f3f4f6",
+              textAlign: "left",
+              padding: "0.7rem 0.7rem",
+            }}
+            contentArrowStyle={{
+              borderRight: "8px solid #fff",
+            }}
+            date={item.date}
+            icon={<item.icon />}
+            iconStyle={{
+              background: theme === "light" ? "#60a5fa" : "#000000",
+              color: "#fff",
+              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+              fontSize: "1.5rem",
+              border: "3px solid #fff",
+            }}
+          >
+            <h3 className="font-bold text-lg capitalize">{item.company}</h3>
+            <h4 className="font-semibold text-md capitalize">{item.title}</h4>
+            <br />
+            <ul
+              className="list-disc pl-4 mt-2 space-y-2 m-2"
+              style={{
+                color: theme === "light" ? "#374151" : "#e5e7eb",
+                textAlign: "left",
+              }}
+            >
+              {item.description.map((point, idx) => (
+                <li key={idx} className="text-base leading-relaxed">
+                  {point}
                 </li>
               ))}
             </ul>
-          )}
-        </motion.div>
-      ))}
-    </motion.section>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </section>
   );
 }
