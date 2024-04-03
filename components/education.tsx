@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { TbSchool } from "react-icons/tb";
-import "@/app/style.css"
+import "@/app/style.css"; // Import LinkedIn style CSS
 
 export const educationData = [
   {
@@ -59,7 +59,6 @@ export default function Education() {
     }
   };
 
-  // JSX for the education section
   return (
     <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
@@ -67,18 +66,20 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            className="vertical-timeline-element"
+            className="vertical-timeline-element linkedin-style" // Add LinkedIn style class
             contentStyle={{
-              background: theme === "light" ? "#ffffff" : "#1f2937",
-              color: theme === "light" ? "#1f2937" : "#f3f4f6",
+              background: theme === "light" ? "#f3f6f8" : "#283e4a", // Update background color
+              color: theme === "light" ? "#333" : "#f3f4f6", // Update text color
             }}
             contentArrowStyle={{
-              borderRight: "8px solid #fff",
+              borderRight: `8px solid ${
+                theme === "light" ? "#f3f6f8" : "#283e4a"
+              }`, // Match background color
             }}
             date={item.date}
             icon={<item.icon />}
             iconStyle={{
-              background: theme === "light" ? "#60a5fa" : "#000000",
+              background: theme === "light" ? "#0077b5" : "#000000", // LinkedIn blue
               color: "#fff",
             }}
           >
@@ -90,7 +91,7 @@ export default function Education() {
               ))}
             </ul>
             <button
-              className="certificate-button"
+              className="certificate-button linkedin-button" // Add LinkedIn style class
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
               View Certificate | Transcript
@@ -101,3 +102,4 @@ export default function Education() {
     </section>
   );
 }
+

@@ -28,32 +28,38 @@ body {
   }
 }
 
-.vertical-timeline-element {
+/*=========================================================*/
+
+/* LinkedIn style */
+.linkedin-style {
+  border: 2px solid #0077b5; /* LinkedIn blue */
+  border-radius: 8px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
-.vertical-timeline-element:hover {
-  transform: translateY(-5px);
-}
-
-.institution-heading {
+.linkedin-style h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.degree {
+.linkedin-style h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-.subject-list {
+.linkedin-style ul {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.certificate-button {
-  background-color: #4caf50;
+.linkedin-style li {
+  font-size: 1rem;
+  color: #333; /* Dark text color */
+}
+
+.linkedin-button {
+  background-color: #0077b5; /* LinkedIn blue */
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -62,6 +68,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.certificate-button:hover {
-  background-color: #388e3c;
+.linkedin-button:hover {
+  background-color: #005e8e; /* Darker shade of LinkedIn blue */
 }
