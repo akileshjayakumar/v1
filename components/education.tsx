@@ -88,9 +88,12 @@ export default function Education() {
               border: "3px solid #fff",
             }}
           >
-            <h3 className="font-bold text-lg capitalize mr[1rem]">
-              {item.institution} | {item.degree}
+            <h3 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
+              {item.institution}
             </h3>
+            <h4 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
+              {item.degree}
+            </h4>
             <br />
             <ul
               className="list-disc pl-4 mt-2 space-y-2 m-2"
@@ -100,7 +103,10 @@ export default function Education() {
               }}
             >
               {item.subjects.map((subject, idx) => (
-                <li key={idx} className="text-base leading-relaxed">
+                <li
+                  key={idx}
+                  className="text-base tracking-wider leading-relaxed"
+                >
                   {subject}
                 </li>
               ))}

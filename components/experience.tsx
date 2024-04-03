@@ -44,8 +44,12 @@ export default function Experience() {
               border: "3px solid #fff",
             }}
           >
-            <h3 className="font-bold text-xl capitalize">{item.company}</h3>
-            <h4 className="font-semibold text-md capitalize">{item.title}</h4>
+            <h3 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
+              {item.company}
+            </h3>
+            <h4 className="font-semibold tracking-wider leading-relaxed text-md capitalize">
+              {item.title}
+            </h4>
             <br />
             <ul
               className="list-disc pl-4 mt-2 space-y-2 m-2"
