@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://github.com/akileshjayakumar?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-xl py-6 px-6 
+          className="inline-block text-xl py-4 px-4
           tracking-wider bg-gradient-to-r from-green-400 to-blue-500 hover:from-cyan-500 hover:to-cyan-600 text-white 
           font-bold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         >

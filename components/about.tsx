@@ -10,11 +10,11 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="max-w-[500rem] sm:m-[15rem] m-[1rem] leading-[5rem] mt-[1rem] sm:mb-40 scroll-mt-28"
+      className="max-w-[50rem] sm:m-[15rem] m-[1rem] leading-[5rem] mt-[1rem] sm:mb-40 scroll-mt-28"
       id="about"
     >
       <SectionHeading>ABOUT</SectionHeading>
-      <p className="text-3xl text-center leading-[3rem] tracking-wider">
+      <p className="text-2xl text-left leading-[3rem] tracking-wider">
         Hi! I'm currently a final-year computer science student at the{" "}
         <a
           className=" hover:bg-blue-700 text-white 
