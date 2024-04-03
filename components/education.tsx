@@ -5,55 +5,70 @@ import SectionHeading from "@/components/section-heading";
 import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { IoSchoolSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 export default function Education() {
   const { ref } = useSectionInView("EDUCATION");
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      className="mb-28 max-w-6xl mx-auto mt-20 leading-8 sm:mb-40 scroll-mt-28"
+      id="education"
+    >
       <SectionHeading>EDUCATION</SectionHeading>
       {educationData.map((item, index) => (
-        <div
+        <motion.div
           key={index}
-          className="bg-white dark:bg-gray-900 shadow-md rounded-lg m-4 p-6"
+          className="bg-white dark:bg-gray-900 shadow-lg rounded-lg m-4 p-6 hover:scale-105 transition-transform duration-300"
+          whileHover={{ scale: 1.03 }}
+          layout
         >
           <div className="flex items-center mb-4">
-            <IoSchoolSharp className="text-xl text-gray-600 dark:text-gray-300 mr-2" />
-            <h1 className="text-xl font-bold capitalize">{item.institution}</h1>
+            <IoSchoolSharp className="text-xl text-primary-500 dark:text-primary-400 mr-2" />
+            <h1 className="text-2xl font-bold capitalize">
+              {item.institution}
+            </h1>
           </div>
-          <h2 className="text-lg font-semibold capitalize mb-1">
+          <h2 className="text-lg font-semibold capitalize mb-2">
             {item.degree}
           </h2>
-          <h3 className="text-sm mb-4">{item.date}</h3>
-          <div className="flex justify-between items-center">
-            <div>
-              {item.modules && (
-                <div className="mt-4">
-                  <h4 className="text-md font-semibold mb-2">Modules:</h4>
-                  <ul className="list-disc space-y-2 pl-5 text-sm">
-                    {item.modules.map((module, idx) => (
-                      <li key={idx} className="leading-relaxed">
-                        {module}
-                      </li>
-                    ))}
-                  </ul>
-                  {item.certificateUrl && (
-                    <a
-                      href={item.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block border-2 border-red-500 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
-                      aria-label="View Certificate"
-                    >
-                      View Certificate
-                    </a>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+          <p className="text-sm mb-3">{item.date}</p>
+          <p>Modules:</p> <br />
+          {item.modules && (
+            <ul className="list-none space-y-2 pl-4 text-sm">
+              {item.modules.map((module, idx) => (
+                <li key={idx} className="flex items-center">
+                  <span className="text-primary-500 dark:text-primary-400 mr-2">
+                    •
+                  </span>
+                  <p className="leading-relaxed">{module}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {item.certificateUrl && (
+            <a
+              href="https://dashboard.accredify.io/verify?id=c903b57a-a109-44c3-8d04-f45d8536bc1f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
+              aria-label="View Certificate"
+            >
+              View Certificate
+            </a>
+          )}
+        </motion.div>
       ))}
-    </section>
+    </motion.section>
   );
 }

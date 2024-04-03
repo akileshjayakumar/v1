@@ -24,10 +24,10 @@ export default function Skills() {
   const { ref } = useSectionInView("SKILLS");
 
   return (
-    <section
+    <motion.section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[60rem] mt-[10rem] text-center leading-8 sm:mb-40 scroll-mt-28"
     >
       <SectionHeading>SKILLS</SectionHeading>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
@@ -54,6 +54,6 @@ export default function Skills() {
           </ul>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 }
