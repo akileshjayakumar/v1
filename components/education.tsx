@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { TbSchool } from "react-icons/tb";
+import "@/app/style.css"
 
 export const educationData = [
   {
@@ -66,14 +67,10 @@ export default function Education() {
         {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
+            className="vertical-timeline-element"
             contentStyle={{
               background: theme === "light" ? "#ffffff" : "#1f2937",
-              boxShadow: "0 4px 10px 0 rgba(0, 0, 0, 0.1)",
-              border:
-                theme === "light" ? "2px solid #e5e7eb" : "2px solid #374151",
               color: theme === "light" ? "#1f2937" : "#f3f4f6",
-              textAlign: "left",
-              padding: "0.7rem 0.7rem",
             }}
             contentArrowStyle={{
               borderRight: "8px solid #fff",
@@ -83,33 +80,17 @@ export default function Education() {
             iconStyle={{
               background: theme === "light" ? "#60a5fa" : "#000000",
               color: "#fff",
-              boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
-              fontSize: "1.5rem",
-              border: "3px solid #fff",
             }}
           >
-            <h3 className="font-bold tracking-wider leading-relaxed text-xl capitalize">
-              {item.institution} <br /> <br /> {item.degree}
-            </h3>
-            <br />
-            <ul
-              className="list-disc pl-4 mt-2 space-y-2 m-2"
-              style={{
-                color: theme === "light" ? "#374151" : "#e5e7eb",
-                textAlign: "left",
-              }}
-            >
+            <h3 className="institution-heading">{item.institution}</h3>
+            <h4 className="degree">{item.degree}</h4>
+            <ul className="subject-list">
               {item.subjects.map((subject, idx) => (
-                <li
-                  key={idx}
-                  className="text-base tracking-wider leading-relaxed"
-                >
-                  {subject}
-                </li>
+                <li key={idx}>{subject}</li>
               ))}
             </ul>
             <button
-              className="button-style bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 flex justify-center items-center rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="certificate-button"
               onClick={() => handleCertificateClick(item.certificateUrl)}
             >
               View Certificate | Transcript
