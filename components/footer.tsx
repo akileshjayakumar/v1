@@ -9,7 +9,10 @@ export default function Footer() {
           href="https://github.com/akileshjayakumar?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block py-2 px-4 tracking-wider bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:rotate-2"
+          className="inline-block py-2 px-4 
+          tracking-wider bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 
+          text-white font-bold rounded-full shadow-lg transition duration-300 ease-in-out 
+          transform hover:-translate-y-1 hover:scale-110 hover:rotate-2"
         >
           more projects on my github!
         </a>
