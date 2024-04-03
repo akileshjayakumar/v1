@@ -2,18 +2,18 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mb-[2rem] px-[2rem] tracking-wider text-4xl text-center text-white">
-      <h3 className="mb-[6rem]">
+    <footer className="mb-10 px-4 tracking-wider text-center text-white">
+      <h3 className="mb-[7rem]">
         {/* Updated styling and animation */}
         <a
           href="https://github.com/akileshjayakumar?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block sm:py-2 sm:px-[3rem] sm:text-4xl text-base py-[1rem] px-[1rem]
-          tracking-wider bg-gradient-to-r from-green-500 to-cyan-500 hover:from-cyan-500 hover:to-cyan-600 
-          sm:text-black font-bold rounded-full shadow-lg duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          className="inline-block text-xl py-6 px-6 
+          tracking-wider bg-gradient-to-r from-green-400 to-blue-500 hover:from-cyan-500 hover:to-cyan-600 text-white 
+          font-bold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         >
-          &lt;a&gt; more projects on my github! /&lt;a&gt;
+          more projects on my github!
         </a>
       </h3>
 

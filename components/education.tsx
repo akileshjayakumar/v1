@@ -17,13 +17,9 @@ export default function Education() {
 
   return (
     <motion.section
-      ref={ref}
-      initial="hidden"
-      animate="visible"
-      variants={variants}
-      transition={{ delay: 0.2, duration: 0.5 }}
-      className="mb-28 max-w-6xl mx-auto mt-20 leading-8 sm:mb-40 scroll-mt-28"
       id="education"
+      ref={ref}
+      className="scroll-mt-28 mb-28 sm:mb-40"
     >
       <SectionHeading>EDUCATION</SectionHeading>
       {educationData.map((item, index) => (
