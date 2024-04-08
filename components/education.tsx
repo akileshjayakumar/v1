@@ -60,7 +60,7 @@ export default function Education() {
 
   // JSX for the education section
   return (
-    <section id="education" ref={ref} className="scroll-mt-28 p-9 mb-28 sm:mb-40">
+    <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>
         {educationData.map((item, index) => (
