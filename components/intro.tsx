@@ -182,14 +182,11 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://docs.google.com/document/d/12aixN8onmZl3A1jYc6EgwrcztquAb0yUDcXebdSstk4/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="akileshjayakumar-resume.pdf"
+            download="akileshjayakumar-resume.pdf"
           >
             <SlDocs
-              className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
-              }
+              className={`${iconStyle} hover:scale-110 transition-transform text-white`}
             />
           </a>
         </div>
