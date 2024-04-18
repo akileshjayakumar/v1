@@ -64,7 +64,7 @@ export const projectsData = [
     tags: ["html", "css", "javascript"],
     imageUrl: textspeech,
     repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
-    liveUrl: "https://akilesh-text-to-speech.vercel.app",
+    liveUrl: "https://akileshjayakumar.github.io/text-to-speech/",
   },
   {
     title: "Flip A Coin Game",
@@ -72,8 +72,8 @@ export const projectsData = [
       "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: flipcoin,
-    repoUrl: "https://github.com/akileshjayakumar/flip-a-coin-game",
-    liveUrl: "https://akileshjayakumar.github.io/flip-a-coin-game/",
+    repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
+    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
   },
 ] as const;
 
