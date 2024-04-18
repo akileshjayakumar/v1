@@ -51,7 +51,7 @@ export const projectsData = [
   {
     title: "Password Generator",
     description:
-      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
@@ -60,16 +60,16 @@ export const projectsData = [
   {
     title: "Text To Speech",
     description:
-      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on Vercel.",
+      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["html", "css", "javascript"],
     imageUrl: textspeech,
     repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
     liveUrl: "https://akileshjayakumar.github.io/text-to-speech/",
   },
   {
-    title: "Flip A Coin Game",
+    title: "Flip The Coin Game",
     description:
-      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages with Git integration for continuous updates.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
