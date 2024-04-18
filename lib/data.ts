@@ -49,22 +49,31 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "ChatGPT Clone",
-    description:
-      "Developed a ChatGPT clone showcasing backend proficiency by enabling real-time interactions with the chatbot via GPT-3.5 API calls. Deployed on Render.",
-    tags: ["html", "css", "javascript", "node.js", "express.js", "openai api"],
-    imageUrl: gptclone,
-    repoUrl: "https://github.com/akileshjayakumar/akileshgpt-chatgpt-clone",
-    liveUrl: "https://akileshgpt-chatgpt-clone.onrender.com",
-  },
-  {
     title: "Password Generator",
     description:
-      "Developed a password generator tool, focusing on user experience to deliver unique and secure passwords. Deployed on GitHub Pages.",
-    tags: ["html", "css", "javascript"],
+      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+    tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
-    liveUrl: "https://akileshjayakumar.github.io/password-generator",
+    liveUrl: "https://akileshjayakumar.github.io/password-generator/",
+  },
+  {
+    title: "Text To Speech",
+    description:
+      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on Vercel.",
+    tags: ["html", "css", "javascript"],
+    imageUrl: textspeech,
+    repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
+    liveUrl: "https://akilesh-text-to-speech.vercel.app",
+  },
+  {
+    title: "Flip A Coin Game",
+    description:
+      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Successfully deployed on GitHub Pages with Git integration for continuous updates.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    imageUrl: flipcoin,
+    repoUrl: "https://github.com/akileshjayakumar/flip-a-coin-game",
+    liveUrl: "https://akileshjayakumar.github.io/flip-a-coin-game/",
   },
 ] as const;
 
