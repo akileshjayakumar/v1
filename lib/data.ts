@@ -52,7 +52,8 @@ export const projectsData = [
     title: "Password Generator",
     description:
       "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["html", "css", "javascript"],
+
     imageUrl: passwordgen,
     repoUrl: "https://github.com/akileshjayakumar/password-generator",
     liveUrl: "https://akileshjayakumar.github.io/password-generator/",
@@ -70,7 +71,7 @@ export const projectsData = [
     title: "Flip The Coin Game",
     description:
       "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["html", "css", "javascript"],
     imageUrl: flipcoin,
     repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
     liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
