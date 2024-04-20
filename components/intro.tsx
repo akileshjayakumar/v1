@@ -5,9 +5,8 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { SlDocs } from "react-icons/sl";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { useSectionInView } from "@/lib/hooks";
-import "/app/style.css";
 import { useState, useEffect, useRef } from "react";
 
 const fullText = [
@@ -132,7 +131,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex sm:gap-[5rem] gap-5">
+        <div className="flex sm:gap-[3rem] gap-5">
           <a
             href="https://twitter.com/StrangeDoctorGo"
             target="_blank"
@@ -182,11 +181,14 @@ export default function Intro() {
           </a>
 
           <a
-            href="akileshjayakumar-resume.pdf"
-            download="akileshjayakumar-resume.pdf"
+            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <SlDocs
-              className={`${iconStyle} hover:scale-110 transition-transform text-white`}
+            <IoDocumentTextOutline
+              className={
+                iconStyle + " hover:scale-110 transition-transform text-white"
+              }
             />
           </a>
         </div>

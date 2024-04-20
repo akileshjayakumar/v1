@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import "./style.css";
+import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
