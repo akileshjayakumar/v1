@@ -1,6 +1,6 @@
 # [Portfolio Website V1](https://www.akileshjayakumar.com/)
 
-Welcome to my portfolio website (V1)! This site is a showcase of my skills, projects, and experiences. It's built with Next.js, TypeScript, and Tailwind CSS, making it responsive, accessible, and user-friendly. Here is the link to the [Live Site](https://www.akileshjayakumar.com/)!
+Welcome to my portfolio website (V1)! This site is a showcase of my skills, projects, and experiences. It's built with Next.js, TypeScript, and Tailwind CSS, making it responsive, accessible, and user-friendly. Here is the link to the live site: [https://www.akileshjayakumar.com/](https://www.akileshjayakumar.com/)
 
 ## Key Features
 
@@ -8,7 +8,7 @@ Welcome to my portfolio website (V1)! This site is a showcase of my skills, proj
 - **Modern UI/UX:** Crafted for an intuitive and seamless user experience.
 - **State Management:** Facilitates smooth user interactions with efficient state management.
 
-## Technologies Used
+## Tools Used
 
 - **Frontend:** Next.js, TypeScript, Tailwind CSS
 - **Version Control:** Git
