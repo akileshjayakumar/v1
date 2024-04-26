@@ -1,17 +1,16 @@
-# [Portfolio Website](https://www.akileshjayakumar.com/)
+# [Portfolio Website V1](https://www.akileshjayakumar.com/)
 
-Welcome to my personal portfolio website! This site is a showcase of my skills, projects, and experiences. It's built with Next.js, TypeScript, React, and Tailwind CSS, making it responsive, accessible, and user-friendly.
+Welcome to my portfolio website (V1)! This site is a showcase of my skills, projects, and experiences. It's built with Next.js, TypeScript, and Tailwind CSS, making it responsive, accessible, and user-friendly. Here is the link to the [Live Site](https://www.akileshjayakumar.com/)!
 
 ## Key Features
 
 - **Responsive Design:** Ensures a smooth experience on any device.
 - **Modern UI/UX:** Crafted for an intuitive and seamless user experience.
 - **State Management:** Facilitates smooth user interactions with efficient state management.
-- **Continuous Deployment:** Setup for automatic updates through Vercel with GitHub integration.
 
 ## Technologies Used
 
-- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
+- **Frontend:** Next.js, TypeScript, Tailwind CSS
 - **Version Control:** Git
 - **Deployment:** Vercel
 
@@ -40,17 +39,18 @@ To set up the project locally, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you have ideas for improvements or new features, feel free to:
+Your contributions are welcome! If you have ideas for improvements or new features:
 
 1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -am 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a pull request.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Submit a pull request.
 
 ## Contact Information
 
-- **Name:** Akilesh Jayakumar
-- **Email:** jayakuma006@mymail.sim.edu.sg
-- **LinkedIn:** [Akilesh Jayakumar on LinkedIn](https://www.linkedin.com/in/akileshjayakumar/)
-- **GitHub:** [Akilesh Jayakumar on GitHub](https://github.com/akileshjayakumar)
+For more information, please reach out to me at:
+
+- **Email**: jayakuma006@mymail.sim.edu.sg
+- **LinkedIn**: [Akilesh Jayakumar on LinkedIn](https://www.linkedin.com/in/akileshjayakumar/)
+- **GitHub**: [Akilesh Jayakumar on GitHub](https://github.com/akileshjayakumar)
