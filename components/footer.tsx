@@ -17,7 +17,7 @@ function ToolsUsed() {
           title="Next.js"
           className="text-white space-x-1 transition duration-300 ease-in-out transform hover:scale-125"
         />
-        <span className="text-white text-sm"></span>
+
       </a>
       <span className="text-xl text-white">+</span>
       <a
@@ -31,7 +31,7 @@ function ToolsUsed() {
           title="TypeScript"
           className="text-blue-600 space-x-1 transition duration-300 ease-in-out transform hover:scale-125"
         />
-        <span className="text-blue-600 text-sm"></span>
+
       </a>
       <span className="text-xl text-white">+</span>
       <a
@@ -45,7 +45,6 @@ function ToolsUsed() {
           title="Tailwind CSS"
           className="text-cyan-500 space-x-1 transition duration-300 ease-in-out transform hover:scale-125"
         />
-        <span className="text-cyan-500 text-sm"></span>
       </a>
     </div>
   );
