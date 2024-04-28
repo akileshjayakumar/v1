@@ -40,7 +40,6 @@ export const experiencesData = [
       "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes.",
       "Utilised pair.gov.sg platform and prompt engineering techniques to automate test cases, reducing software bugs.",
       "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
-      "Research on Whole of Government (WOG) tools and products, gaining insights into digital infrastructure.",
     ],
     icon: CgWorkAlt,
     date: "December 2023 - Present",
