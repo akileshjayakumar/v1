@@ -42,7 +42,7 @@ export const experiencesData = [
       "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
     ],
     icon: CgWorkAlt,
-    date: "December 2023 - Present",
+    date: "December 2023 - April 2024",
   },
 ] as const;
 
