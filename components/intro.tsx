@@ -15,6 +15,7 @@ const fullText = [
   "i am currently learning aws.",
   "i love building and designing software.",
   "i love solving puzzles and the rubik's cube.",
+  "i like to play badminton.",
   "cardistry and magic tricks are my hobbies.",
   "sci-fi and comic book movies are my favourites.",
   "let's connect!",
@@ -101,7 +102,7 @@ export default function Intro() {
             height={350}
             quality={100}
             priority={true}
-            className="rounded-full mb-4 sm:mb-8 object-cover border-[0.2rem] border-[cyan] no-shadow"
+            className="rounded-full mb-[1rem] sm:mb-[3rem] bject-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 

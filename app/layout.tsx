@@ -1,4 +1,4 @@
-import Header from "@/components/header";
+
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
@@ -24,7 +24,7 @@ export default function RootLayout({
         <div className="background-animation"></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
+            {/* <Header /> */}
             {children}
             <Footer />
           </ActiveSectionContextProvider>
