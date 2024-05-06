@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { useSectionInView } from "@/lib/hooks";
+import { SiLeetcode } from "react-icons/si";
+import { FaGitlab } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
 const fullText = [
@@ -85,7 +87,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="max-w-[50rem] text-center text-white scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex flex-col sm:m-1 items-center justify-center">
         <motion.div
@@ -139,9 +141,7 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <RiTwitterXLine
-              className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
-              }
+              className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
 
@@ -152,7 +152,8 @@ export default function Intro() {
           >
             <FaLinkedin
               className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
+                iconStyle +
+                " hover:scale-110 transition-transform text-blue-600"
               }
             />
           </a>
@@ -162,10 +163,8 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGoogle
-              className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
-              }
+            <FcGoogle
+              className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
 
@@ -175,8 +174,32 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <FaGithub
+              className={iconStyle + " hover:scale-110 transition-transform"}
+            />
+          </a>
+
+          <a
+            href="https://gitlab.com/akileshjayakumar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGitlab
               className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
+                iconStyle +
+                " hover:scale-110 transition-transform text-orange-600"
+              }
+            />
+          </a>
+
+          <a
+            href="https://leetcode.com/u/C4JbqLuKlV/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiLeetcode
+              className={
+                iconStyle +
+                " hover:scale-110 transition-transform text-yellow-400"
               }
             />
           </a>
@@ -187,9 +210,7 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <IoDocumentTextOutline
-              className={
-                iconStyle + " hover:scale-110 transition-transform text-white"
-              }
+              className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
         </div>
