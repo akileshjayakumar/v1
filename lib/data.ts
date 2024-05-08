@@ -1,8 +1,15 @@
 import { CgWorkAlt } from "react-icons/cg";
-import gptclone from "@/public/gpt-clone.png";
-import passwordgen from "@/public/password-gen.png";
-import textspeech from "@/public/text-to-speech.png";
-import flipcoin from "@/public/flip-coin.png";
+import nextjs14 from "@/public/nextjs14.png";
+import sentiment from "@/public/sentiment.png";
+import email from "@/public/email.png";
+
+import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
+import { FaPython } from "react-icons/fa";
+import { SiStreamlit } from "react-icons/si";
+import { RiOpenaiFill } from "react-icons/ri";
 
 export const links = [
   {
@@ -46,36 +53,52 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
-  {
-    title: "Password Generator",
-    description:
-      "Implemented a robust password generator tool, focusing on user experience to deliver unique and secure passwords. Deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["html", "css", "javascript"],
+type ProjectItem = {
+  title: string;
+  description: string;
+  tags: React.ReactNode[];
+  imageUrl: any;
+  repoUrl: string;
+  liveUrl: string;
+};
 
-    imageUrl: passwordgen,
-    repoUrl: "https://github.com/akileshjayakumar/password-generator",
-    liveUrl: "https://akileshjayakumar.github.io/password-generator/",
+export const projectsData: ProjectItem[] = [
+  {
+    title: "Next.js14 ChatBot",
+    description:
+      "Developed an interactive ChatBot using Next.js and Vercel's SDK, featuring real-time responses and a user-friendly interface, hosted on Vercel with continuous integration from GitHub.",
+    tags: [
+      <TbBrandNextjs />,
+      <SiTypescript />,
+      <SiTailwindcss />,
+      <RiOpenaiFill />,
+    ],
+    imageUrl: nextjs14,
+    repoUrl: "https://github.com/akileshjayakumar/nextjs14-sdk-chatbot",
+    liveUrl: "https://nextjs14-sdk-chatbot.vercel.app/",
   },
   {
-    title: "Text To Speech",
+    title: "Sentiment Analysis Web App",
     description:
-      "Developed a Text to Speech web application demonstrating frontend proficiency, enabling real-time text-to-speech conversion using Web Speech API. Deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["html", "css", "javascript"],
-    imageUrl: textspeech,
-    repoUrl: "https://github.com/akileshjayakumar/text-to-speech",
-    liveUrl: "https://akileshjayakumar.github.io/text-to-speech/",
+      "Developed sentiment analysis web app using Python and Streamlit, integrating LangChain for AI-driven analysis and Matplotlib for data visualization.",
+    tags: [<FaPython />, <SiStreamlit />, <RiOpenaiFill />],
+    imageUrl: sentiment,
+    repoUrl:
+      "https://github.com/akileshjayakumar/sentiment-analysis-app-streamlit",
+    liveUrl: "https://sentiment-analysis-web-app.streamlit.app/",
   },
   {
-    title: "Flip The Coin Game",
+    title: "Phishing Email Detector",
     description:
-      "Created an engaging coin flip game, enhancing user interaction through clickable elements and simulating coin flip animations. Deployed on GitHub Pages with Git integration for continuous updates.",
-    tags: ["html", "css", "javascript"],
-    imageUrl: flipcoin,
-    repoUrl: "https://github.com/akileshjayakumar/flip-the-coin",
-    liveUrl: "https://akileshjayakumar.github.io/flip-the-coin/",
+      "Developed a phishing email detection web application using Python and Streamlit, featuring real-time analysis and risk assessment through regex and pattern detection to educate users on email security.",
+    tags: [<FaPython />, <SiStreamlit />],
+
+    imageUrl: email,
+    repoUrl:
+      "https://github.com/akileshjayakumar/phishing-email-detector-streamlit",
+    liveUrl: "https://phishing-email-detector.streamlit.app/",
   },
-] as const;
+];
 
 export const skillsData = {
   languages: ["Python", "SQL", "JavaScript/TypeScript", "HTML/CSS"],
