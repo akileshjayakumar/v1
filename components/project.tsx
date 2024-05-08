@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ProjectItem } from "@/lib/types"; // Ensure this path is correct
+import React from "react";
 
-type ProjectProps = ProjectItem;
+type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
@@ -25,26 +26,33 @@ export default function Project({
     <motion.div
       className="scroll-mt-28 mb-28 sm:mb-40"
       ref={ref}
-      style={{ scale: scaleProgress, opacity: opacityProgress }}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
     >
       <motion.div
-        whileHover={{ scale: 1.11 }}
-        className="bg-black mb-[2rem] mt-9 sm:h-[30rem] sm:w-[50rem] max-w-[70rem] scroll-mt-28 text-left rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem] group"
+        whileHover={{
+          scale: 1.11,
+        }}
+        className="bg-black mb-[2rem] mt-9 sm:h-[30rem] max-w-[50rem] scroll-mt-28 text-left
+        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem] group"
       >
         <motion.div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-3xl font-semibold text-white">{title}</h3>
           <p className="mt-2 leading-relaxed text-white">{description}</p>
-          <ul className="flex mt-[2rem] flex-wrap gap-2 sm:mt-auto px-2 py-4">
-            {tags.map((IconComponent, index) => (
-              <li className="text-white text-5xl" key={index}>
-                {React.isValidElement(IconComponent) ? (
-                  IconComponent
-                ) : (
-                  <span>Invalid Icon</span>
-                )}
+
+          <ul className="flex mt-[2rem] flex-wrap gap-2 sm:mt-auto">
+            {tags.map((tag, index) => (
+              <li
+                className="bg-gray-800 px-4 py-1 text-[1rem] border-gray-600 tracking-wider text-white rounded-full"
+                key={index}
+              >
+                {tag}
               </li>
             ))}
           </ul>
+
           <div className="mt-[2rem] flex gap-4 mb-[1rem]">
             <a
               href={repoUrl}
@@ -66,6 +74,7 @@ export default function Project({
             </a>
           </div>
         </motion.div>
+
         <motion.div className="absolute hidden sm:block top-8 -right-40 w-[28rem] rounded-t-lg shadow-2xl transition">
           <Image src={imageUrl} alt="Project Image" quality={100} />
         </motion.div>
