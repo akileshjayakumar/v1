@@ -10,6 +10,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { SiLeetcode } from "react-icons/si";
 import { FaGitlab } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -134,30 +135,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex sm:gap-[3rem] gap-5">
-          <a
-            href="https://twitter.com/StrangeDoctorGo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <RiTwitterXLine
-              className={iconStyle + " hover:scale-110 transition-transform"}
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/akileshjayakumar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-blue-600"
-              }
-            />
-          </a>
-
+        <div className="flex flex-wrap sm:gap-[3rem] gap-5 ">
           <a
             href="https://g.dev/akileshjayakumar"
             target="_blank"
@@ -203,6 +181,28 @@ export default function Intro() {
               }
             />
           </a>
+          <a
+            href="https://twitter.com/StrangeDoctorGo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RiTwitterXLine
+              className={iconStyle + " hover:scale-110 transition-transform"}
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/akileshjayakumar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin
+              className={
+                iconStyle +
+                " hover:scale-110 transition-transform text-blue-600"
+              }
+            />
+          </a>
 
           <a
             href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
@@ -210,6 +210,16 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <IoDocumentTextOutline
+              className={iconStyle + " hover:scale-110 transition-transform"}
+            />
+          </a>
+
+          <a
+            href="mailto:jayakuma006@mymail.sim.edu.sg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdOutlineMarkEmailUnread
               className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
