@@ -24,7 +24,7 @@ export default function Project({
 
   return (
     <motion.div
-      className="scroll-mt-28 mb-28 sm:mb-40"
+      className="scroll-mt-28 mb-28 sm:mb-40 border-t-2 border-b-2 border-gray-300"
       ref={ref}
       style={{
         scale: scaleProgress,

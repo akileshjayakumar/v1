@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28 border-t-2 border-b-2 border-gray-300"
       id="about"
     >
       <SectionHeading>ABOUT</SectionHeading>
