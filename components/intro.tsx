@@ -135,7 +135,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex flex-wrap gap-[1rem] ml-3 sm:gap-[3rem]">
+        <div className="flex flex-wrap gap-[1rem] ml-5 sm:gap-[3rem]">
           <a
             href="https://g.dev/akileshjayakumar"
             target="_blank"
@@ -170,7 +170,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://leetcode.com/u/C4JbqLuKlV/"
+            href="https://leetcode.com/u/akileshjayakumar/"
             target="_blank"
             rel="noopener noreferrer"
           >
