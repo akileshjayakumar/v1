@@ -15,10 +15,9 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 const fullText = [
   "welcome to my portfolio website!",
   "i love learning new technologies.",
-  "i am currently learning aws.",
+  "i am currently learning RAG and AWS.",
   "i love building and designing software.",
   "i love solving puzzles and the rubik's cube.",
-  "i like to play badminton.",
   "cardistry and magic tricks are my hobbies.",
   "sci-fi and comic book movies are my favourites.",
   "let's connect!",
