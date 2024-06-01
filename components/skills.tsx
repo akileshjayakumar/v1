@@ -27,7 +27,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40 border-t-2 border-b-2 border-gray-300"
+      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28"
     >
       <SectionHeading>SKILLS</SectionHeading>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
