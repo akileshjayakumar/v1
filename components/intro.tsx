@@ -204,7 +204,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1xhTd9qTAkE4yx5s51JJ5IJ40K8uRo_DZ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
