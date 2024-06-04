@@ -11,6 +11,8 @@ import { SiLeetcode } from "react-icons/si";
 import { FaGitlab } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { HiOutlineMail } from "react-icons/hi";
+import { GrDocumentPdf } from "react-icons/gr";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -208,7 +210,7 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoDocumentTextOutline
+            <GrDocumentPdf
               className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
@@ -218,7 +220,7 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MdOutlineMarkEmailUnread
+            <HiOutlineMail
               className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
