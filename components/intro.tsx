@@ -11,8 +11,12 @@ import { SiLeetcode } from "react-icons/si";
 import { FaGitlab } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
+<<<<<<< HEAD
 import { HiOutlineMail } from "react-icons/hi";
 import { GrDocumentPdf } from "react-icons/gr";
+=======
+import { SiDevpost } from "react-icons/si";
+>>>>>>> a3362ea (edit intro.tsx)
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -158,14 +162,14 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://gitlab.com/akileshjayakumar"
+            href="https://devpost.com/akileshjayakumar?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGitlab
+            <SiDevpost
               className={
                 iconStyle +
-                " hover:scale-110 transition-transform text-orange-600"
+                " hover:scale-110 transition-transform text-cyan-600"
               }
             />
           </a>
