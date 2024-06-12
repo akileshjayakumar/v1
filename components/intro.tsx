@@ -13,6 +13,8 @@ import { useState, useEffect, useRef } from "react";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrDocumentPdf } from "react-icons/gr";
+import { SiDevpost } from "react-icons/si";
+import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -158,15 +160,13 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://gitlab.com/akileshjayakumar"
+            href="https://devpost.com/akileshjayakumar?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGitlab
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-orange-600"
-              }
+            <SiDevpost
+              className={iconStyle + " hover:scale-110 transition-transform"}
+              style={{ color: "#39CCE6" }}
             />
           </a>
 
@@ -188,7 +188,10 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <RiTwitterXLine
-              className={iconStyle + " hover:scale-110 transition-transform"}
+              className={
+                iconStyle +
+                " hover:scale-110 transition-transform text-orange-600"
+              }
             />
           </a>
 
@@ -220,8 +223,11 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <HiOutlineMail
-              className={iconStyle + " hover:scale-110 transition-transform"}
+            <PiMicrosoftOutlookLogo
+              className={
+                iconStyle +
+                " hover:scale-110 transition-transform"
+              }
             />
           </a>
         </div>
