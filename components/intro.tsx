@@ -209,7 +209,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1eu-UrnMGvxuq12eeEFTQkVTPJj26HfSp/view?usp=sharing"
+            href="https://drive.google.com/file/d/1TUYUP7GGQwyDf5Z-LU4KXPqDzND0_iIs/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -224,10 +224,7 @@ export default function Intro() {
             rel="noopener noreferrer"
           >
             <PiMicrosoftOutlookLogo
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform"
-              }
+              className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
         </div>
