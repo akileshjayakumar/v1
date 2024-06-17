@@ -183,7 +183,7 @@ export default function Intro() {
             />
           </a>
           <a
-            href="https://twitter.com/StrangeDoctorGo"
+            href="https://x.com/StrangeDoctorGo"
             target="_blank"
             rel="noopener noreferrer"
           >
