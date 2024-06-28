@@ -209,7 +209,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1Tw9goEupDhZ6PtX2eJdeFpVFYtTMXoYx/view?usp=sharing"
+            href="https://google.com"
             target="_blank"
             rel="noopener noreferrer"
           >
