@@ -66,7 +66,7 @@ export const projectsData = [
     imageUrl: sentiment,
     repoUrl:
       "https://github.com/akileshjayakumar/sentiment-analysis-app-streamlit",
-    liveUrl: "",
+    liveUrl: "https://sentiment-analysis-web-app.streamlit.app",
   },
   {
     title: "Phishing Email Detector",
