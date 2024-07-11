@@ -16,6 +16,8 @@ import { GrDocumentPdf } from "react-icons/gr";
 import { SiDevpost } from "react-icons/si";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
+import hf from "@/public/hf-logo.png";
+
 const fullText = [
   "welcome to my portfolio website!",
   "i love learning new technologies.",
@@ -108,7 +110,7 @@ export default function Intro() {
             height={350}
             quality={100}
             priority={true}
-            className="rounded-full mb-[1rem] sm:mb-[3rem] bject-cover border-[0.2rem] border-[cyan] no-shadow"
+            className="rounded-full mb-[1rem] sm:mb-[3rem] object-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 
@@ -133,12 +135,12 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center m-9 sm:m-8 mb-[15rem] mt-[2rem] text-2xl font-bold text-white"
+        className="flex flex-col items-center justify-center m-9 sm:m-8 mb-[15rem] mt-[2rem] text-2xl font-bold text-white"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem] sm:flex-wrap">
+        <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem]">
           <a
             href="https://g.dev/akileshjayakumar"
             target="_blank"
@@ -160,14 +162,12 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://devpost.com/akileshjayakumar?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
+            href="https://huggingface.co/akileshjayakumar"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
           >
-            <SiDevpost
-              className={iconStyle + " hover:scale-110 transition-transform"}
-              style={{ color: "#39CCE6" }}
-            />
+            <Image src={hf} alt="HF Logo" width={50} height={50} />
           </a>
 
           <a
@@ -182,6 +182,8 @@ export default function Intro() {
               }
             />
           </a>
+        </div>
+        <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem] mt-4">
           <a
             href="https://x.com/StrangeDoctorGo"
             target="_blank"
