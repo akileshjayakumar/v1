@@ -1,6 +1,6 @@
-# [Portfolio Website V1](https://www.akileshjayakumar.com/)
+# Portfolio Website V1
 
-Welcome to my portfolio website (V1)! This site is a showcase of my skills, projects, and experiences. It's built with Next.js, TypeScript, and Tailwind CSS, making it responsive, accessible, and user-friendly. Here is the link to the live site: [https://www.akileshjayakumar.com/](https://www.akileshjayakumar.com/)
+Here is the link to the live site: [https://www.akileshjayakumar.com/](https://www.akileshjayakumar.com)
 
 ## Key Features
 
@@ -36,16 +36,6 @@ To set up the project locally, follow these steps:
    ```
 5. **Access the site locally:**
    Visit `http://localhost:3000` in your web browser.
-
-## Contributing
-
-Your contributions are welcome! If you have ideas for improvements or new features:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Submit a pull request.
 
 ## Contact Information
 
