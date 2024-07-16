@@ -15,7 +15,7 @@ export default function About() {
     >
       <SectionHeading>ABOUT</SectionHeading>
       <p className="text-2xl text-center leading-[3rem] tracking-wider">
-        Hi! I'm currently a final-year computer science student at the{" "}
+        Hello! I am currently studying computer science at the{" "}
         <a
           className=" hover:bg-blue-700 text-white 
           justify-center items-center rounded duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
