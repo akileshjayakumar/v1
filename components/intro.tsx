@@ -5,18 +5,16 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { RiTwitterXLine } from "react-icons/ri";
-import { IoDocumentTextOutline } from "react-icons/io5";
 import { useSectionInView } from "@/lib/hooks";
 import { SiLeetcode } from "react-icons/si";
-import { FaGitlab } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
-import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { HiOutlineMail } from "react-icons/hi";
+
+
 import { GrDocumentPdf } from "react-icons/gr";
-import { SiDevpost } from "react-icons/si";
+
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
-import hf from "@/public/hf-logo.png";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -162,12 +160,13 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://huggingface.co/akileshjayakumar"
+            href="https://akileshjayakumar.medium.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform"
           >
-            <Image src={hf} alt="HF Logo" width={50} height={50} />
+            <FaMedium
+              className={iconStyle + " hover:scale-110 transition-transform"}
+            />
           </a>
 
           <a
