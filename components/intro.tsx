@@ -21,8 +21,6 @@ const fullText = [
   "i love learning new technologies.",
   "i am currently learning Svelte, RAG and AWS.",
   "i love building and designing software.",
-  "i love solving puzzles and the rubik's cube.",
-  "cardistry and magic tricks are my hobbies.",
   "sci-fi and comic book movies are my favourites.",
   "let's connect!",
 ];
