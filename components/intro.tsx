@@ -19,11 +19,14 @@ import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 const fullText = [
   "welcome to my portfolio website!",
   "i love learning new technologies.",
-  "i am currently learning Svelte, RAG and AWS.",
+  "i am currently learning RAG, AWS and Neo4j.",
   "i love building and designing software.",
-  "sci-fi and comic book movies are my favourites.",
+  "sci-fi and comic book movies are my favorites.",
+  "when i'm not coding, i'm on wordle.",
+  "learn more about me using my rag app!",
   "let's connect!",
 ];
+
 
 export default function Intro() {
   const [text, setText] = useState("");
