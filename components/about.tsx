@@ -10,15 +10,14 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28"
+      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28 px-4 sm:px-0"
       id="about"
     >
       <SectionHeading>ABOUT</SectionHeading>
-      <p className="text-2xl text-center leading-[3rem] tracking-wider">
+      <p className="text-lg sm:text-2xl text-center leading-[2rem] sm:leading-[3rem] tracking-wider">
         Hello! I am currently studying computer science at the{" "}
         <a
-          className=" hover:bg-blue-700 text-white 
-          justify-center items-center rounded duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          className="hover:bg-blue-700 text-white justify-center items-center rounded duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
           href="https://www.uow.edu.au/"
           target="_blank"
           rel="noopener noreferrer"
