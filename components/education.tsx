@@ -58,12 +58,11 @@ export default function Education() {
     }
   };
 
-  // JSX for the education section
   return (
     <section
       id="education"
       ref={ref}
-      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28"
+      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28 px-4 sm:px-0"
     >
       <SectionHeading>EDUCATION</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#ddd" : "#333"}>

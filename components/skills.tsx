@@ -27,11 +27,11 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28"
+      className="mt-[9rem] max-w-[45rem] text-center sm:mb-40 scroll-mt-28 px-4 sm:px-0"
     >
       <SectionHeading>SKILLS</SectionHeading>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
-        <div key={categoryIndex}>
+        <div key={categoryIndex} className="mb-8">
           <h3 className="text-2xl tracking-wider font-medium lowercase text-white">
             {category}
           </h3>
