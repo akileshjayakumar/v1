@@ -49,17 +49,20 @@ export default function Skills() {
                   custom={skillIndex}
                 >
                   <div className="mt-4">
-                    {/* Adding a hover animation to each logo */}
                     <motion.div
                       whileHover={{
-                        scale: 1.1, // Scales up the logo on hover
+                        scale: 1.1,
                         transition: {
-                          duration: 0.3, // Smooth transition duration
+                          duration: 0.3,
                         },
                       }}
                     >
                       {React.createElement(skill.logo, {
-                        style: { height: "90px", width: "90px", color: "white" },
+                        style: {
+                          height: "90px",
+                          width: "90px",
+                          color: skill.color,
+                        },
                       })}
                     </motion.div>
                   </div>

@@ -10,8 +10,36 @@ import { SiMongodb } from "react-icons/si";
 import { FaJsSquare } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
+import { IconType } from "react-icons";
 
 import nextjs14 from "@/public/nextjs14.png";
+
+type Skill = {
+  name: string;
+  logo: IconType;
+  color: string;
+};
+
+export const skillsData: Record<string, Skill[]> = {
+  "frameworks & languages": [
+    { name: "LangChain", logo: SiLangchain, color: "#8AC6F4" },
+    { name: "Next.js", logo: TbBrandNextjs, color: "#fff" },
+    { name: "Python", logo: FaPython, color: "#4B8BBE" },
+    { name: "SQL", logo: DiMysql, color: "#00758F" },
+    { name: "JavaScript/TypeScript", logo: FaJsSquare, color: "#F7DF1E" },
+    { name: "HTML/CSS", logo: FaHtml5, color: "#E34F26" },
+  ],
+  databases: [
+    { name: "Neo4j", logo: SiNeo4J, color: "#008CC1" },
+    { name: "MongoDB", logo: SiMongodb, color: "#4FAA4F" },
+    { name: "Oracle", logo: FaDatabase, color: "#FF0000" },
+  ],
+  devTools: [
+    { name: "Docker", logo: SiDocker, color: "#2496ED" },
+    { name: "Git", logo: SiGit, color: "#F05033" },
+    { name: "GitHub", logo: SiGithub, color: "#fff" },
+  ],
+} as const;
 
 export const links = [
   {
@@ -52,24 +80,3 @@ export const projectsData = [
     liveUrl: "https://nextjs14-sdk-chatbot.vercel.app/",
   },
 ] as const;
-
-export const skillsData = {
-  "frameworks & languages": [
-    { name: "LangChain", logo: SiLangchain },
-    { name: "Next.js", logo: TbBrandNextjs },
-    { name: "Python", logo: FaPython },
-    { name: "SQL", logo: DiMysql }, 
-    { name: "JavaScript/TypeScript", logo: FaJsSquare }, 
-    { name: "HTML/CSS", logo: FaHtml5 }, 
-  ],
-  databases: [
-    { name: "Neo4j", logo: SiNeo4J }, 
-    { name: "MongoDB", logo: SiMongodb }, 
-    { name: "SiOracle", logo: FaDatabase }, 
-  ],
-  devTools: [
-    { name: "Docker", logo: SiDocker },
-    { name: "Git", logo: SiGit },
-    { name: "GitHub", logo: SiGithub }
-  ],
-} as const;

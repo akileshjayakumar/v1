@@ -17,7 +17,6 @@ function ToolsUsed() {
           title="Next.js"
           className="text-white space-x-1 transition duration-300 ease-in-out transform hover:scale-125"
         />
-
       </a>
       <span className="text-xl text-white">+</span>
       <a
@@ -31,7 +30,6 @@ function ToolsUsed() {
           title="TypeScript"
           className="text-blue-600 space-x-1 transition duration-300 ease-in-out transform hover:scale-125"
         />
-
       </a>
       <span className="text-xl text-white">+</span>
       <a
