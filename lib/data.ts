@@ -1,9 +1,17 @@
-import { CgWorkAlt } from "react-icons/cg";
-import nextjs14 from "@/public/nextjs14.png";
-import sentiment from "@/public/sentiment.png";
-import email from "@/public/email.png";
-
+import { SiLangchain } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { FaPython } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa";
+import { SiDocker } from "react-icons/si";
+import { SiGit } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiNeo4J } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { FaJsSquare } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+
+import nextjs14 from "@/public/nextjs14.png";
 
 export const links = [
   {
@@ -32,21 +40,6 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
-  {
-    company: "CPF Board",
-    title: "Automation Intern",
-    location: "Singapore",
-    description: [
-      "Developed a Sentiment Analysis App using GPT-3.5 API and Python to automate HR processes.",
-      "Utilised pair.gov.sg platform and prompt engineering techniques to automate test cases, reducing software bugs.",
-      "Automated repetitive workflows using Microsoft Power Automate, streamlining operations for employees.",
-    ],
-    icon: CgWorkAlt,
-    date: "December 2023 - April 2024",
-  },
-] as const;
-
 export const projectsData = [
   {
     title: "Next.js14 ChatBot",
@@ -58,39 +51,25 @@ export const projectsData = [
     repoUrl: "https://github.com/akileshjayakumar/nextjs14-sdk-chatbot",
     liveUrl: "https://nextjs14-sdk-chatbot.vercel.app/",
   },
-  {
-    title: "Sentiment Analysis Web App",
-    description:
-      "Engineered a real-time sentiment analysis web app using Python and Streamlit, integrating LangChain for AI-driven analysis and Matplotlib for data visualization.",
-    tags: ["python", "streamlit", "langchain", "matplotlib"],
-    imageUrl: sentiment,
-    repoUrl:
-      "https://github.com/akileshjayakumar/sentiment-analysis-app-streamlit",
-    liveUrl: "https://sentiment-analysis-web-app.streamlit.app",
-  },
-  {
-    title: "Phishing Email Detector",
-    description:
-      "Developed a phishing email detection web application using Python and Streamlit, featuring real-time analysis and risk assessment through regex and pattern detection to educate users on email security.",
-    tags: ["python", "streamlit"],
-    imageUrl: email,
-    repoUrl:
-      "https://github.com/akileshjayakumar/phishing-email-detector-streamlit",
-    liveUrl: "https://phishing-email-detector.streamlit.app/",
-  },
 ] as const;
 
 export const skillsData = {
-  languages: ["Python", "SQL", "JavaScript/TypeScript", "HTML/CSS"],
-  frameworks: ["Tailwind CSS", "React", "Next.js", "Node.js", "Express.js"],
-  devTools: [
-    "Git",
-    "GitHub",
-    "Vercel",
-    "Render",
-    "Figma",
-    "OpenAI",
-    "Hugging Face",
+  "frameworks & languages": [
+    { name: "LangChain", logo: SiLangchain },
+    { name: "Next.js", logo: TbBrandNextjs },
+    { name: "Python", logo: FaPython },
+    { name: "SQL", logo: DiMysql }, 
+    { name: "JavaScript/TypeScript", logo: FaJsSquare }, 
+    { name: "HTML/CSS", logo: FaHtml5 }, 
   ],
-  databases: ["MongoDB", "Oracle"],
+  databases: [
+    { name: "Neo4j", logo: SiNeo4J }, 
+    { name: "MongoDB", logo: SiMongodb }, 
+    { name: "SiOracle", logo: FaDatabase }, 
+  ],
+  devTools: [
+    { name: "Docker", logo: SiDocker },
+    { name: "Git", logo: SiGit },
+    { name: "GitHub", logo: SiGithub }
+  ],
 } as const;

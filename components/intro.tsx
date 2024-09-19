@@ -3,18 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { RiTwitterXLine } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
-import { SiLeetcode } from "react-icons/si";
-import { FaMedium } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
-
 import { GrDocumentPdf } from "react-icons/gr";
-
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
-
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -26,7 +20,6 @@ const fullText = [
   "learn more about me using my rag app!",
   "let's connect!",
 ];
-
 
 export default function Intro() {
   const [text, setText] = useState("");
@@ -92,9 +85,9 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] px-4 sm:px-0"
+      className="mb-28 max-w-[90%] mx-auto text-center sm:mb-0 scroll-mt-[100rem] px-4 sm:px-0"
     >
-      <div className="flex flex-col sm:m-1 items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -109,20 +102,15 @@ export default function Intro() {
             height={350}
             quality={100}
             priority={true}
-            className="rounded-full mb-[1rem] sm:mb-[3rem] object-cover border-[0.2rem] border-[cyan] no-shadow"
+            className="rounded-full mb-4 sm:mb-6 object-cover border-[0.2rem] border-[cyan] no-shadow"
           />
         </motion.div>
 
-        <motion.h1
-          className="font-bold tracking-wider sm:m-2 mt-[1rem] sm:text-5xl text-5xl text-white"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
+        <motion.h1 className="font-bold tracking-wider mt-4 sm:text-5xl text-3xl text-white">
           hi, i'm akilesh
         </motion.h1>
 
-        <motion.h1 className="tracking-wider font-medium sm:m-4 mt-[2rem] sm:text-2xl text-2xl text-white">
+        <motion.h1 className="tracking-wider font-medium mt-4 sm:text-2xl text-xl text-white">
           <span
             ref={textRef}
             style={{ whiteSpace: isMobile ? "normal" : "nowrap" }}
@@ -141,12 +129,15 @@ export default function Intro() {
       >
         <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem]">
           <a
-            href="https://g.dev/akileshjayakumar"
+            href="https://www.linkedin.com/in/akileshjayakumar/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FcGoogle
-              className={iconStyle + " hover:scale-110 transition-transform"}
+            <FaLinkedin
+              className={
+                iconStyle +
+                " hover:scale-110 transition-transform text-blue-600"
+              }
             />
           </a>
 
@@ -161,30 +152,6 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://akileshjayakumar.medium.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaMedium
-              className={iconStyle + " hover:scale-110 transition-transform"}
-            />
-          </a>
-
-          <a
-            href="https://leetcode.com/u/akileshjayakumar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiLeetcode
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-yellow-400"
-              }
-            />
-          </a>
-        </div>
-        <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem] mt-4">
-          <a
             href="https://x.com/StrangeDoctorGo"
             target="_blank"
             rel="noopener noreferrer"
@@ -198,20 +165,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/akileshjayakumar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-blue-600"
-              }
-            />
-          </a>
-
-          <a
-            href="https://google.com"
+            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >

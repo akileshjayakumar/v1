@@ -7,6 +7,13 @@ body {
   border-color: cyan;
   border-width: 0.2rem;
   border-radius: 0rem;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+h1, h2, h3, p {
+  margin: 0; /* Reset margin for headings and paragraphs */
 }
 
 .typing-cursor {
@@ -25,6 +32,12 @@ body {
   }
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem; /* Add padding for smaller screens */
   }
 }
 
