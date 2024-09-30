@@ -13,6 +13,8 @@ import { DiMysql } from "react-icons/di";
 import { IconType } from "react-icons";
 
 import nextjs14 from "@/public/nextjs14.png";
+import ragchat from "@/public/rag_chatbot.png";
+import sentimentopenai from "@/public/sentiment_openai.png";
 
 type Skill = {
   name: string;
@@ -70,13 +72,35 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "Personalised RAG Chatbot",
+    description:
+      "Built a personalised RAG Chatbot for question-answering tasks that return context-rich answers to users about myself.",
+    tags: ["python", "gradio", "langchain", "qdrant", "openai"],
+
+    imageUrl: ragchat,
+    repoUrl:
+      "https://huggingface.co/spaces/akileshjayakumar/rag-chatbot/tree/main",
+    liveUrl: "https://huggingface.co/spaces/akileshjayakumar/rag-chatbot",
+  },
+  {
     title: "Next.js14 ChatBot",
     description:
-      "Developed an interactive ChatBot using Next.js and Vercel's SDK, featuring real-time responses and a user-friendly interface, hosted on Vercel with continuous integration from GitHub.",
-    tags: ["next.js", "typescript", "tailwindcss", "openai api"],
+      "Built a ChatGPT clone to explore and experiment with the new Vercel AI SDK.",
+    tags: ["next.js", "typescript", "tailwindcss", "vercel ai sdk"],
 
     imageUrl: nextjs14,
     repoUrl: "https://github.com/akileshjayakumar/nextjs14-sdk-chatbot",
     liveUrl: "https://nextjs14-sdk-chatbot.vercel.app/",
+  },
+  {
+    title: "Sentiment Analysis Web App",
+    description:
+      "Developed a sentiment analysis web app featuring customisable token limits and temperature settings.",
+    tags: ["Python", "Streamlit", "langchain", "openai"],
+
+    imageUrl: sentimentopenai,
+    repoUrl:
+      "https://github.com/akileshjayakumar/streamlit-sentiment-analysis-app",
+    liveUrl: "https://interactive-sentiment-analysis.streamlit.app/",
   },
 ] as const;
