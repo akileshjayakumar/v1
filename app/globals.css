@@ -7,13 +7,16 @@ body {
   border-color: cyan;
   border-width: 0.2rem;
   border-radius: 0rem;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, p {
-  margin: 0; /* Reset margin for headings and paragraphs */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 .typing-cursor {
@@ -24,7 +27,6 @@ h1, h2, h3, p {
   animation: blink 0.99s infinite;
 }
 
-/* Blinking Cursor Keyframes */
 @keyframes blink {
   0%,
   100% {
@@ -37,8 +39,6 @@ h1, h2, h3, p {
 
 @media (max-width: 768px) {
   body {
-    padding: 1rem; /* Add padding for smaller screens */
+    padding: 1rem;
   }
 }
-
-/*=========================================================*/
