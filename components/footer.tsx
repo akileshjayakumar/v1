@@ -63,8 +63,11 @@ function Footer() {
         </a>
       </h3>
       <div className="font-bold flex-col flex justify-center items-center">
-        © 2024 Akilesh Jayakumar | Built with <br />
-        <br /> <ToolsUsed />
+        <div className="font-bold flex-col flex justify-center items-center">
+          built with
+        </div>
+        <br /> <ToolsUsed /> <br />
+        © 2024 Akilesh Jayakumar <br />
       </div>
     </footer>
   );
