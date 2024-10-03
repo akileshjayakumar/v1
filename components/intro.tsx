@@ -127,7 +127,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex flex-wrap gap-[1rem] ml-[1rem] sm:gap-[3rem]">
+        <div className="flex gap-[1rem] m-[1rem] sm:gap-[3rem]">
           <a
             href="https://www.linkedin.com/in/akileshjayakumar/"
             target="_blank"
