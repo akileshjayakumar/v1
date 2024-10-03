@@ -11,6 +11,8 @@ import { FaJsSquare } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 import { IconType } from "react-icons";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiStreamlit } from "react-icons/si";
 
 import nextjs14 from "@/public/nextjs14.png";
 import ragchat from "@/public/rag_chatbot.png";
@@ -30,6 +32,8 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "SQL", logo: DiMysql, color: "#00758F" },
     { name: "JavaScript/TypeScript", logo: FaJsSquare, color: "#F7DF1E" },
     { name: "HTML/CSS", logo: FaHtml5, color: "#E34F26" },
+    { name: "Tailwind CSS", logo: RiTailwindCssFill, color: "#06b6d4" },
+    { name: "Streamlit", logo: SiStreamlit, color: "#FF4B4B" },
   ],
   databases: [
     { name: "Neo4j", logo: SiNeo4J, color: "#008CC1" },
@@ -96,7 +100,7 @@ export const projectsData = [
     title: "Sentiment Analysis Web App",
     description:
       "Developed a sentiment analysis web app featuring customisable token limits and temperature settings.",
-    tags: ["Python", "Streamlit", "langchain", "openai"],
+    tags: ["python", "streamlit", "langchain", "openai"],
 
     imageUrl: sentimentopenai,
     repoUrl:
