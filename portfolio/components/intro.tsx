@@ -6,8 +6,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { useSectionInView } from "../lib/hooks";
 import { useState, useEffect, useRef } from "react";
-import { PiMicrosoftOutlookLogoDuotone } from "react-icons/pi";
-import { FaFilePdf } from "react-icons/fa6";
+
+import { GrDocumentPdf } from "react-icons/gr";
+import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -164,25 +165,22 @@ export default function Intro() {
           </a>
 
           <a
-            href="mailto:jayakuma006@mymail.sim.edu.sg"
+            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <PiMicrosoftOutlookLogoDuotone
+            <GrDocumentPdf
               className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
 
           <a
-            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
+            href="mailto:jayakuma006@mymail.sim.edu.sg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFilePdf
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-blue-600"
-              }
+            <PiMicrosoftOutlookLogo
+              className={iconStyle + " hover:scale-110 transition-transform"}
             />
           </a>
         </div>
