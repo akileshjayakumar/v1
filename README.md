@@ -5,7 +5,7 @@ Here is the link to the live site: [https://www.akileshjayakumar.com/](https://w
 ## Tech Stack
 
 - [Vercel](https://streamlit.io/): For deployment
-- [Next.js](https://nextjs.org/): For Frontend
+- [Next.js](https://nextjs.org/): For frontend
 
 ## Contact Information
 
