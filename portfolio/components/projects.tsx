@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData } from "@/lib/data";
+import { projectsData } from "@/portfolio/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 import SectionHeading from "./section-heading";
-import { useSectionInView } from "@/lib/hooks";
+import { useSectionInView } from "@/portfolio/lib/hooks";
 
 type ProjectProps = (typeof projectsData)[number];
 
