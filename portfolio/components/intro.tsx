@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { useSectionInView } from "@/portfolio/lib/hooks";
+import { useSectionInView } from "../lib/hooks";
 import { useState, useEffect, useRef } from "react";
 import { PiMicrosoftOutlookLogoDuotone } from "react-icons/pi";
 import { FaFilePdf } from "react-icons/fa6";

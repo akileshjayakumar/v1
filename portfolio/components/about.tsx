@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { useSectionInView } from "@/portfolio/lib/hooks";
+import { useSectionInView } from "../lib/hooks";
 
 export default function About() {
   const { ref } = useSectionInView("ABOUT");

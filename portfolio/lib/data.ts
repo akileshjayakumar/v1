@@ -14,9 +14,9 @@ import { IconType } from "react-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiStreamlit } from "react-icons/si";
 
-import nextjs14 from "@/public/nextjs14.png";
-import ragchat from "@/public/rag_chatbot.png";
-import sentimentopenai from "@/public/sentiment_openai.png";
+import ragchat from "@/public/images/rag_chatbot.png";
+import nextjs14 from "@/public/images/nextjs14.png";
+import sentimentopenai from "@/public/images/sentiment_openai.png";
 
 type Skill = {
   name: string;
