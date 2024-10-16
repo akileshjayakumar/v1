@@ -7,7 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
 import { useState, useEffect, useRef } from "react";
 import { PiMicrosoftOutlookLogoDuotone } from "react-icons/pi";
-import { FaFilePdf } from "react-icons/fa6";
+import { GrDocumentPdf } from "react-icons/gr";
 
 const fullText = [
   "welcome to my portfolio website!",
@@ -95,8 +95,8 @@ export default function Intro() {
           whileHover={{ scale: 1.2 }}
         >
           <Image
-            src="/profile-photo.jpg"
-            alt="profile-photo"
+            src="/profilephoto.jpg"
+            alt="profilephoto"
             width={350}
             height={350}
             quality={100}
@@ -178,7 +178,7 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFilePdf
+            <GrDocumentPdf
               className={
                 iconStyle +
                 " hover:scale-110 transition-transform text-blue-600"
