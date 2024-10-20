@@ -174,7 +174,8 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://docs.google.com/document/d/1xSzu8tr0wTPws4p6kmbIIkKWmiE546apEEU3n6l27Ms/edit?usp=sharing"
+            href="/AkileshJayakumarResume.pdf"
+            download="AkileshJayakumarResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
