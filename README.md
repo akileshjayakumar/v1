@@ -1,6 +1,6 @@
 # Portfolio Website V1
 
-Here is the link to the live site: [https://www.akileshjayakumar.com/](https://www.akileshjayakumar.com)
+Here is the link to the live site: [https://www.akileshjayakumar.com](https://www.akileshjayakumar.com)
 
 ## Tech Stack
 
