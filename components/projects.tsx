@@ -40,9 +40,9 @@ function Project({
           scale: 1.11,
         }}
         className="bg-black mb-[2rem] mt-9 sm:h-[30rem] max-w-[50rem] scroll-mt-28 text-left
-        rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem] group"
+  rounded-lg overflow-hidden sm:pr-8 relative transition sm:group-even:pl-8 border-[cyan] border-[0.2rem] group flex flex-col sm:flex-row"
       >
-        <motion.div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+        <motion.div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full sm:max-w-[50%]">
           <h3 className="text-3xl font-semibold text-white">{title}</h3>
           <p className="mt-2 leading-relaxed text-white">{description}</p>
 
@@ -72,15 +72,20 @@ function Project({
               target="_blank"
               rel="noopener noreferrer"
               className="button-style bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-5 flex justify-center items-center rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-              style={{ minWidth: "120px", minHeight: "40px" }}
+              style={{ minWidth: "150px", minHeight: "50px" }}
             >
               Live Site
             </a>
           </div>
         </motion.div>
 
-        <motion.div className="absolute hidden sm:block top-8 -right-40 w-[28rem] rounded-t-lg shadow-2xl transition">
-          <Image src={imageUrl} alt="Project Image" quality={100} />
+        <motion.div className="sm:w-[50%] sm:h-full relative">
+          <Image
+            src={imageUrl}
+            alt="Project Image"
+            fill
+            style={{ objectFit: "cover" }}
+          />
         </motion.div>
       </motion.div>
     </motion.div>

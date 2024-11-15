@@ -14,9 +14,9 @@ import { IconType } from "react-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiStreamlit } from "react-icons/si";
 
-import nextjs14 from "@/public/nextjs14.jpg";
-import ragchat from "@/public/ragchatbot.jpg";
-import sentimentopenai from "@/public/sentimentopenai.jpg";
+import nextjs14 from "@/public/icons/nextjs14.jpg";
+import ragchat from "@/public/icons/ragchatbot.jpg";
+import langgraph from "@/public/icons/lang.png";
 
 type Skill = {
   name: string;
@@ -76,35 +76,33 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "Personalised RAG Chatbot",
+    title: "LangGraph Agentic Chatbot",
+    description:
+      "Developed an LLM Agent capable of answering user queries by searching and retrieving real-time information from the web.",
+    tags: ["python", "gradio", "langgraph", "tavily", "openai"],
+    imageUrl: langgraph,
+    repoUrl:
+      "https://huggingface.co/spaces/akileshjayakumar/LangGraph-Agentic-Chatbot/tree/main",
+    liveUrl:
+      "https://huggingface.co/spaces/akileshjayakumar/LangGraph-Agentic-Chatbot",
+  },
+  {
+    title: "Personal RAG Chatbot",
     description:
       "Built a personalised RAG Chatbot for question-answering tasks that return context-rich answers to users about myself.",
     tags: ["python", "gradio", "langchain", "qdrant", "openai"],
-
     imageUrl: ragchat,
     repoUrl:
       "https://huggingface.co/spaces/akileshjayakumar/rag-chatbot/tree/main",
     liveUrl: "https://huggingface.co/spaces/akileshjayakumar/rag-chatbot",
   },
   {
-    title: "Next.js14 ChatBot",
+    title: "Next.js LLM Chatbot",
     description:
       "Built a ChatGPT clone to explore and experiment with the new Vercel AI SDK.",
     tags: ["next.js", "typescript", "tailwindcss", "vercel ai sdk"],
-
     imageUrl: nextjs14,
     repoUrl: "https://github.com/akileshjayakumar/nextjs14-sdk-chatbot",
     liveUrl: "https://nextjs14-sdk-chatbot.vercel.app/",
   },
-  {
-    title: "Sentiment Analysis Web App",
-    description:
-      "Developed a sentiment analysis web app featuring customisable token limits and temperature settings.",
-    tags: ["python", "streamlit", "langchain", "openai"],
-
-    imageUrl: sentimentopenai,
-    repoUrl:
-      "https://github.com/akileshjayakumar/streamlit-sentiment-analysis-app",
-    liveUrl: "https://interactive-sentiment-analysis.streamlit.app/",
-  },
-] as const;
+];
