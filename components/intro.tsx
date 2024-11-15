@@ -95,7 +95,7 @@ export default function Intro() {
           whileHover={{ scale: 1.2 }}
         >
           <Image
-            src="/profilephoto.jpg"
+            src="/icons/profilephoto.jpg"
             alt="profilephoto"
             width={350}
             height={350}
@@ -174,7 +174,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="/AkileshJayakumarResume.pdf"
+            href="/pdf/AkileshJayakumarResume.pdf"
             download="AkileshJayakumarResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
