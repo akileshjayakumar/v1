@@ -7,17 +7,10 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
 import { useState, useEffect, useRef } from "react";
 import { PiMicrosoftOutlookLogoDuotone } from "react-icons/pi";
-import { GrDocumentPdf } from "react-icons/gr";
 
 const fullText = [
   "welcome to my portfolio website!",
   "i love learning new technologies.",
-  "i am currently learning RAG, AWS and Neo4j.",
-  "i love building and designing software.",
-  "sci-fi and comic book movies are my favorites.",
-  "when i'm not coding, i'm on wordle.",
-  "learn more about me using my rag app!",
-  "let's connect!",
 ];
 
 export default function Intro() {
@@ -173,19 +166,7 @@ export default function Intro() {
             />
           </a>
 
-          <a
-            href="/pdf/AkileshJayakumarResume.pdf"
-            download="AkileshJayakumarResume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GrDocumentPdf
-              className={
-                iconStyle +
-                " hover:scale-110 transition-transform text-blue-600"
-              }
-            />
-          </a>
+          
         </div>
       </motion.div>
     </section>
