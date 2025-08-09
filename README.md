@@ -4,7 +4,7 @@ Here is the link to the live site: [https://v1-akilesh.vercel.app/](https://v1-a
 
 ## Tech Stack
 
-- [Vercel](https://streamlit.io/): For deployment
+- [Vercel](https://vercel.com/): For deployment
 - [Next.js](https://nextjs.org/): For frontend
 
 ## Contact Information
