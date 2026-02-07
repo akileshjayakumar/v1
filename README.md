@@ -1,60 +1,34 @@
 # Portfolio Website V1
-
 A personal portfolio site built with Next.js to showcase skills, projects, and contact links.
 
-Live site: [https://v1-akilesh.vercel.app/](https://v1-akilesh.vercel.app/)
-
 ## Quick Start
-
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
-For a production build:
-
-```bash
-npm run build
-npm run start
-```
-
-## Core Capabilities
-
+## Capabilities
 - Animated intro section with social/contact links
 - Skills grid grouped by category
 - Project showcase card with repository and live links
 - Responsive layout with Tailwind CSS and Framer Motion
 
 ## Configuration
-
-No environment variables are required for local development.
+- No required environment variables are documented for basic usage.
 
 ## Usage
-
-Update portfolio content in `lib/data.ts`:
-
-- `skillsData` for skill categories and icons
-- `projectsData` for featured projects
-- `links` for section navigation labels
-
-You can customize sections in:
-
-- `components/intro.tsx`
-- `components/skills.tsx`
-- `components/projects.tsx`
-
-## Contributing and Testing
-
-Run lint checks before submitting changes:
-
 ```bash
-npm run lint
+npm run build
+npm run start
 ```
 
-Contributions are welcome via pull requests.
+## Contributing and Testing
+- Contributions are welcome through pull requests with clear, scoped changes.
+- Run the following checks before submitting changes:
+```bash
+yarn lint
+yarn build
+```
 
 ## License
-
-MIT License. See `LICENSE`.
+Licensed under the `MIT` license. See [LICENSE](./LICENSE) for full text.
