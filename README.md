@@ -33,7 +33,7 @@ No environment variables are required for local development.
 
 ## Usage
 
-Update portfolio content in `/Users/akilesh/Developer/v1/lib/data.ts`:
+Update portfolio content in `lib/data.ts`:
 
 - `skillsData` for skill categories and icons
 - `projectsData` for featured projects
@@ -41,9 +41,9 @@ Update portfolio content in `/Users/akilesh/Developer/v1/lib/data.ts`:
 
 You can customize sections in:
 
-- `/Users/akilesh/Developer/v1/components/intro.tsx`
-- `/Users/akilesh/Developer/v1/components/skills.tsx`
-- `/Users/akilesh/Developer/v1/components/projects.tsx`
+- `components/intro.tsx`
+- `components/skills.tsx`
+- `components/projects.tsx`
 
 ## Contributing and Testing
 
@@ -57,4 +57,4 @@ Contributions are welcome via pull requests.
 
 ## License
 
-MIT License. See `/Users/akilesh/Developer/v1/LICENSE`.
+MIT License. See `LICENSE`.
