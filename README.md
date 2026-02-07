@@ -1,16 +1,60 @@
 # Portfolio Website V1
 
-Here is the link to the live site: [https://v1-akilesh.vercel.app/](https://v1-akilesh.vercel.app/)
+A personal portfolio site built with Next.js to showcase skills, projects, and contact links.
 
-## Tech Stack
+Live site: [https://v1-akilesh.vercel.app/](https://v1-akilesh.vercel.app/)
 
-- [Vercel](https://vercel.com/): For deployment
-- [Next.js](https://nextjs.org/): For frontend
+## Quick Start
 
-## Contact Information
+```bash
+npm install
+npm run dev
+```
 
-For more information, please reach out to me at:
+Open [http://localhost:3000](http://localhost:3000).
 
-- **Email**: jayakuma006@mymail.sim.edu.sg
-- **LinkedIn**: [Akilesh Jayakumar on LinkedIn](https://www.linkedin.com/in/akileshjayakumar/)
-- **GitHub**: [Akilesh Jayakumar on GitHub](https://github.com/akileshjayakumar)
+For a production build:
+
+```bash
+npm run build
+npm run start
+```
+
+## Core Capabilities
+
+- Animated intro section with social/contact links
+- Skills grid grouped by category
+- Project showcase card with repository and live links
+- Responsive layout with Tailwind CSS and Framer Motion
+
+## Configuration
+
+No environment variables are required for local development.
+
+## Usage
+
+Update portfolio content in `lib/data.ts`:
+
+- `skillsData` for skill categories and icons
+- `projectsData` for featured projects
+- `links` for section navigation labels
+
+You can customize sections in:
+
+- `components/intro.tsx`
+- `components/skills.tsx`
+- `components/projects.tsx`
+
+## Contributing and Testing
+
+Run lint checks before submitting changes:
+
+```bash
+npm run lint
+```
+
+Contributions are welcome via pull requests.
+
+## License
+
+MIT License. See `LICENSE`.
